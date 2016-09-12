@@ -1,0 +1,89 @@
+% Chapter 1
+
+\chapter{Requirements} % Main chapter title
+
+\label{Chapter2} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+%----------------------------------------------------------------------------------------
+
+First of all is important to analyse which are the requirements of gAn web (and how gAn web can improve the performances of gAn). 
+
+\section{Functional requirements}
+The definition of functional requirements aims to specifying in detail what the web application can do, and in which way an user can use it. The development of gAn web is divided in two stages: 
+an early stage, more simple, with basic functionalities, just to investigate what are the best ways to implement the functionalities and to test with a little group (2-3) of users if this software can really be useful and which functionalities are really important;
+A late stage, more complex, with some complex functionalities obtained listening the request of the first group of users;
+It is important to notice that the second stage (the late one) is a never-finished stage: the needs of the users are permanently changing and evolving, the application is designed to be adaptable, and to try to satisfy the unknown needs of future users.   
+Following are exposed the requirements of the two versions:
+
+\subsection{Early version}
+The first version (from now "gAn web v1") is a very simple application: instead of access the program by a linux terminal like gAn, in gAn web v1, the user can 
+use the program through a graphical interface. 
+The requirements of this version are the following:
+\begin{enumerate}
+
+% 1
+\item The user, in the homepage, can chose the run (only one run, for the moment) in which he is interested, using a input field. This field has validator, able to understand if the run number is inserted, if it is effectively a number, and if it is in an acceptable range. The user receives an explaining and precise error message directly on the homepage if the input field is empty and if the inserted value is not acceptable.
+
+% 2
+\item The user can start the program with a single click, by a button (usable only if the inserted number is valid).
+
+% 3
+\item When the program is executed the user can see the text output on the screen. This text is clear for a physicist (it is not clear for a person who doesn't have a specific preparation). 
+
+% 4
+\item When the program is executed the user can see the output images by clicking a button that link to a images-page. The images are ordered and organized by groups (the groups are related about which sensor takes the information necessary to create the image). The user can decide if he prefers to see the image in a little, medium or big format. The user can also decide if the images are distributed in the screen vertically or through a "carousel layout". The user can access the image in full-screen by clicking on it: he is redirected to a page with the image shown in full screen, and can return back to the all-images page by a return button. 
+
+%5
+\item The user can modify a configuration file (a .txt file on the server), by a web interface. In this files there are some values the need to be setted (otherwise it use default values), and the user can do it by radio buttons (in this way he is forced to chose valid values). This configuration file can modify the way in which gAn works and modify the resulting output (both the text and the images).   
+
+\end{enumerate}
+
+\subsection{Late version}
+The late version is more complex. It was born from the tips and the observation of the first users. The modifications are not numerous, but there are a lot of additions of new features. All the new required characteristics are exposed following:
+
+\begin{enumerate}
+
+% 1
+\item The user can insert multiple runs: separated by a semicolon (but in case of errors the system can automatically correct them replacing symbols like "-" or "," or "." with semicolons and giving a more robust service). These runs can be inserted by an input field of by a range select button: this button open a "modal" that allows the user to chose the first run and the last, and automatically insert the comprised runs (for example, if the user inserts 30000 and 30010 the system inserts automatically all the run numbers between 30000 and 30010). This modal has a validation system, that ensure the correctness of the inserted values. 
+
+% 2
+\item The user can chose which version of gAn use for the execution of the program. In this moments exist 2 versions, but in the future they can became more. They are externally very similar, the differences are the algorithms in the program, but they give a different output (different output but in the same format: text and images). Another difference is that the configuration file is not written in txt, like in the early version, but it is written in xml (see next point). 
+
+% 3
+\item The configuration file is not only in text format, but also in xml format (it depends on the selected version of gAn). This fact ensures a stronger structure, and must be transparent to the user (he mustn't see differences).
+
+%4
+\item The user can chose what version of Root he wants to use for the program. Theoretically different versions of Root are perfectly compatible, but in practice each version of gAn is designed to work with a particular version of Root and to avoid problems it was specifically requested to the gAn web designer to allows the user to chose freely which version of Root use among the installed versions on the server.  
+
+%5
+\item The user can save images on his hard disk: he can chose from the shown images in the images page an image to download by clicking on a specific download button near the image. Furthermore there is another button "Download All" with whom the user can simple download all the output images.
+
+%6 
+\item The user can download a reduced version of the root file with informations about the images and the results: gAn produce this kind of files as "half-processed" during the computing, and it is not a problem to save this on the hard disk of the server in a specified folder. For an expert user can be scientifically interesting have this file (this root file contain more information than the output, the most of this information is useless (it is an "half-processed" file) , but sometimes an expert user can find something interesting), so the user must have the opportunity to download this.     
+
+% 7
+\item The first little group of user prefers the dropdown menu to the radio button, so all the radio buttons in the program are replaced by dropdown menus.
+
+% 8
+\item The user has to access not only to a png image, but to a root-image. This kind of image is interactive: the user can with a left click of the mouse (a continued click, like the "dragging") select parts of the image and zoom them, and with a right click do dynamically some kind of image processing (set colors, chose  what kind of chart to show, modify the chart legend, translate in a 3D space the image etcetera). All of this must be done by the user through a browser window.  This requisite seems to be very complex, but Root provides libraries (these libraries work well but they are poorly documented) to interact with Javascript, and can in some way resolve the problem.  
+
+% 9
+\item In the homepage the user can see the run number of the last root file produced by the machine, and its creation date and time (so, he can understand what is the maximum of the range of the insertable numbers) 
+
+In the late version there was another functional requisite: ideally the user should have been able to select a gAn version not installed in the server machine: in this case the system should have been capable to automatically  search on the AEgIS gitlab repositories the correct version (if existing), download it, unpack it in the server, and use it to execute the program. After some discussion this requirement has been cancelled, because it was considered complex, basically useless, and potentially harmful (on the repository there are untested and incomplete versions, that can create if executed wrong output, so wrong scientific results).
+
+\end{enumerate}
+
+download from git,
+impossible things: gitHub
+
+\subsection{Ambiguities}
+
+
+\section{Unfunctional requirements}
+unfunctional are... definition%TODO %TODO %TODO
+
+lists:
+no crash (at least don't kill apache), no install
+
+\
