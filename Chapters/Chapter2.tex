@@ -22,7 +22,7 @@ The requirements of this version are the following:
 \begin{enumerate}
 
 % 1
-\item The user, in the homepage, can chose the run (only one run, for the moment) in which he is interested, using a input field. This field has validator, able to understand if the run number is inserted, if it is effectively a number, and if it is in an acceptable range. The user receives an explaining and precise error message directly on the homepage if the input field is empty and if the inserted value is not acceptable.
+\item The user, in the homepage, can chose the run (only one run, for the moment) in which he is interested, using a input field. This field has validator, able to understand if the run number is inserted, if it is effectively a number, and if it is in an acceptable range. The user receives an explaining and precise error message directly on the homepage if the input field is empty and if the inserted value is not acceptable. It is always possible validate the inserted run and ensure that the related Root file exists? No, because in some moments some sensors don't work properly and it is inevitable that some root files related to some runs are incomplete, or even inexistent.
 
 % 2
 \item The user can start the program with a single click, by a button (usable only if the inserted number is valid).
@@ -70,20 +70,34 @@ The late version is more complex. It was born from the tips and the observation 
 % 9
 \item In the homepage the user can see the run number of the last root file produced by the machine, and its creation date and time (so, he can understand what is the maximum of the range of the insertable numbers) 
 
-In the late version there was another functional requisite: ideally the user should have been able to select a gAn version not installed in the server machine: in this case the system should have been capable to automatically  search on the AEgIS gitlab repositories the correct version (if existing), download it, unpack it in the server, and use it to execute the program. After some discussion this requirement has been cancelled, because it was considered complex, basically useless, and potentially harmful (on the repository there are untested and incomplete versions, that can create if executed wrong output, so wrong scientific results).
+In the late version there was another functional requisite: ideally the user should have been able to select a gAn version also if not installed in the server machine: in this case the system should have been capable to automatically search on the AEgIS Gitlab repository the correct version (if existing), download it, unpack it in the server, and use it to execute the program. 
+After some discussion this requirement has been cancelled, because it was considered complex, basically useless, and potentially harmful (on the branches of the repository there are untested and incomplete versions, that can create if executed wrong outputs, so wrong scientific results). At this moment installing manually the stable versions of gAn on the server seems to be a more smart way to work.
 
 \end{enumerate}
 
-download from git,
-impossible things: gitHub
+\subsection{Ambiguities (and related solutions)}
 
-\subsection{Ambiguities}
+At least a point seems to be quite ambiguous: 
 
+%\begin {enumerate}
+
+% 1
+% \item 
+The textual output of gAn needs to be formatted in some way to be more organized and clear? 
+The answer is difficult: for a non-physicists this output seems to be disordered, too long, with too many groups of informations, and very difficult to understand, but on this question all the physicists questioned answered that the output is perfectly clear and doesn't need to be modified or improved in any way. The only requests of the users were about the font and the font-size. Anyway, in the second version, in case of multiple run selection, there is a "navbar" that allows the user to show only a run-result per time.
+
+%\end{enumerate}
 
 \section{Unfunctional requirements}
-unfunctional are... definition%TODO %TODO %TODO
 
-lists:
-no crash (at least don't kill apache), no install
+Both versions, the first and the second, have two unfunctional requisites:
 
-\
+\begin{enumerate}
+
+\item The first is quite simple: gAn web has to ensure that in case of crash of the program the web server mustn't crash too. The point is that on this web server (Apache server, installed on Linux) there are some other important applications, so, if gAn web crashes it is not a big problem, but the crash cannot force Apache, or worst the entire machine, to stop or restart. 
+This requisite is quite easy to meet: a modern web application based on Html, Javascript, PHP and CSS is quite safe, a general crash of the server it is very unlikely to happen. If the C++ application or some Root libraries crashes (for example if the user asks for an inexistent run) the web application gracefully warn the user about the problem, but without uncontrolled behaviours.  
+
+\item The application must work without install nothing. Also this requirement is very easy to meet: gAn web is a web interface, it requires only a browser, nothing else.
+
+\end{enumerate}
+
