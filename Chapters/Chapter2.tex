@@ -47,10 +47,10 @@ The late version is more complex. It was born from the tips and the observation 
 \item The user can insert multiple runs: separated by a semicolon (but in case of errors the system can automatically correct them replacing symbols like "-" or "," or "." with semicolons and giving a more robust service). These runs can be inserted by an input field of by a range select button: this button open a "modal" that allows the user to chose the first run and the last, and automatically insert the comprised runs (for example, if the user inserts 30000 and 30010 the system inserts automatically all the run numbers between 30000 and 30010). This modal has a validation system, that ensure the correctness of the inserted values. 
 
 % 2
-\item The user can chose which version of gAn use for the execution of the program. In this moments exist 2 versions, but in the future they can became more. They are externally very similar, the differences are the algorithms in the program, but they give a different output (different output but in the same format: text and images). Another difference is that the configuration file is not written in txt, like in the early version, but it is written in xml (see next point). 
+\item The user can chose which branch of gAn use for the execution of the program. In this moments exist 2 complete branches, but in the future they can became more. They are externally very similar, the differences are the algorithms in the program, but they give a different output (different output but in the same format: text and images). Another difference is that the configuration file is not written mandatory in txt, like in the early version, but it can be written in xml, it depends which branch you chose (see next point). 
 
 % 3
-\item The configuration file is not only in text format, but also in xml format (it depends on the selected version of gAn). This fact ensures a stronger structure, and must be transparent to the user (he mustn't see differences).
+\item The configuration file is not only in text format, but also can be in xml format (it depends on the selected version of gAn). This fact can ensure a stronger structure, and must be transparent to the user (he mustn't see differences).
 
 %4
 \item The user can chose what version of Root he wants to use for the program. Theoretically different versions of Root are perfectly compatible, but in practice each version of gAn is designed to work with a particular version of Root and to avoid problems it was specifically requested to the gAn web designer to allows the user to chose freely which version of Root use among the installed versions on the server.  
@@ -73,6 +73,9 @@ The late version is more complex. It was born from the tips and the observation 
 In the late version there was another functional requisite: ideally the user should have been able to select a gAn version also if not installed in the server machine: in this case the system should have been capable to automatically search on the AEgIS Gitlab repository the correct version (if existing), download it, unpack it in the server, and use it to execute the program. 
 After some discussion this requirement has been cancelled, because it was considered complex, basically useless, and potentially harmful (on the branches of the repository there are untested and incomplete versions, that can create if executed wrong outputs, so wrong scientific results). At this moment installing manually the stable versions of gAn on the server seems to be a more smart way to work.
 
+% 10
+\item There is a login system: the user must insert the password of the office to use the system. The authentication is based on the confrontation between the hash function of the inserted password and the hash function of the AEgIS password. If the password is correct the user receives a cookie, before each action in the site the server request and check this cookie to be sure about the identity of the user.  
+
 \end{enumerate}
 
 \subsection{Ambiguities (and related solutions)}
@@ -88,9 +91,9 @@ The answer is difficult: for a non-physicists this output seems to be disordered
 
 %\end{enumerate}
 
-\section{Unfunctional requirements}
+\section{Non-functional requirements}
 
-Both versions, the first and the second, have two unfunctional requisites:
+Both versions, the first and the second, have three non-functional requisites:
 
 \begin{enumerate}
 
@@ -98,6 +101,8 @@ Both versions, the first and the second, have two unfunctional requisites:
 This requisite is quite easy to meet: a modern web application based on Html, Javascript, PHP and CSS is quite safe, a general crash of the server it is very unlikely to happen. If the C++ application or some Root libraries crashes (for example if the user asks for an inexistent run) the web application gracefully warn the user about the problem, but without uncontrolled behaviours.  
 
 \item The application must work without install nothing. Also this requirement is very easy to meet: gAn web is a web interface, it requires only a browser, nothing else.
+
+\item The application must be easy to be modified and extended in the future by persons who aren't necessarily software engineers. The point is that the student who wrote this program is a "momentary collaborator" in the AEgIS experiment, and all the modifications to the program must be done by other people, in most cases physicists. So the best way is to comment in detail the code and keep the code simple (this is a basic good-programming requirement).   
 
 \end{enumerate}
 
