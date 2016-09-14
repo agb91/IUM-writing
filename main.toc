@@ -13,4 +13,5 @@
 \contentsline {chapter}{\numberline {3}Functional Analysis}{9}{chapter.32}
 \contentsline {section}{\numberline {3.1}Scenario-based requirements analysis}{9}{section.33}
 \contentsline {chapter}{\numberline {4}Prototypation}{13}{chapter.41}
-\contentsline {section}{\numberline {4.1}Scenario-based requirements analysis}{13}{section.42}
+\contentsline {section}{\numberline {4.1}Early version}{13}{section.42}
+\contentsline {section}{\numberline {4.2}Late version}{16}{section.51}
