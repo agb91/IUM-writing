@@ -9,8 +9,8 @@
 \section{Early version}
 
 This version is very simple and it contains only the basic functionalities. 
-The goal of this version are: understand if this kind of system can be useful for the users, and experiment some technical solutions to create the features needed to achieve the goals. At this stage the application is evidently incomplete, there are numerous deficiencies and inconsistencies and the goals of the Human Machine Interaction are ignored. All this point are corrected in the second version, and this first version is used to show a "before-after comparison".
-GAn Web is a web application (as the name suggests) so the interface is created using HTML and CSS. This languages are very advanced and allows the programmer to create and modify an interface very easily. The framework Bootstrap, used in this project, even improve the performances of these languages. So all the prototypes are directly created by code, without paper-based mock ups.
+The goal of this version are: to understand if this kind of system can be useful for the users, and experiment some technical solutions to create the features needed to achieve the goals. At this stage the application is evidently incomplete, there are numerous deficiencies and inconsistencies and the goals of the Human Machine Interaction are ignored. All this point are corrected in the second version, and this first version can be used to show a "before-after comparison".
+GAn Web is a web application (as the name suggests) so the interface is created using HTML and CSS. This languages are very advanced and allows the programmer to create and modify an interface very easily. The framework Bootstrap, used in this project, even improves the performances of these languages. So all the prototypes are directly created by code, without paper-based mock ups.
 
 Following are visible some part of the early prototype, with very simple features.
 
@@ -63,10 +63,68 @@ This page allows the user to chose by radio buttons (modified using Bootstrap gr
 \end{enumerate}
 
 \section{How the early version can be improved}
-The early version's goal is just to be a demo. In particular, it is based on the assumption that the user knows in every moment all about gAn (how does it works,  what is the meaning of each field of the configuration file, etcetera). It can be improve literally in every point, according with the principles of the Human Machine Interaction.
+The early version's goal is just to be a demo. In particular, it is based on the assumption that the user knows in every moment all about gAn (how does it works,  what is the meaning of each field of the configuration file, etcetera). It can be improved literally in every point, according with the principles of the Human Machine Interaction.
 
-\subsection{Modified pages}
-
-\subsection{Added pages}
 
 \section{Late version}
+
+The late version is based on the early version, some pages (and functionalities) are added, some existing pages are improved. Following all modifications are explained.
+
+\subsection{Modified pages}
+The homepage:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{HomePageEmpty.png} 
+\caption{The homepage of gAn Web without input}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{HomePage.png} 
+\caption{The homepage of gAn Web ready to start}
+\end{figure}
+
+There are some modifications:
+
+\begin{enumerate}
+
+\item The user is informed about what is the last existing run: he can read "last existing run: nnnnn, from dd/mm/yy". This point is important because in most cases the user searches results regarding the lasts 10 runs.
+
+\item The button "send" was unclear, the button "START" is more clear, the user can immediately understand that the goal of this button is start gAn. The button is red and unclickable if there are problems with the inserted runs (or if the input field is empty), green and clickable if there are no problems.	 %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO  cambia immagineeeeee il bottone  è verde e non rosso.... %TODO %TODO %TODO %TODO %TODO %TODO   
+
+\item The input field has a place-holder, that shows to the user how to correctly insert the runs separated by semicolon (there is an automatic system that corrects the inserted values if the separator is not a semicolon)
+ 
+\item It is possible to insert a group of runs selecting them by range (inserting the first and the last): the button "Add runs by range" opens a modal (shown in the image). The user can chose the minimum and the maximum of the range, the system validates the inserted values (maximum must be more that minimum, they must be numbers etcetera).
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{RangeRunsModal.png}  
+\caption{The modal opened by clicking the button "Add runs by range"}
+\end{figure}
+
+\item There is a little message "You are using: nameOfGAnBranch" that informs the user about which is the branch of gAn used by default if he doesn't change the configuration (the default branch is the last used, because usually when a group of users starts to use a branch, it continues to use it for some days)
+
+\item There are two new buttons: "Chose Root version", "Chose gAn version". These buttons redirect the user to pages able to modify the version of Root and gAn used in the computation.
+ 
+\item Each button and each field have a tooltip: a little explaining text that appears when the user moves the mouse over the object. In this way an inexperienced user can easily understand what each component does.  
+
+\end{enumerate}
+
+
+The page related to the modifications of the configuration file of gAn:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{HomePage.png} 
+\caption{The edit-configurator page of gAn Web}
+\end{figure}
+
+This page doesn't use anymore radio buttons, because some users ask the developers to use dropdown menus (for aesthetic reasons). The user can read near the button the currently selected value for each field. There aren't tool-tips able to describe the signification of each field here, because the users to which gAn Web is intended have a perfect understanding of the names and the features of each sensor (mimito, scint, farcup, etcetera are sensors).  
+
+
+
+
+
+\subsection{Added pages}
