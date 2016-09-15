@@ -16,5 +16,5 @@
 \contentsline {section}{\numberline {4.1}Early version}{13}{section.42}
 \contentsline {section}{\numberline {4.2}How the early version can be improved}{16}{section.51}
 \contentsline {section}{\numberline {4.3}Late version}{16}{section.52}
-\contentsline {subsection}{\numberline {4.3.1}Modified pages}{17}{subsection.53}
+\contentsline {subsection}{\numberline {4.3.1}Modified pages}{16}{subsection.53}
 \contentsline {subsection}{\numberline {4.3.2}Added pages}{21}{subsection.73}

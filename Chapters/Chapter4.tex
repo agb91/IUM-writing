@@ -41,7 +41,7 @@ The textual result of the computation is visible: it seems to be too long and in
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.25]{AllImagesOLD.png} %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO SISTEMA STOCAZZO DI IMMAGINE
+\includegraphics[scale=0.25]{AllImagesPageOLD.png} %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO SISTEMA STOCAZZO DI IMMAGINE
 \caption{The page able to show the output images in the early prototype}
 \end{figure}   
 
@@ -168,5 +168,61 @@ This navbar is in fixed position related to the screen, and can be dragged by th
 \item "Back to Home" and "Look at the images" are in a fixed position on the screen: also if the user scrolls down or up the screen he is always able to see these buttons.    
 
 \end{enumerate}
+
+The page that shows in an organized way the images that gAn produces in output. The following image shows the new appearance of the page:
+
+\begin{figure}[H]
+\centering
+\includegraphics[AllImagesPage.png} 
+\caption{The page who shows the images that gAn produces in output}
+\end{figure}
+
+Modifications:
+\begin{enumerate}
+
+\item The dropdown menu "Runs to show" allows the user to select only the images produced by a single run (by default the system shows the images related to all the runs). The users widely use this option, because in this way they can compare images extrapolated in the same way but related with runs with different configurations.
+
+\item "Download All Images" allows the user to download by a single click all the images related to the execution. The late design introduces this requirement because commonly the users want to download the images using the right click of the mouse and the browser's button "Save Image As". In this way this process is faster and easier.
+
+\item The buttons "Back to Previous page" and "Back to Home" are links towards the textual output page and the homepage. They are in fixed position.
+
+\item By clicking on the image the user reaches a page that shows the image in full screen, but not in a static format: the image is dynamically accessible like shown in the following images:
+
+\begin{figure}[H]
+\centering
+\includegraphics[RootLikeImage2.png} 
+\caption{Moving the cursor the system shows the value of this histogram in the selected point}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[RootLikeImage2.png} 
+\caption{Moving the cursor the system shows the value of this histogram in the selected point}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[RootLikeImage.png} 
+\caption{The user can modify numerous settings in the generated image}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[RootLikeImage3.png} %TODO %TODO %TODO %TODO %TODO %TODO take this screen
+\caption{The user can show the histogram not only in traditional format, but also in a numerical format where the numbers are the value of the function in their position}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[RootLikeImage4.png} %TODO %TODO %TODO %TODO %TODO %TODO %TODO  take this screen
+\caption{Another solution is to generate a 3d image in lego-style of the histogram}
+\end{figure}
+
+
+ 
+\end{enumerate}
+
 
 \subsection{Added pages}
