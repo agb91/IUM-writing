@@ -19,7 +19,7 @@ Following are visible some part of the early prototype, with very simple feature
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{HomePageOLD.png} 
+\includegraphics[scale=0.25]{HomePageOLD.png} 
 \caption{The early homepage of gAn Web}
 \end{figure}
 
@@ -29,7 +29,7 @@ It is quite clear: There is the AEgIS Logo, an input field where the user can in
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{TextOutputOLD.png} 
+\includegraphics[scale=0.25]{TextOutputOLD.png} 
 \caption{The early page related to the textual output of gAn Web}
 \end{figure}
   
@@ -41,7 +41,7 @@ The textual result of the computation is visible: it seems to be too long and in
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{AllImagesOLD.png} %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO SISTEMA STOCAZZO DI IMMAGINE
+\includegraphics[scale=0.25]{AllImagesOLD.png} %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO SISTEMA STOCAZZO DI IMMAGINE
 \caption{The page able to show the output images in the early prototype}
 \end{figure}   
 
@@ -54,7 +54,7 @@ The user the chose by dropdown menus the dimension, the layout ("vertical", if h
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{EditConfigOLD.png} %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO PROCURA LA CAZZO DI IMMAGINE CON I RADIOBUTTONS 
+\includegraphics[scale=0.25]{EditConfigOLD.png}  
 \caption{The configuration page}
 \end{figure}   
 
@@ -75,14 +75,14 @@ The homepage:
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{HomePageEmpty.png} 
+\includegraphics[scale=0.25]{HomePageEmpty.png} 
 \caption{The homepage of gAn Web without input}
 \end{figure}
 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{HomePage.png} 
+\includegraphics[scale=0.25]{HomePage.png} 
 \caption{The homepage of gAn Web ready to start}
 \end{figure}
 
@@ -92,7 +92,23 @@ There are some modifications:
 
 \item The user is informed about what is the last existing run: he can read "last existing run: nnnnn, from dd/mm/yy". This point is important because in most cases the user searches results regarding the lasts 10 runs.
 
-\item The button "send" was unclear, the button "START" is more clear, the user can immediately understand that the goal of this button is start gAn. The button is red and unclickable if there are problems with the inserted runs (or if the input field is empty), green and clickable if there are no problems.	 %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO  cambia immagineeeeee il bottone  è verde e non rosso.... %TODO %TODO %TODO %TODO %TODO %TODO   
+\item The button named "send" was unclear, the word "START" is more clear, the user can immediately understand that the goal of this button is to start gAn. The button is red and unclickable if there are problems (like in the following image) with the inserted runs (or if the input field is empty), green and clickable if there are no problems.	
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{ErrorInputHomepage.png}  
+\caption{The "Start" button is red if the values in the input field are invalid}
+\end{figure}
+
+When the user clicks start a progress bar appears. Unfortunately it is very hard to understand exactly how long the computation will last, because different runs can take different time (it depends on the amount of data that the sensors take about the run, and on the workload of the server machine, that is in common with other applications). On average is observed that the computation take five seconds multiplied by the number of selected runs, but if another user asked for that computation before the system already has the results in memory and the computation is faster. A wait of several seconds can be not comfortable for the user, the progress bar is imprecise but ensure to the user that the system is working correctly to ensure the correct answer. In the following image the progress bar:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{ProgressBar.png}  
+\caption{The progress aimed to make more comfortable the user's waiting}
+\end{figure}
+
+
 
 \item The input field has a place-holder, that shows to the user how to correctly insert the runs separated by semicolon (there is an automatic system that corrects the inserted values if the separator is not a semicolon)
  
@@ -100,7 +116,7 @@ There are some modifications:
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{RangeRunsModal.png}  
+\includegraphics[scale=0.25]{RangeRunsModal.png}  
 \caption{The modal opened by clicking the button "Add runs by range"}
 \end{figure}
 
@@ -117,7 +133,7 @@ The page related to the modifications of the configuration file of gAn:
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{HomePage.png} 
+\includegraphics[scale=0.25]{EditConfig.png} 
 \caption{The edit-configurator page of gAn Web}
 \end{figure}
 
@@ -125,6 +141,32 @@ This page doesn't use anymore radio buttons, because some users ask the develope
 
 
 
+The page that shows the textual output of gAn is exposed in the following images, has some modifications:
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{TextOutputPage.png} 
+\caption{The page who shows the textual output of gAn}
+\end{figure}
+
+
+\begin{enumerate}
+\item The user can chose what results he wants to show on the screen by clicking the corresponding run number from the "navbar", like in the image:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{WhichRunNavbar.png} 
+\caption{By this "navbar" the user can chose the run results to show}
+\end{figure}
+
+This navbar is in fixed position related to the screen, and can be dragged by the user to allow him to decide where put it.
+
+\item "Download Root File of: nnnn" is a button that allows to user to download the semi-processed file .root with some output information regarding the computation.
+
+\item "Back to Home" gives the user the opportunity to directly return to the homepage. 
+
+\item "Back to Home" and "Look at the images" are in a fixed position on the screen: also if the user scrolls down or up the screen he is always able to see these buttons.    
+
+\end{enumerate}
 
 \subsection{Added pages}
