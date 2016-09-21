@@ -48,14 +48,39 @@ This pattern is quite useful in some situation, because it forces the user to do
 This useful pattern recommends to create a dynamic structure able to adapt itself automatically to the screen's dimensions. The concept of "adapt itself" doesn't include only the ability to modify the dimensions of each object, but also to modify the layout of the screen. This pattern is very useful in applications that must work both on laptops and on mobile devices. In the particular case of gAn Web the users never use mobile devices, so the application has to adapt itself only to screens with a dimension of minimum 13-14 inches. For this reason the automatics system of object-dimensioning provided by Bootstrap (based on the partitioning of the screen in columns and sub-columns) is sufficient to ensure that all the system is usable by all the "target" screens. In fact all the objects that compose the system's graphic can adapt themselves easily to all the expected screen dimensions. 
 
 
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO  
-%USED PATTERN: 
-%7 liquid layout partially
-%8 hover tools
-%10 input prompt 
-%11 harmless default
-%12 Same-page error messages (only page 1...)
-%14 Alternative views
+\subsection{Hover tools}
+
+This kind of helper allows the user to get information about the tasks that each object can carry on just moving the mouse over it. 
+
+%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO METTI IMMAGINE DI HOVER
+
+The interface of gAn Web is quite simple, but for a new user is useful to have a some tips about the components potentialities. Bootstrap provides some easy commands to create the tooltips accessible by a "on hover" event, giving to the developer a fast way to implement this pattern.
+
+\subsection{Harmless default}
+
+This pattern is used in 2 ways:
+\begin{enumerate}
+
+\item In the homepage, where the user has to insert the run numbers (before he can press the start button) some place-holders are visible (as is shown in the figure %TODO %TODO %TODO %TODO %TODO INSERTI NUMBER OF THE FIGURE)
+
+%TODO %TODO %TODO %TODO %TODO %TODO %TODO  INSERT THE FIGURE OF THE PLACEHOLDER
+
+These place-holders aim to teach the user to insert correctly the numbers: separating them with a semicolon (if the user uses a dot, a slash, or a dash, the application can repair the error and run correctly the same). 
+
+\item Another use of this pattern is related to the page that aims to modify the configuration file of gAn: here the user can see as default the last known working values, avoiding to re-insert values that he doesn't want to change.
+
+%TODO %TODO %TODO %TODO  image here 
+\end{enumerate}
+
+\subsection{Same-page error messages}
+
+This pattern allows the user to understand immediately if and where there is an error in the inserted values, showing him a visible message in the page able to explain him how to correct the error. In most cases in gAn Web the values are inserted using dropdown menus, so it is impossible make errors, but in each part where there is a "free" input field this pattern is used: if the inserted value doesn't meet the requirements of a validator a message appears on the screen explaining to the user what to do to solve the problem.
+
+%TODO %TODO %TODO %TODO  IMAGE HERE
+
+\subsection{Alternative views}
+This pattern proposes to let the user choose among alternative views that are substantially different from the default view. 
+GAn Web applies this pattern where shows images to the user: he can show if he prefers to see an static image in png format, that is simple and contains all and only the needed information (or better, the information that the designer thought the user needs), or a dynamic, modifiable and navigable image in Root format, in which the user can decide exactly what to see.
 
 
  
