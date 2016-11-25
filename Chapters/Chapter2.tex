@@ -24,6 +24,9 @@ In this project there is a big advantage: in this particular situation the desig
 % 3
 \item
 The third stage is the final stage. At this point the application is modified to accord the observations of the users. It is important to notice that the third stage (the last one) is a never-finished stage: the needs of the users are permanently changing and evolving, the application is designed to be adaptable, and to try to satisfy the unknown needs of future users.
+
+\end{enumerate}
+
    
 Following are exposed the requirements of the three versions:
 
@@ -100,15 +103,9 @@ After some discussion this requirement has been cancelled, because it was consid
 
 At least a point seems to be quite ambiguous: 
 
-%\begin {enumerate}
-
-% 1
-% \item 
 The textual output of gAn needs to be formatted in some way to be more organized and clear? 
 The answer is difficult: for a non-physicists this output seems to be disordered, too long, with too many groups of informations, and very difficult to understand, but on this question the pilot users (that are physicists) questioned answered that the output is perfectly clear and doesn't need to be modified or improved in any way. The only requests of the users were about the font and the font-size. To check this fact the best solution probably is observe the behavior of the users at work, and eventually ask them informations about that.
 Anyway, in the second version, in case of multiple run selection, there is a "navbar" that allows the user to show only a run-result per time.
-
-%\end{enumerate}
 
 \section{Non-functional requirements}
 
@@ -125,7 +122,6 @@ This requisite is quite easy to meet: a modern web application based on Html, Ja
 
 \item The application must be easy to be modified and extended in the future by persons who aren't necessarily software engineers. The point is that the student who wrote this program is a "momentary collaborator" in the AEgIS experiment, and all the modifications to the program must be done by other people, in most cases physicists. So the best way is to comment in detail the code and keep the code simple (this is a basic good-programming requirement).   
 
-\item This web application will be (probably) accessible though the internet, so the security (mainly validation of the inputs, to contrast a possible code injection) is a not-negligible point.  
 
 \end{enumerate}
 
