@@ -8,19 +8,37 @@
 
 \section{User friendly Data analysis: gAn Web}
 
-GAn is a program that aims to analyse huge amount of data related to the AEgIS experiment at the CERN.
+GAn is a program that aims to analyse data related to the AEgIS experiment at the CERN.
  
-This program receive in input a folder containing several terabytes of files in ".root" format, and parameter named "run parameter", that identifies the information in which the users are interested. 
-A file ".root" is a file produced by a variegated group of sensors in a complex machine that accelerates particles and lets them crash together. This sensors produce .root files continuously (8 hours per day). The time in this experiment is divided in "runs" (a run lasts about 140 seconds), so the user, by the run parameter can tell to gAn in which time slice he is interested.
+This program receive (continuously) in input a folder containing several terabytes of files in ".root" format, and some parameters; 
+A file ".root" is a file produced by a variegated group of sensors in a complex machine that accelerates particles and lets them crash together. This sensors produce data continuously (8 hours per day), and a software system validates and saves these data in file with .root extension. 
+
+The parameters are:
+\begin{enumerate}
+
+% 1
+\item "Run Number", that identifies in which part of the data the user is interested. 
+The time in this experiment is divided in "runs" (a run lasts about 140 seconds), so the user, by the run parameter can tell to gAn in which time slice he is interested. For example: run 55614 means that the user is interested in the information related to the 22th of November 2016, taken in the time slice between 15:45 and 15:47.  
+
+% 2
+\item "Type of analysis", that identifies what the program must do with the data and what it must show as output to the user.
+A "type" is a way in which the program extracts information from the raw data. each type can extract different information using different parts of data and elaborating them in different ways. For example: a type of analysis named "Ingmari's Code" can extract information about the temperatures of some elemental particles analysing how quickly they change direction subjected to a force. 
+
+\end{enumerate}
+
 
 The .root files can be analysed using a framework named ROOT Framework, that consists in a lot of libraries specialized in high-energy physics analysis, and an interpreter able to understand a C++ script.
 Actually, gAn is the sum of the Root Framework plus a lot of C++ scripts.
-The goal of gAn is reduce the huge amount of raw data in input in a little amount of scientifically interesting data in output. To do this it has to filter data, understand which of them are scientifically interesting, chose the parts that are related to the run selected by the user (by the run parameter), elaborate and compare them, and make advanced statistical analysis on them.  
+The goal of gAn is reduce the huge amount of raw data in input in a little amount of scientifically interesting and easily understandable data in output. To do this it has to filter data, understand which of them are scientifically interesting, chose the parts that are related to the run selected by the user (by the run parameter), elaborate and compare them, and make advanced statistical analysis on them.  
 gAn can be called using a common linux terminal, using a command with parameters. 
 
-The output of gAn consists of a single text file with computed, organized data, and a folder of images in png format. 
+The output of gAn consists of a single text file with computed, (quite) organized data, and a folder of images in png format.
+
+%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO  INSERT AN IMAGE OF THE OUTPUT BEFORE ALL (TERMINAL)
+
+ 
 This structure (root files in input, data analysis using Root, images, organized and selected data in output) is very common in the CERN's experiments. 
-The output of gAn is quite understandable by an experienced physicist, but it is disorganized, complex for an untrained user, and and the terminal interface can be surely improved using some more user friendly technologies.
+The output of gAn is quite understandable by an experienced physicist, but it is disorganized, complex for an untrained user, and the terminal interface can be surely improved using some more user friendly technologies.
 
 
 GAn Web is a web application, that aims to create a user friendly web interface, based on the most important human-machine interaction principles, between the users and gAn.
@@ -29,7 +47,7 @@ A web interface can improve it in two ways:
 \begin{enumerate}
 
 % 1
-\item gAn is a stand-alone program based on Root, installable on the user's machine; the user has to install the correct version of Root to avoid compatibility problems (Root is still not perfectly version independent: different versions can lead to different behaviours). Furthermore, this kind of program is continuously changing, the performed analysis is continuously improved, so the installed version of gAn is not final and unchangeable, and the user musts often update it. Instead, a centralized version installed on a server, with services accessible from a normal browser by the user can avoid (at least reduce) this kind of problems and be more usable.    
+\item gAn is a stand-alone program based on Root, installable on the user's machine; the user has to install the correct version of Root to avoid compatibility problems (Root is still not perfectly version independent: different versions can lead to different behaviours). Furthermore, this kind of program is continuously changing, the performed analysis is continuously improved (in the first 2 weeks from the debut of the program there are already several different kinds of analysis, because often at the changing of the needs the programmers creates new generations of analysis), so the installed version of gAn is not final and unchangeable, and the user musts often update it. Instead, a centralized version installed on a server, with services accessible from a normal browser by the user can avoid (at least reduce) this kind of problems and be more usable.    
  
 
 % 2

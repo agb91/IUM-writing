@@ -4,19 +4,9 @@
 \contentsline {chapter}{Abstract}{iii}{section*.1}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.3}
 \contentsline {section}{\numberline {1.1}User friendly Data analysis: gAn Web}{1}{section.4}
-\contentsline {chapter}{\numberline {2}Requirements}{3}{chapter.8}
-\contentsline {section}{\numberline {2.1}Functional requirements}{3}{section.9}
-\contentsline {subsection}{\numberline {2.1.1}Early version}{3}{subsection.10}
-\contentsline {subsection}{\numberline {2.1.2}Late version}{5}{subsection.16}
-\contentsline {subsection}{\numberline {2.1.3}Ambiguities (and related solutions)}{7}{subsection.27}
-\contentsline {section}{\numberline {2.2}Non-functional requirements}{7}{section.28}
-\contentsline {chapter}{\numberline {3}Functional Analysis}{9}{chapter.32}
-\contentsline {section}{\numberline {3.1}Scenario-based requirements analysis}{9}{section.33}
-\contentsline {chapter}{\numberline {4}Prototypation}{13}{chapter.41}
-\contentsline {section}{\numberline {4.1}Early version}{13}{section.42}
-\contentsline {section}{\numberline {4.2}How the early version can be improved}{16}{section.51}
-\contentsline {section}{\numberline {4.3}Late version}{16}{section.52}
-\contentsline {subsection}{\numberline {4.3.1}Modified pages}{17}{subsection.53}
-\contentsline {subsection}{\numberline {4.3.2}Added pages}{24}{subsection.82}
-\contentsline {chapter}{\numberline {5}Implementation}{27}{chapter.86}
-\contentsline {section}{\numberline {5.1}TODO}{30}{section.101}
+\contentsline {chapter}{\numberline {2}Requirements}{5}{chapter.10}
+\contentsline {section}{\numberline {2.1}Functional requirements}{5}{section.11}
+\contentsline {subsection}{\numberline {2.1.1}Early version}{6}{subsection.15}
+\contentsline {subsection}{\numberline {2.1.2}Intermediate version}{7}{subsection.22}
+\contentsline {subsection}{\numberline {2.1.3}Ambiguities (and related solutions)}{10}{subsection.33}
+\contentsline {section}{\numberline {2.2}Non-functional requirements}{11}{section.34}
