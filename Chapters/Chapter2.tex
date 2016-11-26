@@ -117,9 +117,7 @@ After some discussion this requirement has been cancelled, because it was consid
 \item There is a login system: the user must insert the password of the office to use the system. The authentication is based on the confrontation between the hash function of the inserted password and the hash function of the AEgIS password. If the password is correct the user receives a cookie, before each action in the site the server request and check this cookie to be sure about the identity of the user.  
 
 
-\end{enumerate}
-
-\subsection{Ambiguities (and related solutions)}
+\subsubsection{Ambiguities (and related solutions)}
 
 At least a point seems to be quite ambiguous: 
 
@@ -127,6 +125,45 @@ The textual output of gAn needs to be formatted in some way to be more organized
 The answer is difficult: for a non-physicists this output seems to be disordered, too long, with too many groups of informations, and very difficult to understand, but on this question the pilot users (that are physicists) questioned answered that the output is perfectly clear and doesn't need to be modified or improved in any way. The only requests of the users were about the font and the font-size. To check this fact the best solution probably is observe the behavior of the users at work, and eventually ask them informations about that.
 Anyway, in the second version, in case of multiple run selection, there is a "navbar" that allows the user to show only a run-result per time.
 
+
+\end{enumerate}
+
+\subsection{Final version}
+The last version (from now "gAn Web v3") is a modified version of the intermediate version. 
+The second version's modification come from two sources: some adding requirements are proposed from the pilot users (that are also supervisors); These adding requirements are the following:
+
+\begin{enumerate}
+%1 chose analysis new way
+\item 
+The main kinds of analysis are now more clear: they are 4-5, and they are     quite stable. Their role and when they are useful is now steadily fixed. Each user, according on his task, knows (should know) in every moment which analysis fits better the situation, so, the best solution is allows the user to choose the type of the analysis through a dropdown menu directly in the main page (exactly like he chooses the run number). At this point the possibility of choose the gAn version is useless, because the definitive version of gAn include all the existing types of analysis. 
+
+%2 single vs multiple
+\item 
+The kind of use of this software is quite different if you decide to work with a single run or a group of runs, so is better if at the beginning the user chose directly if he wants work with a single run or more than one. 
+
+%3 don't choose root version
+\item
+There is an effort in the developing of the whole project to make it independent of the Root version, So the interface won't ask to the user to choose a Root version anymore.
+
+\end{enumerate}
+ 
+Furthermore, the version version with this last requirements was tested with the users: the developer studied their behavior observing them at work with the existing version, listening to their comments, and asking them opinion and information. The impact  of the debut with the users highlights some problems to be overcome, and from the analysis and the solution of these problems the requirement of the last version was defined. The problems observed (and for each the proposed solution) are the following:
+
+\begin{enumerate}
+\item 
+It is important to help the user in some way to choose the run number: the user needs a view on the logbook of the run, that is a text in which there are information about each run number divided by date.
+
+\item
+Actually nobody use the button to modify the dimension of the images: they all use the biggest version.. is better to remove (or move in a less central place) this dropdown. A similar reasoning can be done for the dropdown that allows the user to switch between the vertical and carousel menu (everybody use).
+
+\item
+The read of the textual output takes too much time: it can be improved highlighting the most important parts (or better, the most important parts for the selected type of analysis)
+
+\item
+The user need to choose by the configuration page the degree of precision (the minimal error) of the x-axis (the time related axis) of each time-related values images. This parameter seemed to be not very important and in the second version actually there wasn't, but all the users modifies it quite often (manually). So is better to let them to do it by the interface
+
+\end{enumerate}
+ 
 \section{Non-functional requirements}
 
 Both versions, the first and the second, have some non-functional requisites:
