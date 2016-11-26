@@ -1,36 +1,55 @@
-% Chapter 3
+% Chapter 1
 
-\chapter{Functional Analysis} % Main chapter title
+\chapter{Early version} % Main chapter title
 
 \label{Chapter3} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
-%----------------------------------------------------------------------------------------
 
-\section{Scenario-based requirements analysis}
+At this point is important to analyse which are the requirements of gAn web at the first version:
 
-Following there are a list of scenarios in which a user achieves a goal by doing a list of steps. The goal of these scenarios is to show in detail how the interaction between the user and the system takes place.
+\section{Functional requirements}
+The definition of functional requirements aims to specifying in detail what the web application can do, and in which way an user can use it. The development of gAn web is divided in three stages, so the requirements are peculiar and different for each stage. The first version (from now "gAn web v1") is a very simple application: instead of access the program by a linux terminal like gAn, in gAn web v1, the user can use the program through a graphical interface. 
+The requirements of this version are the following:
 
 \begin{enumerate}
 
-\item The user wants to analyse the runs between 30000 and 30010, plus the run 31456, to make a confrontation, he is interested both in the text-output and in the images: 
-the user goes to the homepage, he is redirected to the authentication page and he do the login. If successful he returns automatically in the homepage, and he can insert the runs between 30000 and 30010 manually separating them with a semicolon or better clicking the "add range of runs" button, that opens a modal, in which the user can insert the minimum and the maximum of the range, and confirm (confirmation redirects the user to the homepage). After the user can add manually the run 31456 separating it from the others with a semicolon. If the inserted run numbers make doesn't make sense the system show on the page an error message. If the inserted run numbers are valid, the user can click the "send" button (before the button was red and un-clickable, now it is green and clickable) and start gAn. A progress bar is shown, a waiting message appears, and the user waits for some seconds (at this stage of development it is very hard to predict how much time gAn requests to execute). After some seconds the user is redirected in a page that shows the textual results: on the top of the page there is a navbar that shows the computed run numbers: the user uses this navbar to chose what part of the results to show in the screen. This bar is draggable, the user can freely move it. From this page the user can, through the button "show all images", access to another page dedicated to the images. In this page he can configure through dropdown menus the dimension, the layout, the group of the images (each image belongs to a group, the group depends on the sensor that generates the data from that the image is generated) to show. He can also, by clicking on a single image, access to another page, with a single image (the clicked image) that is completely accessible: the user can rotate the image, move it in a 3d space, zoom in, zoom out, select part, do some basic digital image processing and chose the kind of chart to show.   
+% 1
+\item The user, in the homepage, can chose the run (only one run, for the moment) in which he is interested, using a input field. This field has validator, able to understand if the run number is inserted, if it is effectively a number, and if it is in an acceptable range. The user receives an explaining and precise error message directly on the homepage if the input field is empty and if the inserted value is not acceptable. It is always possible validate the inserted run and ensure that the related Root file exists? No, because in some moments some sensors don't work properly and it is inevitable that some root files related to some runs are incomplete, or even inexistent.
 
-\item The user wants to use the version 5.34 of Root (an old but stable version) to execute gAn: 
-he complete the login, in the home page there is a button name "Chose Root version", clicking on this button the user is sent to a page where, he is informed about the current version of Root, and through a dropdown menu can chose among some version of Root already installed on the server (all the acceptable Root versions are installed on the server) . If the 5.34 version is one of the installed version he can select it and confirm, the goal is achieved. If the 5.34 version is not installed, the user cannot use this version.  
+% 2
+\item At this moment there is only a generic idea about what kind of analysis can be useful for the user, so in this version there will be only a generic analysis, able to dump in text all the possible information, and a group of example images (this is useless for the goal of the scientific research, but very useful to improve the understand the needed features of the web interface).
+At this stage is not clear if the type of analysis will be chosen by the user of automatically selected by the program , so in gAn web v1 there are no buttons able to allow the user to select the type of analysis (this point will be reconsidered in next versions).
 
-\item The user wants to select the "Rug-dev" branch of gAn:
-the process is very similar to the process that allows the user to chose a Root version. The user complete the login, in the home page there is a button name "Chose gAn version", clicking on this button the user is sent to a page where, he, through a dropdown menu, can chose among some branches of gAN existing on the machine. "Rug-dev" is one of these, the user can confirm and the task is completed.
+% 3
+\item The user can start the program with a single click, by a button (usable only if the inserted number is valid).
 
-\item The user wants to make the computation using only the data taken from the sensor named "Mimito":
-The user, after the login, in the homepage can use the button "Edit Config" the reach a page in which, through some dropdown menus, he can change the configuration file of gAn. Each of the dropdown menus is related to a sensor (often they are 5-6, it depends on the branch), and the option of the dropdown are "yes" or "no": if "yes" is selected the sensor's data are used in the computation, if "no" they aren't. One of the dropdown menus is named "Mimito", the user select "yes" for this sensor, "no" for all the others.  
+% 4
+\item When the program is executed the user can see the text output on the screen. This text is clear for a physicist (it is not clear for a person who doesn't have a specific preparation). 
 
-\item %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO INSERT SOMETHING RELATED TO THE ROOT LIKE IMAGE
+% 5
+\item When the program is executed the user can see the output images by clicking a button that link to a images-page. The images are ordered and organized by groups (the groups are related about which sensor takes the information necessary to create the image). The user can decide if he prefers to see the image in a little, medium or big format. The user can also decide if the images are distributed in the screen vertically or through a "carousel layout". The user can access the image in full-screen by clicking on it: he is redirected to a page with the image shown in full screen, and can return back to the all-images page by a return button. It is absolutely important to understand exactly which information are interesting for the users, and show in the images only them and all of them, this point will be solved with a confrontation with the pilot-users. 
 
-\item The user want to download all the images related to the runs 40001 and 40002:
-He can, after the login, insert the runs in the homepage (it is possible both by input field and by range selector), run gAn, wait the end of the execution, click "Show all images", and from here click "download all images". All the images will be downloaded in png format. %TODO %TODO %TODO %TODO %TODO %TODO %TODO  CHECK IF THIS PROCESS IS EXACTLY similar to what is written
+%6
+\item The user can modify a configuration file (a .txt file on the server), by a web interface. In this files there are some values the need to be setted (otherwise it uses default values), and the user can do it by radio buttons (in this way he is forced to chose valid values). This configuration file can modify the way in which gAn works and modify the resulting output (both the text and the images).   
 
-\item The user wants to download the semi-processed root file related to the runs 31111 and 31112:
-The steps are the same as the steps used to download the images, but instead of the button "Show all images", the user has to use the button "download root files".     
+\end{enumerate}
 
-\end{enumerate}  
+ 
+\section{Non-functional requirements}
+
+All the versions have some non-functional requisites:
+
+\begin{enumerate}
+
+\item The first is quite simple: gAn web has to ensure that in case of crash of the program the web server mustn't crash too. The point is that on this web server (Apache server, installed on Linux) there are some other important applications, so, if gAn web crashes it is not a big problem, but the crash cannot force Apache, or worst the entire machine, to stop or restart. 
+This requisite is quite easy to meet: a modern web application based on Html, Javascript, PHP and CSS is quite safe, a general crash of the server it is very unlikely to happen. If the C++ application or some Root libraries crashes (for example if the user asks for an inexistent run) the web application gracefully warn the user about the problem, but without uncontrolled behaviours.  
+
+\item The application must work without install nothing. Also this requirement is very easy to meet: gAn Web is a web interface, it requires only a browser, nothing else.
+
+\item The application must be compatible with any machine (except mobile phones, not requested), regardless of hardware, operating system, installed software. Also this requirement is achieved because of gAn Web only needs a browser to be used. 
+
+\item The application must be easy to be modified and extended in the future by persons who aren't necessarily software engineers. The point is that the student who wrote this program is a "momentary collaborator" in the AEgIS experiment, and all the modifications to the program must be done by other people, in most cases physicists. So the best way is to comment in detail the code and keep the code simple (this is a basic good-programming requirement).   
+
+
+\end{enumerate}
 

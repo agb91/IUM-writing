@@ -4,36 +4,45 @@
 \contentsline {chapter}{Abstract}{iii}{section*.1}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.3}
 \contentsline {section}{\numberline {1.1}User friendly Data analysis: gAn Web}{1}{section.4}
-\contentsline {chapter}{\numberline {2}Requirements}{5}{chapter.10}
+\contentsline {chapter}{\numberline {2}Organization of the project}{5}{chapter.10}
 \contentsline {section}{\numberline {2.1}The role of the designer and the users}{5}{section.11}
-\contentsline {section}{\numberline {2.2}Functional requirements}{6}{section.18}
-\contentsline {subsection}{\numberline {2.2.1}Early version}{7}{subsection.19}
-\contentsline {subsection}{\numberline {2.2.2}Intermediate version}{8}{subsection.26}
-\contentsline {subsubsection}{Ambiguities (and related solutions)}{11}{subsubsection*.37}
-\contentsline {subsection}{\numberline {2.2.3}Final version}{11}{subsection.38}
-\contentsline {section}{\numberline {2.3}Non-functional requirements}{13}{section.46}
-\contentsline {chapter}{\numberline {3}Functional Analysis}{15}{chapter.51}
-\contentsline {section}{\numberline {3.1}Scenario-based requirements analysis}{15}{section.52}
-\contentsline {chapter}{\numberline {4}Prototypation}{19}{chapter.60}
-\contentsline {section}{\numberline {4.1}Early version}{19}{section.61}
-\contentsline {section}{\numberline {4.2}How the early version can be improved}{22}{section.70}
-\contentsline {section}{\numberline {4.3}Late version}{22}{section.71}
-\contentsline {subsection}{\numberline {4.3.1}Modified pages}{23}{subsection.72}
-\contentsline {subsection}{\numberline {4.3.2}Added pages}{30}{subsection.101}
-\contentsline {chapter}{\numberline {5}Implementation}{33}{chapter.105}
-\contentsline {section}{\numberline {5.1}TODO}{36}{section.120}
-\contentsline {chapter}{\numberline {6}Design}{37}{chapter.121}
-\contentsline {section}{\numberline {6.1}Used patterns}{37}{section.122}
-\contentsline {subsection}{\numberline {6.1.1}Clear entry point}{37}{subsection.123}
-\contentsline {subsection}{\numberline {6.1.2}Wizard}{38}{subsection.124}
-\contentsline {subsection}{\numberline {6.1.3}Spatial memory}{38}{subsection.125}
-\contentsline {subsection}{\numberline {6.1.4}Grid of equals}{38}{subsection.126}
-\contentsline {subsection}{\numberline {6.1.5}Responsive enabling}{39}{subsection.127}
-\contentsline {subsection}{\numberline {6.1.6}Progress indicator}{39}{subsection.128}
-\contentsline {subsection}{\numberline {6.1.7}Go Back to a Safe Place}{39}{subsection.129}
-\contentsline {subsection}{\numberline {6.1.8}Modal panel}{40}{subsection.130}
-\contentsline {subsection}{\numberline {6.1.9}Liquid layout}{40}{subsection.131}
-\contentsline {subsection}{\numberline {6.1.10}Hover tools}{41}{subsection.132}
-\contentsline {subsection}{\numberline {6.1.11}Harmless default}{41}{subsection.133}
-\contentsline {subsection}{\numberline {6.1.12}Same-page error messages}{41}{subsection.136}
-\contentsline {subsection}{\numberline {6.1.13}Alternative views}{42}{subsection.137}
+\contentsline {chapter}{\numberline {3}Early version}{7}{chapter.21}
+\contentsline {section}{\numberline {3.1}Functional requirements}{7}{section.22}
+\contentsline {section}{\numberline {3.2}Non-functional requirements}{8}{section.29}
+\contentsline {chapter}{\numberline {4}Intermediate version}{11}{chapter.34}
+\contentsline {section}{\numberline {4.1}Functional requirements}{11}{section.35}
+\contentsline {subsection}{\numberline {4.1.1}Ambiguities (and related solutions)}{14}{subsection.46}
+\contentsline {chapter}{\numberline {5}Final version}{15}{chapter.47}
+\contentsline {section}{\numberline {5.1}Functional requirements}{15}{section.48}
+\contentsline {chapter}{\numberline {6}Requirements}{17}{chapter.56}
+\contentsline {section}{\numberline {6.1}Functional requirements}{17}{section.57}
+\contentsline {subsection}{\numberline {6.1.1}Early version}{17}{subsection.58}
+\contentsline {subsection}{\numberline {6.1.2}Intermediate version}{19}{subsection.65}
+\contentsline {subsubsection}{Ambiguities (and related solutions)}{21}{subsubsection*.76}
+\contentsline {subsection}{\numberline {6.1.3}Final version}{22}{subsection.77}
+\contentsline {section}{\numberline {6.2}Non-functional requirements}{23}{section.85}
+\contentsline {chapter}{\numberline {7}Functional Analysis}{25}{chapter.90}
+\contentsline {section}{\numberline {7.1}Scenario-based requirements analysis}{25}{section.91}
+\contentsline {chapter}{\numberline {8}Prototypation}{29}{chapter.99}
+\contentsline {section}{\numberline {8.1}Early version}{29}{section.100}
+\contentsline {section}{\numberline {8.2}How the early version can be improved}{32}{section.109}
+\contentsline {section}{\numberline {8.3}Late version}{32}{section.110}
+\contentsline {subsection}{\numberline {8.3.1}Modified pages}{33}{subsection.111}
+\contentsline {subsection}{\numberline {8.3.2}Added pages}{40}{subsection.140}
+\contentsline {chapter}{\numberline {9}Implementation}{43}{chapter.144}
+\contentsline {section}{\numberline {9.1}TODO}{46}{section.159}
+\contentsline {chapter}{\numberline {10}Design}{47}{chapter.160}
+\contentsline {section}{\numberline {10.1}Used patterns}{47}{section.161}
+\contentsline {subsection}{\numberline {10.1.1}Clear entry point}{47}{subsection.162}
+\contentsline {subsection}{\numberline {10.1.2}Wizard}{48}{subsection.163}
+\contentsline {subsection}{\numberline {10.1.3}Spatial memory}{48}{subsection.164}
+\contentsline {subsection}{\numberline {10.1.4}Grid of equals}{48}{subsection.165}
+\contentsline {subsection}{\numberline {10.1.5}Responsive enabling}{49}{subsection.166}
+\contentsline {subsection}{\numberline {10.1.6}Progress indicator}{49}{subsection.167}
+\contentsline {subsection}{\numberline {10.1.7}Go Back to a Safe Place}{49}{subsection.168}
+\contentsline {subsection}{\numberline {10.1.8}Modal panel}{50}{subsection.169}
+\contentsline {subsection}{\numberline {10.1.9}Liquid layout}{50}{subsection.170}
+\contentsline {subsection}{\numberline {10.1.10}Hover tools}{51}{subsection.171}
+\contentsline {subsection}{\numberline {10.1.11}Harmless default}{51}{subsection.172}
+\contentsline {subsection}{\numberline {10.1.12}Same-page error messages}{51}{subsection.175}
+\contentsline {subsection}{\numberline {10.1.13}Alternative views}{52}{subsection.176}

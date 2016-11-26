@@ -1,253 +1,59 @@
-% Chapter 4
+% Chapter 1
 
-\chapter{Prototypation} % Main chapter title
+\chapter{Intermediate version} % Main chapter title
 
-\label{Chapter4} % For referencing the chapter elsewhere, use \ref{Chapter4} 
+\label{Chapter4} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
-%----------------------------------------------------------------------------------------
+In this chapter the features of the intermediate version are exposed.
 
-\section{Early version}
+\section{Functional requirements}
 
-This version is very simple and it contains only the basic functionalities. 
-The goal of this version are: to understand if this kind of system can be useful for the users, and experiment some technical solutions to create the features needed to achieve the goals. At this stage the application is evidently incomplete, there are numerous deficiencies and inconsistencies and the goals of the Human Machine Interaction are ignored. All this point are corrected in the second version, and this first version can be used to show a "before-after comparison".
-GAn Web is a web application (as the name suggests) so the interface is created using HTML and CSS. This languages are very advanced and allows the programmer to create and modify an interface very easily. The framework Bootstrap, used in this project, even improves the performances of these languages. So all the prototypes are directly created by code, without paper-based mock ups.
-
-Following are visible some part of the early prototype, with very simple features.
-
-\begin{enumerate}
-\item The homepage:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{HomePageOLD.png} 
-\caption{The early homepage of gAn Web}
-\end{figure}
-
-It is quite clear: There is the AEgIS Logo, an input field where the user can insert a run number (only one in this version) and a "Send" button to start the analysis (using gAn). A button "Edit Configuration File" allows the user to  enter in the page dedicated to the configuration of the program.
-
-\item The text output page:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{TextOutputOLD.png} 
-\caption{The early page related to the textual output of gAn Web}
-\end{figure}
-  
-The textual result of the computation is visible: it seems to be too long and incomprehensible, but for physicists it is quite clear. The graphics is very minimalist, there is only one button: "Look at the images", that sends the user to the page related to the images. 
-
-
-
-\item The page related to the images:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{AllImagesPageOLD.png} %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO SISTEMA STOCAZZO DI IMMAGINE
-\caption{The page able to show the output images in the early prototype}
-\end{figure}   
-
-This page shows the images in a dynamic framework, that the user can edit.
-The user can choose by dropdown menus the dimension, the layout ("vertical", if he prefers the images disposed vertically one above the other, "carousel" if he prefers the images organized horizontally, navigable by a "next" button and a "previous" button), the group to show (each image belongs to a group, each group usually is composed by 2-3 images). Clicking on a image the user can open it in a full page version (but it is still a static image, a png).
-
-
-
-\item The page that aims to edit the configuration file:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{EditConfigOLD.png}  
-\caption{The configuration page}
-\end{figure}   
-
-This page allows the user to choose by radio buttons (modified using Bootstrap graphic) the value to insert in the configuration file of gAn. Radio buttons force users to insert correct values.    
-
-\end{enumerate}
-
-\section{How the early version can be improved}
-The early version's goal is just to be a demo. In particular, it is based on the assumption that the user knows in every moment all about gAn (how does it works,  what is the meaning of each field of the configuration file, etcetera). It can be improved literally in every point, according with the principles of the Human Machine Interaction.
-
-
-\section{Late version}
-
-The late version is based on the early version, some pages (and functionalities) are added, some existing pages are improved. Following all modifications are explained.
-
-\subsection{Modified pages}
-The homepage:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{HomePageEmpty.png} 
-\caption{The homepage of gAn Web without input}
-\end{figure}
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{HomePage.png} 
-\caption{The homepage of gAn Web ready to start}
-\end{figure}
-
-There are some modifications:
+The intermediate version (from now "gAn Web v2") is more complex than the first one. It was born from the tips and the observation of the pilot users. The modifications are not numerous, but there are a lot of additions of new features. All the new required characteristics are exposed following:
 
 \begin{enumerate}
 
-\item The user is informed about what is the last existing run: he can read "last existing run: nnnnn, from dd/mm/yy". This point is important because in most cases the user searches results regarding the lasts 10 runs.
+% 1
+\item The user can insert multiple runs: separated by a semicolon (but in case of errors the system can automatically correct them replacing symbols like "-" or "," or "." with semicolons and giving a more robust service). These runs can be inserted by an input field of by a range select button: this button open a "modal" that allows the user to chose the first run and the last, and automatically insert the comprised runs (for example, if the user inserts 30000 and 30010 the system inserts automatically all the run numbers between 30000 and 30010). This modal has a validation system, that ensure the correctness of the inserted values. It is not perfectly clear if this solution fit the needs of the users, but the tests with the whole users group will probably solve this doubt. 
 
-\item The button named "send" was unclear, the word "START" is more clear, the user can immediately understand that the goal of this button is to start gAn. The button is red and unclickable if there are problems (like in the following image) with the inserted runs (or if the input field is empty), green and clickable if there are no problems.	
+% 2
+\item The user can chose which kind of analysis execute. At this point the different analysis are related to the different branches of gAn that at this stage an heterogeneous group of programmers are developing and uploading on Gitlab. It is no clear which of these branches will be definitive and which no, lo the program must be able to use all of them. The type of the analysis depends on the version of gAn downloaded and used for the execution of the program. In gAn Web v2 five complete branches exist, but in the future they can became more. They are externally very similar, the differences are the algorithms in the program, but they give a different output (different output but in the same format: text and images). 
+At this stage is not clear if all this different versions will be used for the final application, to clarify this point the best solution is observe directly the user's behavior. 
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{ErrorInputHomepage.png}  
-\caption{The "Start" button is red if the values in the input field are invalid}
-\end{figure}
+% 3
+\item The configuration file is not only in text format, but also can be in xml format (it depends on the selected version of gAn). The xml ensures a stronger structure, and must be transparent to the user (he mustn't see differences between the configurator that works with a txt file and the one that works with xml). At this stage both text format and xml format are acceptable, to ensure the retro-compatibility of some analysis, but is possible that in further versions the xml-based design will became dominant. 
 
-When the user clicks start a progress bar appears. Unfortunately it is very hard to understand exactly how long the computation will last, because different runs can take different time (it depends on the amount of data that the sensors take about the run, and on the workload of the server machine, that is in common with other applications). On average is observed that the computation take five seconds multiplied by the number of selected runs, but if another user asked for that computation before the system already has the results in memory and the computation is faster. A wait of several seconds can be not comfortable for the user, the progress bar is imprecise but ensure to the user that the system is working correctly to ensure the correct answer. In the following image the progress bar:
+%4
+\item The user can chose what version of Root he wants to use for the program. Theoretically different versions of Root are perfectly compatible, but in practice each version of gAn is designed to work with a particular version of Root and to avoid problems it seems to be a good idea to allows the user to choose freely which version of Root use among the installed versions on the server.  
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{ProgressBar.png}  
-\caption{The progress aimed to make more comfortable the user's waiting}
-\end{figure}
+%5
+\item The user can save images on his hard disk: he can chose from the shown images in the images page an image to download by clicking on a specific download button near the image. Furthermore there is another button "Download All" with whom the user can simple download all the output images.
 
+%6 
+\item The user can download a reduced version of the root file with informations about the images and the results: gAn produce this kind of files as "half-processed" during the computing, and it is not a problem to save this on the hard disk of the server in a specified folder. For an expert user can be scientifically interesting have this file (this root file contain more information than the output, the most of this information is useless [it is an "half-processed" file] , but sometimes an expert user can find something interesting), so the user must have the opportunity to download this.     
 
+% 7
+\item The first little group of user prefers the dropdown menu to the radio button, so all the radio buttons in the program are replaced by dropdown menus.
 
-\item The input field has a place-holder, that shows to the user how to correctly insert the runs separated by semicolon (there is an automatic system that corrects the inserted values if the separator is not a semicolon)
- 
-\item It is possible to insert a group of runs selecting them by range (inserting the first and the last): the button "Add runs by range" opens a modal (shown in the image). The user can choose the minimum and the maximum of the range, the system validates the inserted values (maximum must be more that minimum, they must be numbers etcetera).
+% 8
+\item The user has to access not only to a png image, but to a root-image. This kind of image is interactive: the user can with a left click of the mouse (a continued click, like the "dragging") select parts of the image and zoom them, and with a right click do dynamically some kind of image processing (set colors, chose  what kind of chart to show, modify the chart legend, translate in a 3D space the image etcetera). In this way each user can choose freely which information he wants see in the image (try to overseen user's needs in this part seems to be too difficult and not useful).
+All of this must be done by the user through a browser window. This requisite seems to be quite complex, but Root provides libraries (these libraries work well but they are poorly documented) to interact with Javascript, and can in some way resolve the problem.  
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{RangeRunsModal.png}  
-\caption{The modal opened by clicking the button "Add runs by range"}
-\end{figure}
+% 9
+\item In the homepage the user can see the run number of the last root file produced by the machine, and its creation date and time (so, he can understand what is the maximum of the range of the insertable numbers). Also, the run number is an unit of measurement of the time, so through this number the user can have information about the progress of the experiment.  
 
-\item There is a little message "You are using: nameOfGAnBranch" that informs the user about which is the branch of gAn used by default if he doesn't change the configuration (the default branch is the last used, because usually when a group of users starts to use a branch, it continues to use it for some days)
+In the intermediate version there was another functional requisite: ideally the user should have been able to select a gAn version also if not installed in the server machine: in this case the system should have been capable to automatically search on the AEgIS Gitlab repository the correct version (if existing), download it, unpack it in the server, and use it to execute the program. 
+After some discussion this requirement has been cancelled, because it was considered complex, basically useless, and potentially harmful (on the branches of the repository there are untested and incomplete versions, that can create if executed wrong outputs, so wrong scientific results). At this moment installing manually the stable versions of gAn on the server seems to be a more smart way to work.
 
-\item There are two new buttons: "Choose Root version", "Choose gAn version". These buttons redirect the user to pages able to modify the version of Root and gAn used in the computation.
- 
-\item Each button and each field have a tooltip: a little explaining text that appears when the user moves the mouse over the object. In this way an inexperienced user can easily understand what each component does.  
-
-\end{enumerate}
+% 10
+\item There is a login system: the user must insert the password of the office to use the system. The authentication is based on the confrontation between the hash function of the inserted password and the hash function of the AEgIS password. If the password is correct the user receives a cookie, before each action in the site the server request and check this cookie to be sure about the identity of the user.  
 
 
-The page related to the modifications of the configuration file of gAn:
+\subsection{Ambiguities (and related solutions)}
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{EditConfig.png} 
-\caption{The edit-configurator page of gAn Web}
-\end{figure}
+At least a point seems to be quite ambiguous: 
 
-This page doesn't use anymore radio buttons, because some users ask the developers to use dropdown menus (for aesthetic reasons). The user can read near the button the currently selected value for each field. There aren't tool-tips able to describe the signification of each field here, because the users to which gAn Web is intended have a perfect understanding of the names and the features of each sensor (mimito, scint, farcup, etcetera are sensors).  
-
-
-
-The page that shows the textual output of gAn is exposed in the following images, has some modifications:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{TextOutputPage.png} 
-\caption{The page who shows the textual output of gAn}
-\end{figure}
-
-
-\begin{enumerate}
-\item The user can choose what results he wants to show on the screen by clicking the corresponding run number from the "navbar", like in the image:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{WhichRunNavbar.png} 
-\caption{By this "navbar" the user can choose the run results to show}
-\end{figure}
-
-This navbar is in fixed position related to the screen, and can be dragged by the user to allow him to decide where put it.
-
-\item "Download Root File of: nnnn" is a button that allows to user to download the semi-processed file .root with some output information regarding the computation.
-
-\item "Back to Home" gives the user the opportunity to directly return to the homepage. 
-
-\item "Back to Home" and "Look at the images" are in a fixed position on the screen: also if the user scrolls down or up the screen he is always able to see these buttons.    
+The textual output of gAn needs to be formatted in some way to be more organized and clear? 
+The answer is difficult: for a non-physicists this output seems to be disordered, too long, with too many groups of informations, and very difficult to understand, but on this question the pilot users (that are physicists) questioned answered that the output is perfectly clear and doesn't need to be modified or improved in any way. The only requests of the users were about the font and the font-size. To check this fact the best solution probably is observe the behavior of the users at work, and eventually ask them informations about that.
+Anyway, in the second version, in case of multiple run selection, there is a "navbar" that allows the user to show only a run-result per time.
 
 \end{enumerate}
-The page that shows in an organized way the images that gAn produces in output. The following image shows the new appearance of the page:
-
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{AllImagesPage.png} 
-\caption{This page shows all the images that gAn produces in output}
-\end{figure}
-
-
-Modifications:
-\begin{enumerate}
-
-\item The dropdown menu "Runs to show" allows the user to select only the images produced by a single run (by default the system shows the images related to all the runs). The users widely use this option, because in this way they can compare images extrapolated in the same way but related with runs with different configurations.
-
-\item "Download All Images" allows the user to download by a single click all the images related to the execution. The late design introduces this requirement because commonly the users want to download the images using the right click of the mouse and the browser's button "Save Image As". In this way this process is faster and easier.
-
-\item The buttons "Back to Previous page" and "Back to Home" are links towards the textual output page and the homepage. They are in fixed position.
-
-\item By clicking on the image the user reaches a page that shows the image in full screen, but not in a static format: the image is dynamically accessible like shown in the following images:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{RootLikeImage2.png} 
-\caption{Moving the cursor the system shows the value of this histogram in the selected point}
-\end{figure}
-
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{RootLikeImage.png} 
-\caption{The user can modify numerous settings in the generated image}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{RootLikeImage3.png} 
-\caption{The user can show the histogram not only in traditional format, but also in a numerical format where the numbers are the value of the function in their position}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{RootLikeImage4.png} 
-\caption{Another solution is to generate a 3d image in lego-style of the histogram}
-\end{figure}
-
-
- 
-\end{enumerate}
-
-
-\subsection{Added pages}
-
-Some pages in the late version are completely new, because they implement new functionalities.
-
-The first new page that the user sees is the login page. It is very simple, it doesn't authenticate a single user, but asks only the password of the office. This basic system of authentication aims simply to ensure that only the people that works in AEgIS experiment can use this software.
-
-Following the login page image:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{Login.png} 
-\caption{Simple login page}
-\end{figure}
-
-In the late version there is also the opportunity for the user to choose which branch of gAn and which version of Root Framework to use to execute the program. The pages that the user can user are quite similar, and quite simple. The user must use dropdown menus to make these choices, and there is always a default safe choice (the system remembers the last working version of Root and the last working branch of gAn), so it is impossible make errors or inconsistent choices. 
-
-Following there are some screen-shots of these pages
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{RootVersionChoice.png} 
-\caption{Page where the user can choose the Root version to use}
-\end{figure}
- 
- 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{ChoosegAnBranch.png} 
-\caption{Page where the user can choose the Root version to use}
-\end{figure}

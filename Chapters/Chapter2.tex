@@ -1,12 +1,12 @@
 % Chapter 1
 
-\chapter{Requirements} % Main chapter title
+\chapter{Organization of the project} % Main chapter title
 
 \label{Chapter2} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
 %----------------------------------------------------------------------------------------
 
-First of all is important to analyse which are the requirements of gAn web (and how gAn web can improve the performances of gAn). 
+We can firstly explain how this project is organized:
 
 \section{The role of the designer and the users}
 In this design process the interaction between designer and users is very strict: in fact for about 2 months, divided in blocks of more of less 2 weeks, the designer has worked together directly with the users. 
@@ -46,139 +46,21 @@ The third stage is the final stage. At this point the application is modified to
 
 \end{enumerate}
 
-\section{Functional requirements}
-The definition of functional requirements aims to specifying in detail what the web application can do, and in which way an user can use it. The development of gAn web is divided in three stages, so the requirements are peculiar and different for each stage, and following they are exposed divided in the three groups: 
+According to this division we can organize the following chapters in this way:
+each chapter is related to a stage of the development.
+For each of the three stages of the development this document will explain:
 
-\subsection{Early version}
-The first version (from now "gAn web v1") is a very simple application: instead of access the program by a linux terminal like gAn, in gAn web v1, the user can 
-use the program through a graphical interface. 
-The requirements of this version are the following:
-\begin{enumerate}
+\begin {enumerate}
 
-% 1
-\item The user, in the homepage, can chose the run (only one run, for the moment) in which he is interested, using a input field. This field has validator, able to understand if the run number is inserted, if it is effectively a number, and if it is in an acceptable range. The user receives an explaining and precise error message directly on the homepage if the input field is empty and if the inserted value is not acceptable. It is always possible validate the inserted run and ensure that the related Root file exists? No, because in some moments some sensors don't work properly and it is inevitable that some root files related to some runs are incomplete, or even inexistent.
-
-% 2
-\item At this moment there is only a generic idea about what kind of analysis can be useful for the user, so in this version there will be only a generic analysis, able to dump in text all the possible information, and a group of example images (this is useless for the goal of the scientific research, but very useful to improve the understand the needed features of the web interface).
-At this stage is not clear if the type of analysis will be chosen by the user of automatically selected by the program , so in gAn web v1 there are no buttons able to allow the user to select the type of analysis (this point will be reconsidered in next versions).
-
-% 3
-\item The user can start the program with a single click, by a button (usable only if the inserted number is valid).
-
-% 4
-\item When the program is executed the user can see the text output on the screen. This text is clear for a physicist (it is not clear for a person who doesn't have a specific preparation). 
-
-% 5
-\item When the program is executed the user can see the output images by clicking a button that link to a images-page. The images are ordered and organized by groups (the groups are related about which sensor takes the information necessary to create the image). The user can decide if he prefers to see the image in a little, medium or big format. The user can also decide if the images are distributed in the screen vertically or through a "carousel layout". The user can access the image in full-screen by clicking on it: he is redirected to a page with the image shown in full screen, and can return back to the all-images page by a return button. It is absolutely important to understand exactly which information are interesting for the users, and show in the images only them and all of them, this point will be solved with a confrontation with the pilot-users. 
-
-%6
-\item The user can modify a configuration file (a .txt file on the server), by a web interface. In this files there are some values the need to be setted (otherwise it uses default values), and the user can do it by radio buttons (in this way he is forced to chose valid values). This configuration file can modify the way in which gAn works and modify the resulting output (both the text and the images).   
-
-\end{enumerate}
-
-\subsection{Intermediate version}
-The intermediate version (from now "gAn Web v2") is more complex. It was born from the tips and the observation of the pilot users. The modifications are not numerous, but there are a lot of additions of new features. All the new required characteristics are exposed following:
-
-\begin{enumerate}
-
-% 1
-\item The user can insert multiple runs: separated by a semicolon (but in case of errors the system can automatically correct them replacing symbols like "-" or "," or "." with semicolons and giving a more robust service). These runs can be inserted by an input field of by a range select button: this button open a "modal" that allows the user to chose the first run and the last, and automatically insert the comprised runs (for example, if the user inserts 30000 and 30010 the system inserts automatically all the run numbers between 30000 and 30010). This modal has a validation system, that ensure the correctness of the inserted values. It is not perfectly clear if this solution fit the needs of the users, but the tests with the whole users group will probably solve this doubt. 
-
-% 2
-\item The user can chose which kind of analysis execute. At this point the different analysis are related to the different branches of gAn that at this stage an heterogeneous group of programmers are developing and uploading on Gitlab. It is no clear which of these branches will be definitive and which no, lo the program must be able to use all of them. The type of the analysis depends on the version of gAn downloaded and used for the execution of the program. In gAn Web v2 five complete branches exist, but in the future they can became more. They are externally very similar, the differences are the algorithms in the program, but they give a different output (different output but in the same format: text and images). 
-At this stage is not clear if all this different versions will be used for the final application, to clarify this point the best solution is observe directly the user's behavior. 
-
-% 3
-\item The configuration file is not only in text format, but also can be in xml format (it depends on the selected version of gAn). The xml ensures a stronger structure, and must be transparent to the user (he mustn't see differences between the configurator that works with a txt file and the one that works with xml). At this stage both text format and xml format are acceptable, to ensure the retro-compatibility of some analysis, but is possible that in further versions the xml-based design will became dominant. 
-
-%4
-\item The user can chose what version of Root he wants to use for the program. Theoretically different versions of Root are perfectly compatible, but in practice each version of gAn is designed to work with a particular version of Root and to avoid problems it seems to be a good idea to allows the user to choose freely which version of Root use among the installed versions on the server.  
-
-%5
-\item The user can save images on his hard disk: he can chose from the shown images in the images page an image to download by clicking on a specific download button near the image. Furthermore there is another button "Download All" with whom the user can simple download all the output images.
-
-%6 
-\item The user can download a reduced version of the root file with informations about the images and the results: gAn produce this kind of files as "half-processed" during the computing, and it is not a problem to save this on the hard disk of the server in a specified folder. For an expert user can be scientifically interesting have this file (this root file contain more information than the output, the most of this information is useless [it is an "half-processed" file] , but sometimes an expert user can find something interesting), so the user must have the opportunity to download this.     
-
-% 7
-\item The first little group of user prefers the dropdown menu to the radio button, so all the radio buttons in the program are replaced by dropdown menus.
-
-% 8
-\item The user has to access not only to a png image, but to a root-image. This kind of image is interactive: the user can with a left click of the mouse (a continued click, like the "dragging") select parts of the image and zoom them, and with a right click do dynamically some kind of image processing (set colors, chose  what kind of chart to show, modify the chart legend, translate in a 3D space the image etcetera). In this way each user can choose freely which information he wants see in the image (try to overseen user's needs in this part seems to be too difficult and not useful).
-All of this must be done by the user through a browser window. This requisite seems to be quite complex, but Root provides libraries (these libraries work well but they are poorly documented) to interact with Javascript, and can in some way resolve the problem.  
-
-% 9
-\item In the homepage the user can see the run number of the last root file produced by the machine, and its creation date and time (so, he can understand what is the maximum of the range of the insertable numbers). Also, the run number is an unit of measurement of the time, so through this number the user can have information about the progress of the experiment.  
-
-In the intermediate version there was another functional requisite: ideally the user should have been able to select a gAn version also if not installed in the server machine: in this case the system should have been capable to automatically search on the AEgIS Gitlab repository the correct version (if existing), download it, unpack it in the server, and use it to execute the program. 
-After some discussion this requirement has been cancelled, because it was considered complex, basically useless, and potentially harmful (on the branches of the repository there are untested and incomplete versions, that can create if executed wrong outputs, so wrong scientific results). At this moment installing manually the stable versions of gAn on the server seems to be a more smart way to work.
-
-% 10
-\item There is a login system: the user must insert the password of the office to use the system. The authentication is based on the confrontation between the hash function of the inserted password and the hash function of the AEgIS password. If the password is correct the user receives a cookie, before each action in the site the server request and check this cookie to be sure about the identity of the user.  
-
-
-\subsubsection{Ambiguities (and related solutions)}
-
-At least a point seems to be quite ambiguous: 
-
-The textual output of gAn needs to be formatted in some way to be more organized and clear? 
-The answer is difficult: for a non-physicists this output seems to be disordered, too long, with too many groups of informations, and very difficult to understand, but on this question the pilot users (that are physicists) questioned answered that the output is perfectly clear and doesn't need to be modified or improved in any way. The only requests of the users were about the font and the font-size. To check this fact the best solution probably is observe the behavior of the users at work, and eventually ask them informations about that.
-Anyway, in the second version, in case of multiple run selection, there is a "navbar" that allows the user to show only a run-result per time.
-
-
-\end{enumerate}
-
-\subsection{Final version}
-The last version (from now "gAn Web v3") is a modified version of the intermediate version. 
-The second version's modification come from two sources: some adding requirements are proposed from the pilot users (that are also supervisors); These adding requirements are the following:
-
-\begin{enumerate}
-%1 chose analysis new way
-\item 
-The main kinds of analysis are now more clear: they are 4-5, and they are     quite stable. Their role and when they are useful is now steadily fixed. Each user, according on his task, knows (should know) in every moment which analysis fits better the situation, so, the best solution is allows the user to choose the type of the analysis through a dropdown menu directly in the main page (exactly like he chooses the run number). At this point the possibility of choose the gAn version is useless, because the definitive version of gAn include all the existing types of analysis. 
-
-%2 single vs multiple
-\item 
-The kind of use of this software is quite different if you decide to work with a single run or a group of runs, so is better if at the beginning the user chose directly if he wants work with a single run or more than one. 
-
-%3 don't choose root version
 \item
-There is an effort in the developing of the whole project to make it independent of the Root version, So the interface won't ask to the user to choose a Root version anymore.
+The requirements of the web interface.
 
-\end{enumerate}
+\item
+The functional analysis of the requirements through some expected scenarios
+
+\item
+The the resulting prototyping (and implementation)  
+
+\end {enumerate} 
+
  
-Furthermore, the version version with this last requirements was tested with the users: the developer studied their behavior observing them at work with the existing version, listening to their comments, and asking them opinion and information. The impact  of the debut with the users highlights some problems to be overcome, and from the analysis and the solution of these problems the requirement of the last version was defined. The problems observed (and for each the proposed solution) are the following:
-
-\begin{enumerate}
-\item 
-It is important to help the user in some way to choose the run number: the user needs a view on the logbook of the run, that is a text in which there are information about each run number divided by date.
-
-\item
-Actually nobody use the button to modify the dimension of the images: they all use the biggest version.. is better to remove (or move in a less central place) this dropdown. A similar reasoning can be done for the dropdown that allows the user to switch between the vertical and carousel menu (everybody use).
-
-\item
-The read of the textual output takes too much time: it can be improved highlighting the most important parts (or better, the most important parts for the selected type of analysis)
-
-\item
-The user need to choose by the configuration page the degree of precision (the minimal error) of the x-axis (the time related axis) of each time-related values images. This parameter seemed to be not very important and in the second version actually there wasn't, but all the users modifies it quite often (manually). So is better to let them to do it by the interface
-
-\end{enumerate}
- 
-\section{Non-functional requirements}
-
-Both versions, the first and the second, have some non-functional requisites:
-
-\begin{enumerate}
-
-\item The first is quite simple: gAn web has to ensure that in case of crash of the program the web server mustn't crash too. The point is that on this web server (Apache server, installed on Linux) there are some other important applications, so, if gAn web crashes it is not a big problem, but the crash cannot force Apache, or worst the entire machine, to stop or restart. 
-This requisite is quite easy to meet: a modern web application based on Html, Javascript, PHP and CSS is quite safe, a general crash of the server it is very unlikely to happen. If the C++ application or some Root libraries crashes (for example if the user asks for an inexistent run) the web application gracefully warn the user about the problem, but without uncontrolled behaviours.  
-
-\item The application must work without install nothing. Also this requirement is very easy to meet: gAn Web is a web interface, it requires only a browser, nothing else.
-
-\item The application must be compatible with any machine (except mobile phones, not requested), regardless of hardware, operating system, installed software. Also this requirement is achieved because of gAn Web only needs a browser to be used. 
-
-\item The application must be easy to be modified and extended in the future by persons who aren't necessarily software engineers. The point is that the student who wrote this program is a "momentary collaborator" in the AEgIS experiment, and all the modifications to the program must be done by other people, in most cases physicists. So the best way is to comment in detail the code and keep the code simple (this is a basic good-programming requirement).   
-
-
-\end{enumerate}
-

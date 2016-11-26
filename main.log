@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.4.14)  26 NOV 2016 15:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.4.14)  26 NOV 2016 16:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1214,7 +1214,23 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
  (./main.aux
 (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux) (./Chapters/Chapter3.aux)
-(./Chapters/Chapter4.aux) (./Chapters/Chapter5.aux) (./Chapters/Chapter6.aux))
+(./Chapters/Chapter4.aux) (./Chapters/Chapter5.aux) (./Chapters/Chapter6.aux
+
+LaTeX Warning: Label `Chapter2' multiply defined.
+
+) (./Chapters/Chapter7.aux
+
+LaTeX Warning: Label `Chapter3' multiply defined.
+
+) (./Chapters/Chapter8.aux
+
+LaTeX Warning: Label `Chapter4' multiply defined.
+
+) (./Chapters/Chapter9.aux
+
+LaTeX Warning: Label `Chapter5' multiply defined.
+
+) (./Chapters/Chapter10.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
@@ -1461,7 +1477,7 @@ Package hyperref Warning: Suppressing link with empty target on input line 93.
 Package hyperref Warning: Suppressing link with empty target on input line 103.
 
 
-<Chapters/images/Logo.png, id=148, 120.45pt x 116.8365pt>
+<Chapters/images/Logo.png, id=184, 120.45pt x 116.8365pt>
 File: Chapters/images/Logo.png Graphic file (type png)
 
 <use Chapters/images/Logo.png>
@@ -1519,7 +1535,7 @@ Overfull \hbox (2.01842pt too wide) in paragraph at lines 40--42
 e CERN's
  []
 
-[2] <Chapters/images/GeneralGAnSchema.png, id=232, 626.34pt x 262.73157pt>
+[2] <Chapters/images/GeneralGAnSchema.png, id=277, 626.34pt x 262.73157pt>
 File: Chapters/images/GeneralGAnSchema.png Graphic file (type png)
 
 <use Chapters/images/GeneralGAnSchema.png>
@@ -1542,69 +1558,146 @@ Overfull \hbox (7.95732pt too wide) in paragraph at lines 39--42
 func-
  []
 
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 52.
-[6] [7]
-Overfull \hbox (2.97707pt too wide) in paragraph at lines 75--76
+) [6]
+\openout2 = `Chapters/Chapter3.aux'.
+
+ (./Chapters/Chapter3.tex
+Chapter 3.
+1: section
+[7
+
+
+
+]
+Overfull \hbox (2.97707pt too wide) in paragraph at lines 33--34
 []\T1/ppl/m/n/12 The user can mod-ify a con-fig-u-ra-tion file (a .txt file on 
 the server),
  []
 
-[8] [9]
-Overfull \hbox (6.6967pt too wide) in paragraph at lines 113--115
-\T1/ppl/m/n/12 ment in-stalling man-u-ally the sta-ble ver-sions of gAn on the 
-server
- []
-
-[10] [11] [12]
-Overfull \hbox (4.39304pt too wide) in paragraph at lines 178--179
+[8]
+Overfull \hbox (4.39304pt too wide) in paragraph at lines 49--50
 \T1/ppl/m/n/12 ing sys-tem, in-stalled soft-ware. Also this re-quire-ment is ac
 hieved
  []
 
 
-Overfull \hbox (2.73709pt too wide) in paragraph at lines 180--181
+Overfull \hbox (2.73709pt too wide) in paragraph at lines 51--52
 \T1/ppl/m/n/12 the fu-ture by per-sons who aren't nec-es-sar-ily soft-ware en-g
 i-neers.
  []
 
 
-Overfull \hbox (4.38042pt too wide) in paragraph at lines 180--181
+Overfull \hbox (4.38042pt too wide) in paragraph at lines 51--52
 \T1/ppl/m/n/12 men-tary col-lab-o-ra-tor" in the AEgIS ex-per-i-ment, and all t
 he mod-
  []
 
 
-Overfull \hbox (8.44946pt too wide) in paragraph at lines 180--181
+Overfull \hbox (8.44946pt too wide) in paragraph at lines 51--52
 \T1/ppl/m/n/12 code and keep the code sim-ple (this is a ba-sic good-programmin
 g
  []
 
-) [13]
-\openout2 = `Chapters/Chapter3.aux'.
-
- (./Chapters/Chapter3.tex [14
-
-
-
-]
-Chapter 3.
-1: section
-[15]
-Overfull \hbox (3.76999pt too wide) in paragraph at lines 24--26
-\T1/ppl/m/n/12 a page in which, through some drop-down menus, he can change
- []
-
-[16]) [17]
+) [9]
 \openout2 = `Chapters/Chapter4.aux'.
 
- (./Chapters/Chapter4.tex [18
+ (./Chapters/Chapter4.tex [10
 
 
 
 ]
 Chapter 4.
-<Chapters/images/HomePageOLD.png, id=342, 1305.87875pt x 746.79pt>
+1: section
+[11] [12]
+Overfull \hbox (6.6967pt too wide) in paragraph at lines 44--46
+\T1/ppl/m/n/12 ment in-stalling man-u-ally the sta-ble ver-sions of gAn on the 
+server
+ []
+
+[13]
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 51.
+) [14]
+\openout2 = `Chapters/Chapter5.aux'.
+
+ (./Chapters/Chapter5.tex
+Chapter 5.
+1: section
+[15
+
+
+
+]) [16]
+\openout2 = `Chapters/Chapter6.aux'.
+
+ (./Chapters/Chapter6.tex
+Chapter 6.
+1: section
+[17
+
+
+
+]
+Overfull \hbox (2.97707pt too wide) in paragraph at lines 36--37
+[]\T1/ppl/m/n/12 The user can mod-ify a con-fig-u-ra-tion file (a .txt file on 
+the server),
+ []
+
+[18] [19] [20]
+Overfull \hbox (6.6967pt too wide) in paragraph at lines 74--76
+\T1/ppl/m/n/12 ment in-stalling man-u-ally the sta-ble ver-sions of gAn on the 
+server
+ []
+
+[21] [22] [23]
+Overfull \hbox (4.39304pt too wide) in paragraph at lines 139--140
+\T1/ppl/m/n/12 ing sys-tem, in-stalled soft-ware. Also this re-quire-ment is ac
+hieved
+ []
+
+
+Overfull \hbox (2.73709pt too wide) in paragraph at lines 141--142
+\T1/ppl/m/n/12 the fu-ture by per-sons who aren't nec-es-sar-ily soft-ware en-g
+i-neers.
+ []
+
+
+Overfull \hbox (4.38042pt too wide) in paragraph at lines 141--142
+\T1/ppl/m/n/12 men-tary col-lab-o-ra-tor" in the AEgIS ex-per-i-ment, and all t
+he mod-
+ []
+
+
+Overfull \hbox (8.44946pt too wide) in paragraph at lines 141--142
+\T1/ppl/m/n/12 code and keep the code sim-ple (this is a ba-sic good-programmin
+g
+ []
+
+) [24]
+\openout2 = `Chapters/Chapter7.aux'.
+
+ (./Chapters/Chapter7.tex
+Chapter 7.
+1: section
+[25
+
+
+
+]
+Overfull \hbox (3.76999pt too wide) in paragraph at lines 24--26
+\T1/ppl/m/n/12 a page in which, through some drop-down menus, he can change
+ []
+
+[26]) [27]
+\openout2 = `Chapters/Chapter8.aux'.
+
+ (./Chapters/Chapter8.tex [28
+
+
+
+]
+Chapter 8.
+<Chapters/images/HomePageOLD.png, id=460, 1305.87875pt x 746.79pt>
 File: Chapters/images/HomePageOLD.png Graphic file (type png)
 
 <use Chapters/images/HomePageOLD.png>
@@ -1613,16 +1706,16 @@ Package pdftex.def Info: Chapters/images/HomePageOLD.png used on input line 22.
 (pdftex.def)             Requested size: 326.46889pt x 186.69704pt.
 
 1: section
-[19] <Chapters/images/TextOutputOLD.png, id=349, 1305.87875pt x 746.79pt>
+[29] <Chapters/images/TextOutputOLD.png, id=466, 1305.87875pt x 746.79pt>
 File: Chapters/images/TextOutputOLD.png Graphic file (type png)
 
 <use Chapters/images/TextOutputOLD.png>
 Package pdftex.def Info: Chapters/images/TextOutputOLD.png used on input line 3
 2.
 (pdftex.def)             Requested size: 326.46889pt x 186.69704pt.
- [20 <./Chapters/images/HomePageOLD.png> <./Chapters/images/TextOutputOLD.png>]
+ [30 <./Chapters/images/HomePageOLD.png> <./Chapters/images/TextOutputOLD.png>]
 
-<Chapters/images/AllImagesPageOLD.png, id=357, 1305.87875pt x 746.79pt>
+<Chapters/images/AllImagesPageOLD.png, id=474, 1305.87875pt x 746.79pt>
 File: Chapters/images/AllImagesPageOLD.png Graphic file (type png)
 
 <use Chapters/images/AllImagesPageOLD.png>
@@ -1630,30 +1723,30 @@ Package pdftex.def Info: Chapters/images/AllImagesPageOLD.png used on input lin
 e 44.
 (pdftex.def)             Requested size: 326.46889pt x 186.69704pt.
 
-<Chapters/images/EditConfigOLD.png, id=358, 1305.87875pt x 746.79pt>
+<Chapters/images/EditConfigOLD.png, id=475, 1305.87875pt x 746.79pt>
 File: Chapters/images/EditConfigOLD.png Graphic file (type png)
 
 <use Chapters/images/EditConfigOLD.png>
 Package pdftex.def Info: Chapters/images/EditConfigOLD.png used on input line 5
 7.
 (pdftex.def)             Requested size: 326.46889pt x 186.69704pt.
- [21 <./Chapters/images/AllImagesPageOLD.png>] <Chapters/images/HomePageEmpty.p
-ng, id=366, 1305.87875pt x 746.79pt>
+ [31 <./Chapters/images/AllImagesPageOLD.png>] <Chapters/images/HomePageEmpty.p
+ng, id=484, 1305.87875pt x 746.79pt>
 File: Chapters/images/HomePageEmpty.png Graphic file (type png)
 
 <use Chapters/images/HomePageEmpty.png>
 Package pdftex.def Info: Chapters/images/HomePageEmpty.png used on input line 7
 8.
 (pdftex.def)             Requested size: 326.46889pt x 186.69704pt.
- [22 <./Chapters/images/EditConfigOLD.png>] <Chapters/images/HomePage.png, id=3
-72, 1305.87875pt x 746.79pt>
+ [32 <./Chapters/images/EditConfigOLD.png>] <Chapters/images/HomePage.png, id=4
+90, 1305.87875pt x 746.79pt>
 File: Chapters/images/HomePage.png Graphic file (type png)
 
 <use Chapters/images/HomePage.png>
 Package pdftex.def Info: Chapters/images/HomePage.png used on input line 85.
 (pdftex.def)             Requested size: 326.46889pt x 186.69704pt.
- [23 <./Chapters/images/HomePageEmpty.png> <./Chapters/images/HomePage.png>]
-<Chapters/images/ErrorInputHomepage.png, id=380, 1082.0425pt x 211.79124pt>
+ [33 <./Chapters/images/HomePageEmpty.png> <./Chapters/images/HomePage.png>]
+<Chapters/images/ErrorInputHomepage.png, id=498, 1082.0425pt x 211.79124pt>
 File: Chapters/images/ErrorInputHomepage.png Graphic file (type png)
 
 <use Chapters/images/ErrorInputHomepage.png>
@@ -1661,16 +1754,16 @@ Package pdftex.def Info: Chapters/images/ErrorInputHomepage.png used on input l
 ine 99.
 (pdftex.def)             Requested size: 270.50996pt x 52.94768pt.
 
-<Chapters/images/ProgressBar.png, id=381, 1251.67625pt x 204.765pt>
+<Chapters/images/ProgressBar.png, id=499, 1251.67625pt x 204.765pt>
 File: Chapters/images/ProgressBar.png Graphic file (type png)
 
 <use Chapters/images/ProgressBar.png>
 Package pdftex.def Info: Chapters/images/ProgressBar.png used on input line 107
 .
 (pdftex.def)             Requested size: 312.91829pt x 51.19112pt.
- [24 <./Chapters/images/ErrorInputHomepage.png> <./Chapters/images/ProgressBar.
+ [34 <./Chapters/images/ErrorInputHomepage.png> <./Chapters/images/ProgressBar.
 png>]
-<Chapters/images/RangeRunsModal.png, id=391, 1016.79875pt x 451.6875pt>
+<Chapters/images/RangeRunsModal.png, id=509, 1016.79875pt x 451.6875pt>
 File: Chapters/images/RangeRunsModal.png Graphic file (type png)
 
 <use Chapters/images/RangeRunsModal.png>
@@ -1678,15 +1771,15 @@ Package pdftex.def Info: Chapters/images/RangeRunsModal.png used on input line
 119.
 (pdftex.def)             Requested size: 254.19907pt x 112.92159pt.
 
-<Chapters/images/EditConfig.png, id=392, 1305.87875pt x 746.79pt>
+<Chapters/images/EditConfig.png, id=510, 1305.87875pt x 746.79pt>
 File: Chapters/images/EditConfig.png Graphic file (type png)
 
 <use Chapters/images/EditConfig.png>
 Package pdftex.def Info: Chapters/images/EditConfig.png used on input line 136.
 
 (pdftex.def)             Requested size: 326.46889pt x 186.69704pt.
- [25 <./Chapters/images/RangeRunsModal.png>] <Chapters/images/TextOutputPage.pn
-g, id=402, 1305.87875pt x 746.79pt>
+ [35 <./Chapters/images/RangeRunsModal.png>] <Chapters/images/TextOutputPage.pn
+g, id=519, 1305.87875pt x 746.79pt>
 File: Chapters/images/TextOutputPage.png Graphic file (type png)
 
 <use Chapters/images/TextOutputPage.png>
@@ -1699,8 +1792,8 @@ Overfull \hbox (2.25764pt too wide) in paragraph at lines 154--155
 en
  []
 
-[26 <./Chapters/images/EditConfig.png> <./Chapters/images/TextOutputPage.png>]
-<Chapters/images/WhichRunNavbar.png, id=409, 1235.61626pt x 154.5775pt>
+[36 <./Chapters/images/EditConfig.png> <./Chapters/images/TextOutputPage.png>]
+<Chapters/images/WhichRunNavbar.png, id=526, 1235.61626pt x 154.5775pt>
 File: Chapters/images/WhichRunNavbar.png Graphic file (type png)
 
 <use Chapters/images/WhichRunNavbar.png>
@@ -1708,16 +1801,16 @@ Package pdftex.def Info: Chapters/images/WhichRunNavbar.png used on input line
 158.
 (pdftex.def)             Requested size: 308.9033pt x 38.64427pt.
 
-<Chapters/images/AllImagesPage.png, id=410, 1305.87875pt x 746.79pt>
+<Chapters/images/AllImagesPage.png, id=527, 1305.87875pt x 746.79pt>
 File: Chapters/images/AllImagesPage.png Graphic file (type png)
 
 <use Chapters/images/AllImagesPage.png>
 Package pdftex.def Info: Chapters/images/AllImagesPage.png used on input line 1
 77.
 (pdftex.def)             Requested size: 326.46889pt x 186.69704pt.
- [27 <./Chapters/images/WhichRunNavbar.png> <./Chapters/images/AllImagesPage.pn
+ [37 <./Chapters/images/WhichRunNavbar.png> <./Chapters/images/AllImagesPage.pn
 g>]
-<Chapters/images/RootLikeImage2.png, id=422, 1305.87875pt x 746.79pt>
+<Chapters/images/RootLikeImage2.png, id=539, 1305.87875pt x 746.79pt>
 File: Chapters/images/RootLikeImage2.png Graphic file (type png)
 
 <use Chapters/images/RootLikeImage2.png>
@@ -1725,15 +1818,15 @@ Package pdftex.def Info: Chapters/images/RootLikeImage2.png used on input line
 195.
 (pdftex.def)             Requested size: 326.46889pt x 186.69704pt.
 
-<Chapters/images/RootLikeImage.png, id=423, 1305.87875pt x 746.79pt>
+<Chapters/images/RootLikeImage.png, id=540, 1305.87875pt x 746.79pt>
 File: Chapters/images/RootLikeImage.png Graphic file (type png)
 
 <use Chapters/images/RootLikeImage.png>
 Package pdftex.def Info: Chapters/images/RootLikeImage.png used on input line 2
 03.
 (pdftex.def)             Requested size: 326.46889pt x 186.69704pt.
- [28 <./Chapters/images/RootLikeImage2.png>] <Chapters/images/RootLikeImage3.pn
-g, id=433, 1305.87875pt x 746.79pt>
+ [38 <./Chapters/images/RootLikeImage2.png>] <Chapters/images/RootLikeImage3.pn
+g, id=551, 1305.87875pt x 746.79pt>
 File: Chapters/images/RootLikeImage3.png Graphic file (type png)
 
 <use Chapters/images/RootLikeImage3.png>
@@ -1741,23 +1834,23 @@ Package pdftex.def Info: Chapters/images/RootLikeImage3.png used on input line
 209.
 (pdftex.def)             Requested size: 326.46889pt x 186.69704pt.
 
-<Chapters/images/RootLikeImage4.png, id=434, 1305.87875pt x 746.79pt>
+<Chapters/images/RootLikeImage4.png, id=552, 1305.87875pt x 746.79pt>
 File: Chapters/images/RootLikeImage4.png Graphic file (type png)
 
 <use Chapters/images/RootLikeImage4.png>
 Package pdftex.def Info: Chapters/images/RootLikeImage4.png used on input line 
 215.
 (pdftex.def)             Requested size: 326.46889pt x 186.69704pt.
- [29 <./Chapters/images/RootLikeImage.png> <./Chapters/images/RootLikeImage3.pn
+ [39 <./Chapters/images/RootLikeImage.png> <./Chapters/images/RootLikeImage3.pn
 g>]
-<Chapters/images/Login.png, id=441, 1305.87875pt x 746.79pt>
+<Chapters/images/Login.png, id=559, 1305.87875pt x 746.79pt>
 File: Chapters/images/Login.png Graphic file (type png)
 
 <use Chapters/images/Login.png>
 Package pdftex.def Info: Chapters/images/Login.png used on input line 234.
 (pdftex.def)             Requested size: 326.46889pt x 186.69704pt.
- [30 <./Chapters/images/RootLikeImage4.png>]
-<Chapters/images/RootVersionChoice.png, id=447, 1305.87875pt x 746.79pt>
+ [40 <./Chapters/images/RootLikeImage4.png>]
+<Chapters/images/RootVersionChoice.png, id=565, 1305.87875pt x 746.79pt>
 File: Chapters/images/RootVersionChoice.png Graphic file (type png)
 
 <use Chapters/images/RootVersionChoice.png>
@@ -1765,19 +1858,19 @@ Package pdftex.def Info: Chapters/images/RootVersionChoice.png used on input li
 ne 244.
 (pdftex.def)             Requested size: 326.46889pt x 186.69704pt.
 
-<Chapters/images/ChoosegAnBranch.png, id=448, 1305.87875pt x 746.79pt>
+<Chapters/images/ChoosegAnBranch.png, id=566, 1305.87875pt x 746.79pt>
 File: Chapters/images/ChoosegAnBranch.png Graphic file (type png)
 
 <use Chapters/images/ChoosegAnBranch.png>
 Package pdftex.def Info: Chapters/images/ChoosegAnBranch.png used on input line
  251.
 (pdftex.def)             Requested size: 326.46889pt x 186.69704pt.
-) [31 <./Chapters/images/Login.png> <./Chapters/images/RootVersionChoice.png>] 
-[32 <./Chapters/images/ChoosegAnBranch.png>]
-\openout2 = `Chapters/Chapter5.aux'.
+) [41 <./Chapters/images/Login.png> <./Chapters/images/RootVersionChoice.png>] 
+[42 <./Chapters/images/ChoosegAnBranch.png>]
+\openout2 = `Chapters/Chapter9.aux'.
 
- (./Chapters/Chapter5.tex
-Chapter 5.
+ (./Chapters/Chapter9.tex
+Chapter 9.
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 13.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -1788,11 +1881,11 @@ m/n/12 http : / / getbootstrap .
  []
 
 1: section
-[33
+[43
 
 
 
-] <Chapters/images/BootstrapButton.png, id=468, 86.3225pt x 53.19875pt>
+] <Chapters/images/BootstrapButton.png, id=586, 86.3225pt x 53.19875pt>
 File: Chapters/images/BootstrapButton.png Graphic file (type png)
 
 <use Chapters/images/BootstrapButton.png>
@@ -1800,7 +1893,7 @@ Package pdftex.def Info: Chapters/images/BootstrapButton.png used on input line
  22.
 (pdftex.def)             Requested size: 43.16113pt x 26.5993pt.
 
-<Chapters/images/BootstrapNavbar.png, id=469, 1079.03125pt x 58.2175pt>
+<Chapters/images/BootstrapNavbar.png, id=587, 1079.03125pt x 58.2175pt>
 File: Chapters/images/BootstrapNavbar.png Graphic file (type png)
 
 <use Chapters/images/BootstrapNavbar.png>
@@ -1812,7 +1905,7 @@ Overfull \hbox (16.31665pt too wide) in paragraph at lines 31--32
  [][] 
  []
 
-<Chapters/images/BootstrapProgressBar.png, id=470, 1192.455pt x 109.40875pt>
+<Chapters/images/BootstrapProgressBar.png, id=588, 1192.455pt x 109.40875pt>
 File: Chapters/images/BootstrapProgressBar.png Graphic file (type png)
 
 <use Chapters/images/BootstrapProgressBar.png>
@@ -1824,7 +1917,7 @@ Overfull \hbox (56.01556pt too wide) in paragraph at lines 39--40
  [][] 
  []
 
-<Chapters/images/BootstrapInputField.png, id=471, 509.905pt x 76.285pt>
+<Chapters/images/BootstrapInputField.png, id=589, 509.905pt x 76.285pt>
 File: Chapters/images/BootstrapInputField.png Graphic file (type png)
 
 <use Chapters/images/BootstrapInputField.png>
@@ -1832,17 +1925,17 @@ Package pdftex.def Info: Chapters/images/BootstrapInputField.png used on input
 line 49.
 (pdftex.def)             Requested size: 254.95187pt x 38.1424pt.
 
-<Chapters/images/BootstrapDropdownMenu.png, id=472, 229.85875pt x 249.93375pt>
+<Chapters/images/BootstrapDropdownMenu.png, id=590, 229.85875pt x 249.93375pt>
 File: Chapters/images/BootstrapDropdownMenu.png Graphic file (type png)
 
 <use Chapters/images/BootstrapDropdownMenu.png>
 Package pdftex.def Info: Chapters/images/BootstrapDropdownMenu.png used on inpu
 t line 57.
 (pdftex.def)             Requested size: 114.92908pt x 124.96657pt.
- [34 <./Chapters/images/BootstrapButton.png> <./Chapters/images/BootstrapNavbar
+ [44 <./Chapters/images/BootstrapButton.png> <./Chapters/images/BootstrapNavbar
 .png> <./Chapters/images/BootstrapProgressBar.png> <./Chapters/images/Bootstrap
 InputField.png>]
-<Chapters/images/BootstrapTooltip.png, id=485, 196.735pt x 93.34875pt>
+<Chapters/images/BootstrapTooltip.png, id=603, 196.735pt x 93.34875pt>
 File: Chapters/images/BootstrapTooltip.png Graphic file (type png)
 
 <use Chapters/images/BootstrapTooltip.png>
@@ -1850,7 +1943,7 @@ Package pdftex.def Info: Chapters/images/BootstrapTooltip.png used on input lin
 e 67.
 (pdftex.def)             Requested size: 98.36725pt x 46.67426pt.
 
-<Chapters/images/BootstrapModal.png, id=486, 1305.87875pt x 746.79pt>
+<Chapters/images/BootstrapModal.png, id=604, 1305.87875pt x 746.79pt>
 File: Chapters/images/BootstrapModal.png Graphic file (type png)
 
 <use Chapters/images/BootstrapModal.png>
@@ -1862,13 +1955,13 @@ Overfull \hbox (291.58783pt too wide) in paragraph at lines 77--78
  [][] 
  []
 
-[35 <./Chapters/images/BootstrapDropdownMenu.png> <./Chapters/images/BootstrapT
-ooltip.png>]) [36 <./Chapters/images/BootstrapModal.png>]
-\openout2 = `Chapters/Chapter6.aux'.
+[45 <./Chapters/images/BootstrapDropdownMenu.png> <./Chapters/images/BootstrapT
+ooltip.png>]) [46 <./Chapters/images/BootstrapModal.png>]
+\openout2 = `Chapters/Chapter10.aux'.
 
 
-(./Chapters/Chapter6.tex
-Chapter 6.
+(./Chapters/Chapter10.tex
+Chapter 10.
 
 Overfull \hbox (24.56752pt too wide) in paragraph at lines 12--14
 \T1/ppl/m/n/12 pat-terns of this project is the web-site [][]$\T1/pcr/m/n/12 ht
@@ -1876,7 +1969,7 @@ tp : / / designinginterfaces .
  []
 
 1: section
-[37
+[47
 
 
 
@@ -1886,38 +1979,42 @@ Overfull \hbox (2.35393pt too wide) in paragraph at lines 23--24
  to home,
  []
 
-[38] [39] [40] [41]) [42]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 174.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 174.
+[48] [49] [50] [51]) [52]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 178.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 178.
  (./main.aux (./Chapters/Chapter1.aux)
 (./Chapters/Chapter2.aux) (./Chapters/Chapter3.aux) (./Chapters/Chapter4.aux)
-(./Chapters/Chapter5.aux) (./Chapters/Chapter6.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 174.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 174.
+(./Chapters/Chapter5.aux) (./Chapters/Chapter6.aux) (./Chapters/Chapter7.aux)
+(./Chapters/Chapter8.aux) (./Chapters/Chapter9.aux) (./Chapters/Chapter10.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 178.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 178.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 650EE871F93A788E3C92129044F2B79B;5320.
+(rerunfilecheck)             Checksum: 3D93068CA2B29A325103EA9C7BACFCB1;6849.
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29050 strings out of 493304
- 594170 string characters out of 6139871
- 707333 words of memory out of 5000000
- 31919 multiletter control sequences out of 15000+600000
+ 29152 strings out of 493304
+ 595688 string characters out of 6139871
+ 710536 words of memory out of 5000000
+ 31944 multiletter control sequences out of 15000+600000
  34757 words of font info for 61 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 57i,20n,84p,10402b,2237s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,20n,84p,10402b,2238s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb
 >
-Output written on main.pdf (48 pages, 1375473 bytes).
+Output written on main.pdf (58 pages, 1395390 bytes).
 PDF statistics:
- 593 PDF objects out of 1000 (max. 8388607)
- 501 compressed objects within 6 object streams
- 186 named destinations out of 1000 (max. 500000)
- 434 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 723 PDF objects out of 1000 (max. 8388607)
+ 620 compressed objects within 7 object streams
+ 235 named destinations out of 1000 (max. 500000)
+ 506 words of extra memory for PDF output out of 10000 (max. 10000000)
 
