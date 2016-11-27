@@ -54,7 +54,19 @@ This requisite is quite easy to meet: a modern web application based on Html, Ja
 \end{enumerate}
 
 \section{Scenario based functional analysis}
-TODO
+
+Following there are a list of scenarios in which a user achieves a goal by doing a list of steps. The goal of these scenarios is to show in detail how the interaction between the user and the system takes place. In this first version, the complexity of the scenarios is very low. 
+
+\begin{enumerate}
+
+\item The user in interested in the run 31111. In particular he is interested in the peak (the highest value) reached by a sensor named Mimito (this kind of task is very common). At this stage we still not work with kinds of analysis. The user, opened a browser in the homepage, insert the run number and push "Send". He waits some seconds (there is a progress bar) and he arrives in a textual output page. At this point he can search in the text the information in which he is interested (it is a numerical value). Probably he is interested also in a image, to understand spatially where this peak is: he click on the Show Images button, he go in the images pages, he select the group "mimito", and the browser shows him a png image showing an histogram in 3 dimension: on the z-axis there is the peak, he can understand in which place (identified by x-axis and y-axis coordinates), the peak take place, and how is shaped the resulting 3-d figure. From there he can return to the homepage and do another task.   
+
+\item The user is no more interested in Mimito, but in another sensor: Faraday Cup. The user wants to know what are the values detected by the sensor in the same run (also this scenario is very common, often when the result of a sensor is unexpected, checking the others is interesting). This other sensor is not automatically enabled, so the user go through the "Edit Configuration" button in a page able to modify the configuration file. Here the user can see a list of sensors, and he can use radio-buttons to modify their values from no (==disabled), to yes (==enabled). The user enables all the sensors, confirms the changes, and automatically return in the homepage. Now he can like before insert the number, and get the outputs in textual and in images format.  
+
+
+
+\end{enumerate}
+
 
 \section{Prototypation}
 TODO 
