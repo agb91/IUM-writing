@@ -1,86 +1,105 @@
-% Chapter 6
+% Chapter 9
 
-\chapter{Design} % Main chapter title
+\chapter{Tests with the Users} % Main chapter title
 
-\label{Chapter6} % For referencing the chapter elsewhere, use \ref{Chapter5} 
+\label{Chapter9} % For referencing the chapter elsewhere, use \ref{Chapter9} 
 
-Developing gAn Web it was decided to design together the physical parts and the conceptual part. This is the holistic approach to design. In this project the users play a special role: they are absolutely participatory, they are an important part of the developing team.
-The point is that in this project the needs of the users are very particular, and very hard to understand for a person who doesn't work in the physics world. So the users must take part in each decision and give continuously opinions and feedbacks, to arrive to a good result.
+In this chapter first of all is exposed how the users are defined and what are their characteristics. Also, here are described the test conducted with them and in which ways they are useful to improve the gAn Web's features.   
 
-\section{Used patterns}
+\section{User's Profile: why?}
 
-The use of some patterns can help the designers to create a better application reusing good solution already known.
-The main source of patterns of this project is the website \url{http://designinginterfaces.com/patterns/}, based on the book "Designing interfaces", written by Jennifer Tidwell, in the edition of 2010.
-
-\subsection{Clear entry point} 
-
-In each page there are only a few entry points, very visible for the user. This result is quite easy to achieve because in the application there aren't an incredible amount of pages, and in each page, according the logic, is quite easy understand where the user desires to go. In fact in each kind of task that the common user executes with gAn there is a "standard" path, and using this advantage it is possible to reduce the entry points in each page to 4-5. 
-
-\subsection{Wizard}
-The fact that each task in gAn has a "standard" path leads that each task executed with the web interface can be carried out using a wizard. The user loses some "freedom of movement" in the application, but in this way he is forced to follow the right way and can avoid easily errors or omissions.
-
-\subsection{Spatial memory}
-In each page the opportunities to move to another page(back to home, show images etcetera) or to execute tasks (confirm, download something, etcetera) are concentrated in the top of the screen or, if they are more then 2, in the top and in the right. They are all in fixed position, so even if the user scrolls down the page can be sure to see them in the same positions. The hope is that in this way the user can automatically associate the position of the buttons with the task that these buttons can execute.
-
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO INSERT IMAGE
-
-\subsection{Grid of equals}
-
-This pattern recommends to position the elements in the screen in a way that creates a "grid". All the elements of the grids must have the same visual weight, to seem equally important to the user's eyes.
-This pattern is used in the page that allows the user to edit the configuration file of gAn, this disposition of elements is useful to give the user an ordered exposition of the editable options in the file.
-
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO INSERT IMAGE here
-
-\subsection{Responsive enabling}
-There are some buttons in the web interface that executes task which need some pre-condition. For example: to start the gAn program it is mandatory to insert one or more runs as input for the program. If this condition is not achieved the button is red and inactive, and only when the user inserts correctly the requested values it became green and clickable. A similar behaviour happens in the configurators. In this way is possible to avoid useless errors and waste of time, without create frustrating experiences for experienced users. 
-
-\subsection{Progress indicator}
-The starting of gAn is a complex task that take some seconds. This waiting can be disturbing for the user, who can think that the program is crashed. Another problem is that is quite difficult at this moment estimate the waiting time with precision. A solution can be create an infinite progress bar, that cannot show to the user exactly how much time he must still wait, but can inform him that the system is effectively working and has receipt his request. 
-
-\subsection{Go Back to a Safe Place}
-In each screen the user can easily return to the homepage, that is the common start point of all the possible tasks. In the page related to the analysis of the images the user can also return to the page where all the images are shown, because this page is a good point to start the image analysis.
-
-\subsection{Modal panel}
-This pattern is quite useful in some situation, because it forces the user to do some stuffs before he can return to the normal execution of the program. This pattern is used in the homepage where the user can choose if he prefers insert some runs by selecting the first and the last of a list. In this situation a modal is opened and he inserts the requested values (that must be valid). The user can exit from the modal only by canceling the operation (through the "X" button) of by inserting valid values. Also this solution helps to avoid useless errors. 
-
-\subsection{Liquid layout}
-
-This useful pattern recommends to create a dynamic structure able to adapt itself automatically to the screen's dimensions. The concept of "adapt itself" doesn't include only the ability to modify the dimensions of each object, but also to modify the layout of the screen. This pattern is very useful in applications that must work both on laptops and on mobile devices. In the particular case of gAn Web the users never use mobile devices, so the application has to adapt itself only to screens with a dimension of minimum 13-14 inches. For this reason the automatics system of object-dimensioning provided by Bootstrap (based on the partitioning of the screen in columns and sub-columns) is sufficient to ensure that all the system is usable by all the "target" screens. In fact all the objects that compose the system's graphic can adapt themselves easily to all the expected screen dimensions. 
+Generically a correct understanding of the user is very important to adapt the features of an application to him; In this case is also more important, because the kind of users to that this application is intended to is quite particular.
 
 
-\subsection{Hover tools}
+\section{User's Profile: classification}
 
-This kind of helper allows the user to get information about the tasks that each object can carry on just moving the mouse over it. 
+\subsection{Generic Characteristics}
+In this part of the document we can try to classify the user:
+The estimated number of users of the application is around 15.
+All the users of gAn Web works as "Shifters" in the AEgIS experiment: so they work with data acquisition and (simple) data analysis.
+Usually the user is quite young: around 30-35 years. This is because the most of the time personnel with a major seniority doesn't work with tasks related to data acquisition. 
+Half of them are male, and half female: in this particular case we think that it is not relevant in their interaction with gAn Web.
+A considerable amount of the users use eyeglasses, and probably some of them pass too many time in front of a screen, but the kind of interaction designed with gAn is usually fast and isn't a big commitment for human eyes. We tried to avoid too many white backgrounds and the use of dazzling colours, but for the images' background they are considered acceptable to improve contrast and let the image to be more clear.  
 
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO METTI IMMAGINE DI HOVER
+\subsection{Education Background}
+The cultural and educational level of the user is very high: almost all of them have a Phd, and they do a complex scientific job.
 
-The interface of gAn Web is quite simple, but for a new user is useful to have a some tips about the components potentialities. Bootstrap provides some easy commands to create the tooltips accessible by a "on hover" event, giving to the developer a fast way to implement this pattern.
+All of them have an extraordinary deep understanding of the particles physics: in particular they understand the technical terminology, the jargon in which the logbooks are written (because all the personnel, in shifts, writes the logbooks) and the names of the sensors (this is quite important, each sensor has a proper name, they are very numerous, and the fact that the users can identify them easily is a big ad advantage). 
 
-\subsection{Harmless default}
+Other important information: almost every time a user use gAn he is quite sure about what he is looking for. Situation in which the user searches a run number and reads generically the output of an analysis (or thinks about which is the correct analysis to use) is not common: in the most of the use cases the user is pretty sure about what is the information to search and what is the correct analysis. 
 
-This pattern is used in 2 ways:
+A different approach exists for the run number, in this case we must identify two different situation:
+
 \begin{enumerate}
 
-\item In the homepage, where the user has to insert the run numbers (before he can press the start button) some place-holders are visible (as is shown in the figure %TODO %TODO %TODO %TODO %TODO INSERTI NUMBER OF THE FIGURE)
+\item The most of the times (around 2/3) the user works with the last run, or the one immediately before. In this case is quite simple identify the correct run.
+\item Sometimes the user searches information regarding a past run, that he remember to be interesting for some reason. In this case often the user remembers the date (the precise day, or the week) of the interesting run, but not the run number exactly.
 
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO  INSERT THE FIGURE OF THE PLACEHOLDER
-
-These place-holders aim to teach the user to insert correctly the numbers: separating them with a semicolon (if the user uses a dot, a slash, or a dash, the application can repair the error and run correctly the same). 
-
-\item Another use of this pattern is related to the page that aims to modify the configuration file of gAn: here the user can see as default the last known working values, avoiding to re-insert values that he doesn't want to change.
-
-%TODO %TODO %TODO %TODO  image here 
 \end{enumerate}
 
-\subsection{Same-page error messages}
-
-This pattern allows the user to understand immediately if and where there is an error in the inserted values, showing him a visible message in the page able to explain him how to correct the error. In most cases in gAn Web the values are inserted using dropdown menus, so it is impossible make errors, but in each part where there is a "free" input field this pattern is used: if the inserted value doesn't meet the requirements of a validator a message appears on the screen explaining to the user what to do to solve the problem.
-
-%TODO %TODO %TODO %TODO  IMAGE HERE
-
-\subsection{Alternative views}
-This pattern proposes to let the user choose among alternative views that are substantially different from the default view. 
-GAn Web applies this pattern where shows images to the user: he can show if he prefers to see an static image in png format, that is simple and contains all and only the needed information (or better, the information that the designer thought the user needs), or a dynamic, modifiable and navigable image in Root format, in which the user can decide exactly what to see.
-
-
+Most of the users are used to use the Linux's terminal, so they are used to quite complex but efficient interaction. A good advantage is that the users are very used to approach new applications, even complex ones, and they learn very rapidly: the advantage is that they are used to give developers hints about what they expect from an new application, because they do it quite often. Actually, the users, in particular the pilot users, are almost co-developers. GAn Web offers them a way to interact efficient like the terminal but easier (hopefully). They also are used to have a feedback for every action they do (using the Linux's terminal you can always know if the program is running, if it is crashed, and what are its outputs).
  
+All the users have an excellent proficiency in English (they are used to speak English in their work environment). 
+
+\subsection{User's psychological characteristics }
+The style of reasoning is quite deductive: the users seem to act in a very scientific way: they observe the situation, they make hypothesis and they experiment them to check if they are true. In gAn Web we can observe that when they are for the first time in front of the application they observe the screen, reading all the tooltips, they understand (of better, they make hypothesis about) what each function do, and they test the functionalities making comments regarding if the application's behavior is the expected one. According the users  propensity the designer of gAn Web tries to let the application acts like the user expects.   
+
+%TODO %TODO%TODO
+%TODO
+%TODO
+%TODO
+
+ caratteristiche
+psicologiche, esperienza
+
+Stile cognitivo Astratto/Concreto
+Deduttivo/Induttivo/Abduttivo
+Verbale/Spaziale
+Analitico/Intuitivo
+Attitudine (dell’utente rispetto al sistema) Positiva
+Neutrale
+Negativa
+Motivazione (dell’utente rispetto all’uso) Alta
+Moderata
+Bassa
+
+L’attivazione emotiva
+Legge di Yerkes-Dodson 
+
+
+Livelli semi-analfabeta
+di alfabetizzazione livello medio
+(lettura) buon livello
+Abilità bassa
+dattilografica media
+(articolatoria) alta
+Titolo media
+di studio superiore
+laurea
+Linguaggio inglese
+nativo altro
+Alfabetizzazione bassa
+Informatica moderata
+alta
+
+
+Si parla in genere di utente “novizio” e utente
+“esperto”
+Si possono distinguere anche in questo modo:
+Novizio (novice): conosce poco del compito e
+dell’applicazione
+“First time”: conosce il compito ma non l’applicazione
+Knowledgeable intermittent user: conosce il compito, ha
+ampia conoscenza delle applicazioni software, ma ha difficoltà
+a ricordare menu, funzionalità, etc.
+Expert frequent user: conosce compito e applicazione
+Esistono anche i “super-users” (o “power users”):
+spesso svolgono un’importante funzione di
+collegamento fra utenti “regolari” e i nuovi sistemi
+informatici introdotti (e i loro sviluppatori) 
+
+Caratteristiche ambientali 
+
+\section{How the tests take place} 
+
+\section{Results}

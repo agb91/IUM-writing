@@ -20,28 +20,26 @@
 \contentsline {section}{\numberline {5.1}Functional requirements}{17}{section.61}
 \contentsline {section}{\numberline {5.2}Scenario based functional analysis}{18}{section.69}
 \contentsline {section}{\numberline {5.3}Prototypation}{18}{section.70}
-\contentsline {chapter}{\numberline {6}Functional Analysis}{19}{chapter.71}
-\contentsline {section}{\numberline {6.1}Scenario-based requirements analysis}{19}{section.72}
-\contentsline {chapter}{\numberline {7}Prototypation}{21}{chapter.73}
-\contentsline {section}{\numberline {7.1}Early version}{21}{section.74}
-\contentsline {section}{\numberline {7.2}How the early version can be improved}{24}{section.83}
-\contentsline {section}{\numberline {7.3}Late version}{24}{section.84}
-\contentsline {subsection}{\numberline {7.3.1}Modified pages}{25}{subsection.85}
-\contentsline {subsection}{\numberline {7.3.2}Added pages}{32}{subsection.114}
-\contentsline {chapter}{\numberline {8}Implementation}{35}{chapter.118}
-\contentsline {section}{\numberline {8.1}TODO}{38}{section.133}
-\contentsline {chapter}{\numberline {9}Design}{39}{chapter.134}
-\contentsline {section}{\numberline {9.1}Used patterns}{39}{section.135}
-\contentsline {subsection}{\numberline {9.1.1}Clear entry point}{39}{subsection.136}
-\contentsline {subsection}{\numberline {9.1.2}Wizard}{40}{subsection.137}
-\contentsline {subsection}{\numberline {9.1.3}Spatial memory}{40}{subsection.138}
-\contentsline {subsection}{\numberline {9.1.4}Grid of equals}{40}{subsection.139}
-\contentsline {subsection}{\numberline {9.1.5}Responsive enabling}{41}{subsection.140}
-\contentsline {subsection}{\numberline {9.1.6}Progress indicator}{41}{subsection.141}
-\contentsline {subsection}{\numberline {9.1.7}Go Back to a Safe Place}{41}{subsection.142}
-\contentsline {subsection}{\numberline {9.1.8}Modal panel}{42}{subsection.143}
-\contentsline {subsection}{\numberline {9.1.9}Liquid layout}{42}{subsection.144}
-\contentsline {subsection}{\numberline {9.1.10}Hover tools}{43}{subsection.145}
-\contentsline {subsection}{\numberline {9.1.11}Harmless default}{43}{subsection.146}
-\contentsline {subsection}{\numberline {9.1.12}Same-page error messages}{43}{subsection.149}
-\contentsline {subsection}{\numberline {9.1.13}Alternative views}{44}{subsection.150}
+\contentsline {chapter}{\numberline {6}Prototypation}{19}{chapter.71}
+\contentsline {section}{\numberline {6.1}Early version}{19}{section.72}
+\contentsline {section}{\numberline {6.2}How the early version can be improved}{22}{section.81}
+\contentsline {section}{\numberline {6.3}Late version}{22}{section.82}
+\contentsline {subsection}{\numberline {6.3.1}Modified pages}{23}{subsection.83}
+\contentsline {subsection}{\numberline {6.3.2}Added pages}{30}{subsection.112}
+\contentsline {chapter}{\numberline {7}Implementation}{33}{chapter.116}
+\contentsline {section}{\numberline {7.1}TODO}{36}{section.131}
+\contentsline {chapter}{\numberline {8}Design}{37}{chapter.132}
+\contentsline {section}{\numberline {8.1}Used patterns}{37}{section.133}
+\contentsline {subsection}{\numberline {8.1.1}Clear entry point}{37}{subsection.134}
+\contentsline {subsection}{\numberline {8.1.2}Wizard}{38}{subsection.135}
+\contentsline {subsection}{\numberline {8.1.3}Spatial memory}{38}{subsection.136}
+\contentsline {subsection}{\numberline {8.1.4}Grid of equals}{38}{subsection.137}
+\contentsline {subsection}{\numberline {8.1.5}Responsive enabling}{39}{subsection.138}
+\contentsline {subsection}{\numberline {8.1.6}Progress indicator}{39}{subsection.139}
+\contentsline {subsection}{\numberline {8.1.7}Go Back to a Safe Place}{39}{subsection.140}
+\contentsline {subsection}{\numberline {8.1.8}Modal panel}{40}{subsection.141}
+\contentsline {subsection}{\numberline {8.1.9}Liquid layout}{40}{subsection.142}
+\contentsline {subsection}{\numberline {8.1.10}Hover tools}{41}{subsection.143}
+\contentsline {subsection}{\numberline {8.1.11}Harmless default}{41}{subsection.144}
+\contentsline {subsection}{\numberline {8.1.12}Same-page error messages}{41}{subsection.147}
+\contentsline {subsection}{\numberline {8.1.13}Alternative views}{42}{subsection.148}
