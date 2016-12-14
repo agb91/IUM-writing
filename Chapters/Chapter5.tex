@@ -43,6 +43,10 @@ The user need to choose by the configuration page the degree of precision (the m
 
 \end{enumerate}
 
+\section{Non-functional requirements}
+
+There is another special requirement emerged in this version, not strictly related to the common behavior of the interface but quite important: the machine  used as server is also used for the testing of single analysis when they are written; sometimes these analysis crashes (quite normal in a test phase), and they remain in a "hung up" state, without doing nothing but occupying Ram memory, and if the blocked application are numerous that can be a problem for the performances of the machine. To ensure a correct behavior gAn Web must check this situation at starting and eventually resolve it.
+
 \section{Scenario based functional analysis}
 TODO
 

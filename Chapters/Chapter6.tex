@@ -1,193 +1,91 @@
-% Chapter 4
+% Chapter 6
 
-\chapter{Prototypation} % Main chapter title
+\chapter{Implementation} % Main chapter title
 
-\label{Chapter4} % For referencing the chapter elsewhere, use \ref{Chapter4} 
+\label{Chapter6} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
 %----------------------------------------------------------------------------------------
 
-\section{Late version}
+\section{Introduction}
 
-The late version is based on the early version, some pages (and functionalities) are added, some existing pages are improved. Following all modifications are explained.
+The designer has evaluated different options to create this software: at the end the option of creating a web application seemed to be the best solution.
+Some non-functional requirements, such as the goal to create a solution easily compatible with any machine, without installing nothing, and without creating problems related to the version of Root Framework or the version of gAn, are quite hard to achieve in a stand-alone application. In a web application instead it is easy avoid all the installation and compatibility problems, because it is sufficient solve them only one time on the server, and the user will never has to think about these points. Furthermore, a machine with a windows environment can in this way access to a service executed by a linux system, without problems.  
 
-\subsection{Modified pages}
-The homepage:
+\section{The use of Bootstrap}
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{HomePageEmpty.png} 
-\caption{The homepage of gAn Web without input}
-\end{figure}
+The only framework used in the interface (Root Framework is used in the back-end) is Bootstrap. Bootstrap is quite useful in the production of the front-end because allows the programmer to manage the dimension of each object on the screen in a smart way and to automatically adapt this dimension to the varying dimension of the screen. It was evaluated the possibility to use a framework for the part related to PHP, but it was preferred not to do so. The point is that the PHP part of the program is quite little and quite atypical: in fact the main task of the PHP part is to talk with the C++ scripts of Root, and for this kind of atypical situation the use of a framework can lead more problems that advantages.  
 
+Everywhere in the program is easily visible the sign of Bootstrap, in particular all the graphical parts are taken from Bootstrap's components (all visible and freely accessible here \url{http://getbootstrap.com/components/}). The goal of this choice is to exploit the wide diffusion of Bootstrap's graphics on the internet: a common user used to navigate on the net surely is used to see the graphical object of Bootstrap, and is unconsciously used to associate these symbols to their signification. So the using on the Bootstrap's graphics can improve the affordance of the interface. 
 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{HomePage.png} 
-\caption{The homepage of gAn Web ready to start}
-\end{figure}
+So all the graphical objects in the application are taken from standard Bootstrap's graphics? No: in fact we checked during the development all the options case per case. Definitely we can observe that in the final tests with users graphic objects taken from Bootstrap are often preferred to the alternatives.. so they are used in most cases, but their adoption is not automatic.  
 
-There are some modifications:
+Bootstrap graphics is an enormous database of object, for this project only a few are used, in particular:
 
 \begin{enumerate}
 
-\item The user is informed about what is the last existing run: he can read "last existing run: nnnnn, from dd/mm/yy". This point is important because in most cases the user searches results regarding the lasts 10 runs.
-
-\item The button named "send" was unclear, the word "START" is more clear, the user can immediately understand that the goal of this button is to start gAn. The button is red and unclickable if there are problems (like in the following image) with the inserted runs (or if the input field is empty), green and clickable if there are no problems.	
+\item The buttons
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.25]{ErrorInputHomepage.png}  
-\caption{The "Start" button is red if the values in the input field are invalid}
+\includegraphics[scale=0.5]{BootstrapButton.png} 
+\caption{A button created with Bootstrap's graphics}
 \end{figure}
 
-When the user clicks start a progress bar appears. Unfortunately it is very hard to understand exactly how long the computation will last, because different runs can take different time (it depends on the amount of data that the sensors take about the run, and on the workload of the server machine, that is in common with other applications). On average is observed that the computation take five seconds multiplied by the number of selected runs, but if another user asked for that computation before the system already has the results in memory and the computation is faster. A wait of several seconds can be not comfortable for the user, the progress bar is imprecise but ensure to the user that the system is working correctly to ensure the correct answer. In the following image the progress bar:
+\item The navbar:
+This object allow to select a button by clicking on it: when the button is selected the graphical effect changes automatically the color, that became more dark, and give the graphical impression of the button physically pushed, making the user aware of what is the selected button. 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.25]{ProgressBar.png}  
-\caption{The progress aimed to make more comfortable the user's waiting}
+\includegraphics[scale=0.35]{BootstrapNavbar.png} 
+\caption{A navbar containing some buttons created with Bootstrap's graphics}
 \end{figure}
 
-
-
-\item The input field has a place-holder, that shows to the user how to correctly insert the runs separated by semicolon (there is an automatic system that corrects the inserted values if the separator is not a semicolon)
- 
-\item It is possible to insert a group of runs selecting them by range (inserting the first and the last): the button "Add runs by range" opens a modal (shown in the image). The user can choose the minimum and the maximum of the range, the system validates the inserted values (maximum must be more that minimum, they must be numbers etcetera).
+\item The progress bar
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.25]{RangeRunsModal.png}  
-\caption{The modal opened by clicking the button "Add runs by range"}
+\includegraphics[scale=0.35]{BootstrapProgressBar.png} 
+\caption{An infinite ProgressBar created using Bootstrap's graphics}
 \end{figure}
 
-\item There is a little message "You are using: nameOfGAnBranch" that informs the user about which is the branch of gAn used by default if he doesn't change the configuration (the default branch is the last used, because usually when a group of users starts to use a branch, it continues to use it for some days)
+This solution makes the waiting time less frustrating for the user. The bar is infinite (without a percentage, it go on like an endless screw until the program is ready to show the results), because it is impossible to estimate precisely the amount of time that the user must wait.
 
-\item There are two new buttons: "Choose Root version", "Choose gAn version". These buttons redirect the user to pages able to modify the version of Root and gAn used in the computation.
- 
-\item Each button and each field have a tooltip: a little explaining text that appears when the user moves the mouse over the object. In this way an inexperienced user can easily understand what each component does.  
+\item The input fields
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{BootstrapInputField.png} 
+\caption{An example of input field taken from Bootstrap's graphics}
+\end{figure}
+
+\item The dropdown menus
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{BootstrapDropdownMenu.png} 
+\caption{A dropdown menu created with Bootstrap's graphics}
+\end{figure}
+
+It is the common solution to force the users to choice a value among some options. According to the users it is aesthetically better than the radio buttons.
+
+\item The tooltips
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{BootstrapTooltip.png} 
+\caption{An explaining tooltip obtained form Bootstrap's graphics}
+\end{figure}
+
+The user can see this kind of tip just moving the mouse over the interested object. The tip explain briefly what the object can do.
+
+\item The modal form
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{BootstrapModal.png} 
+\caption{A modal form obtained form Bootstrap's graphics}
+\end{figure}
+
+This structure, named "modal form", is a window that appears on the screen as response to some event, takes the focus, and allow the user to execute some activities. 
 
 \end{enumerate}
-
-
-The page related to the modifications of the configuration file of gAn:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{EditConfig.png} 
-\caption{The edit-configurator page of gAn Web}
-\end{figure}
-
-This page doesn't use anymore radio buttons, because some users ask the developers to use dropdown menus (for aesthetic reasons). The user can read near the button the currently selected value for each field. There aren't tool-tips able to describe the signification of each field here, because the users to which gAn Web is intended have a perfect understanding of the names and the features of each sensor (mimito, scint, farcup, etcetera are sensors).  
-
-
-
-The page that shows the textual output of gAn is exposed in the following images, has some modifications:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{TextOutputPage.png} 
-\caption{The page who shows the textual output of gAn}
-\end{figure}
-
-
-\begin{enumerate}
-\item The user can choose what results he wants to show on the screen by clicking the corresponding run number from the "navbar", like in the image:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{WhichRunNavbar.png} 
-\caption{By this "navbar" the user can choose the run results to show}
-\end{figure}
-
-This navbar is in fixed position related to the screen, and can be dragged by the user to allow him to decide where put it.
-
-\item "Download Root File of: nnnn" is a button that allows to user to download the semi-processed file .root with some output information regarding the computation.
-
-\item "Back to Home" gives the user the opportunity to directly return to the homepage. 
-
-\item "Back to Home" and "Look at the images" are in a fixed position on the screen: also if the user scrolls down or up the screen he is always able to see these buttons.    
-
-\end{enumerate}
-The page that shows in an organized way the images that gAn produces in output. The following image shows the new appearance of the page:
-
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{AllImagesPage.png} 
-\caption{This page shows all the images that gAn produces in output}
-\end{figure}
-
-
-Modifications:
-\begin{enumerate}
-
-\item The dropdown menu "Runs to show" allows the user to select only the images produced by a single run (by default the system shows the images related to all the runs). The users widely use this option, because in this way they can compare images extrapolated in the same way but related with runs with different configurations.
-
-\item "Download All Images" allows the user to download by a single click all the images related to the execution. The late design introduces this requirement because commonly the users want to download the images using the right click of the mouse and the browser's button "Save Image As". In this way this process is faster and easier.
-
-\item The buttons "Back to Previous page" and "Back to Home" are links towards the textual output page and the homepage. They are in fixed position.
-
-\item By clicking on the image the user reaches a page that shows the image in full screen, but not in a static format: the image is dynamically accessible like shown in the following images:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{RootLikeImage2.png} 
-\caption{Moving the cursor the system shows the value of this histogram in the selected point}
-\end{figure}
-
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{RootLikeImage.png} 
-\caption{The user can modify numerous settings in the generated image}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{RootLikeImage3.png} 
-\caption{The user can show the histogram not only in traditional format, but also in a numerical format where the numbers are the value of the function in their position}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{RootLikeImage4.png} 
-\caption{Another solution is to generate a 3d image in lego-style of the histogram}
-\end{figure}
-
-
- 
-\end{enumerate}
-
-
-\subsection{Added pages}
-
-Some pages in the late version are completely new, because they implement new functionalities.
-
-The first new page that the user sees is the login page. It is very simple, it doesn't authenticate a single user, but asks only the password of the office. This basic system of authentication aims simply to ensure that only the people that works in AEgIS experiment can use this software.
-
-Following the login page image:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{Login.png} 
-\caption{Simple login page}
-\end{figure}
-
-In the late version there is also the opportunity for the user to choose which branch of gAn and which version of Root Framework to use to execute the program. The pages that the user can user are quite similar, and quite simple. The user must use dropdown menus to make these choices, and there is always a default safe choice (the system remembers the last working version of Root and the last working branch of gAn), so it is impossible make errors or inconsistent choices. 
-
-Following there are some screen-shots of these pages
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{RootVersionChoice.png} 
-\caption{Page where the user can choose the Root version to use}
-\end{figure}
- 
- 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.25]{ChoosegAnBranch.png} 
-\caption{Page where the user can choose the Root version to use}
-\end{figure}
