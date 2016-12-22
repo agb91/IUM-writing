@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.4.14)  14 DEC 2016 15:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.4.14)  22 DEC 2016 11:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1219,7 +1219,7 @@ Package csquotes Info: ... found 'babel' package.
 
 LaTeX Warning: Label `Chapter6' multiply defined.
 
-) (./Chapters/Chapter8.aux) (./Chapters/Chapter9.aux))
+) (./Chapters/Chapter8.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
@@ -1931,19 +1931,15 @@ Chapter 8.
 
 
 
-] [50] [51] [52] [53] [54] [55]) [56]
-\openout2 = `Chapters/Chapter9.aux'.
-
-
-No file Chapters/Chapter9.tex.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
-(./main.aux (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux)
-(./Chapters/Chapter3.aux) (./Chapters/Chapter4.aux) (./Chapters/Chapter5.aux)
-(./Chapters/Chapter6.aux) (./Chapters/Chapter7.aux) (./Chapters/Chapter8.aux)
-(./Chapters/Chapter9.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
+] [50] [51] [52] [53] [54] [55]) [56] [57]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 176.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 176.
+ (./main.aux
+(./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux) (./Chapters/Chapter3.aux)
+(./Chapters/Chapter4.aux) (./Chapters/Chapter5.aux) (./Chapters/Chapter6.aux)
+(./Chapters/Chapter7.aux) (./Chapters/Chapter8.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 176.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 176.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: B24C0CF8EC3073752C62D35FB441ECEB;8842.
 
@@ -1955,10 +1951,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29151 strings out of 493304
- 595589 string characters out of 6139871
- 708312 words of memory out of 5000000
- 31947 multiletter control sequences out of 15000+600000
+ 29145 strings out of 493304
+ 595452 string characters out of 6139871
+ 707333 words of memory out of 5000000
+ 31945 multiletter control sequences out of 15000+600000
  34757 words of font info for 61 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  57i,20n,84p,10402b,2237s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1968,10 +1964,10 @@ fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb
 >
-Output written on main.pdf (62 pages, 1412385 bytes).
+Output written on main.pdf (63 pages, 1414124 bytes).
 PDF statistics:
- 777 PDF objects out of 1000 (max. 8388607)
- 669 compressed objects within 7 object streams
- 239 named destinations out of 1000 (max. 500000)
+ 781 PDF objects out of 1000 (max. 8388607)
+ 672 compressed objects within 7 object streams
+ 240 named destinations out of 1000 (max. 500000)
  583 words of extra memory for PDF output out of 10000 (max. 10000000)
 

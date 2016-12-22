@@ -9,20 +9,24 @@ Here will be explained the features of the final version, and how we are arrived
 \section{Functional requirements}
 
 The last version (from now "gAn Web v3") is a modified version of the intermediate version. 
-The second version's modification come from two sources: some adding requirements are proposed from the pilot users (that are also supervisors); These adding requirements are the following:
+The second version's modification come from two sources: some adding requirements are proposed from the pilot users (that are also supervisors); These adding requirements proposed by the supervisors are the following:
 
 \begin{enumerate}
 %1 chose analysis new way
 \item 
-The main kinds of analysis are now more clear: they are 4-5, and they are     quite stable. Their role and when they are useful is now steadily fixed. Each user, according on his task, knows (should know) in every moment which analysis fits better the situation, so, the best solution is allows the user to choose the type of the analysis through a dropdown menu directly in the main page (exactly like he chooses the run number). At this point the possibility of choose the gAn version is useless, because the definitive version of gAn include all the existing types of analysis. 
+The main kinds of analysis are now more clear: they are around 15, and they are     quite stable (their goals, so their input and expected output are quite stable, but still we'll probably modify the algorithmic ways in which these goals are achieved; from the point of view of the web interface the situation us quite stable). Their roles and when they are useful is now steadily fixed (more precisely: we are pretty sure about the role of the existing analysis, but in the future we can add more analysis..). Each user, according on his task, knows (should know) in every moment which analysis fits better the situation, so, the best solution is allows the user to choose the type of the analysis through a dropdown menu directly in the main page (exactly like he chooses the run number). At this point the possibility of choose the gAn version is useless, because the definitive version of gAn include all the existing types of analysis. 
 
 %2 single vs multiple
 \item 
 The kind of use of this software is quite different if you decide to work with a single run or a group of runs, so is better if at the beginning the user chose directly if he wants work with a single run or more than one. 
 
+If the user works with a single run the focus is mainly on the "exploration" of the information in the data, with the multiple runs the focus is more on the possibility to compare and see what is different.
+
+In the second case (more then one) is better to tell if the runs are a range (form N to M, all the runs between) or a group of non-consecutive runs (it can be useful, because of the feasibility to compare non-consecutive runs can be interesting). If the user is interested in a group of runs that are not a range, the previous solution of multiple runs separated by a comma is not a good idea: often in these cases the researched runs are little consecutive groups, so a list of ranges. It is better if the user can have an input area (like a sheet) in which he can put the intervals, divided in different lines (or other separators).
+
 %3 don't choose root version
 \item
-There is an effort in the developing of the whole project to make it independent of the Root version, So the interface won't ask to the user to choose a Root version anymore.
+There is an effort in the developing of the whole project to make it independent of the Root version, so the interface won't ask to the user to choose a Root version anymore. 
 
 \end{enumerate}
  
@@ -33,13 +37,13 @@ Furthermore, the version version with this last requirements was tested with the
 It is important to help the user in some way to choose the run number: the user needs a view on the logbook of the run, that is a text in which there are information about each run number divided by date.
 
 \item
-Actually nobody use the button to modify the dimension of the images: they all use the biggest version.. is better to remove (or move in a less central place) this dropdown. A similar reasoning can be done for the dropdown that allows the user to switch between the vertical and carousel menu (everybody use).
+Actually nobody use the button to modify the dimension of the images: they all use the biggest version.. is better to remove (or move in a less central place) this dropdown menu. A similar reasoning can be done for the dropdown that allows the user to switch between the vertical and carousel menu (everybody use vertical, clearly at this point the carousel version isn't useful).
 
 \item
 The read of the textual output takes too much time: it can be improved highlighting the most important parts (or better, the most important parts for the selected type of analysis)
 
 \item
-The user need to choose by the configuration page the degree of precision (the minimal error) of the x-axis (the time related axis) of each time-related values images. This parameter seemed to be not very important and in the second version actually there wasn't, but all the users modifies it quite often (manually). So is better to let them to do it by the interface
+The user needs to choose by the configuration page the degree of precision (the minimal error) of the x-axis (the time related axis) of each time-related values images. This parameter seemed to be not very important and in the second version actually there wasn't, but almost all the users modify it quite often (manually), and verbally ask for the possibility to set it through the interface. So is better to let them to do it by the interface
 
 \end{enumerate}
 
@@ -48,7 +52,27 @@ The user need to choose by the configuration page the degree of precision (the m
 There is another special requirement emerged in this version, not strictly related to the common behavior of the interface but quite important: the machine  used as server is also used for the testing of single analysis when they are written; sometimes these analysis crashes (quite normal in a test phase), and they remain in a "hung up" state, without doing nothing but occupying Ram memory, and if the blocked application are numerous that can be a problem for the performances of the machine. To ensure a correct behavior gAn Web must check this situation at starting and eventually resolve it.
 
 \section{Scenario based functional analysis}
-TODO
+Following we can show some examples able to explain how the typical interaction must work in the definitive version:
+
+\begin{enumerate}
+
+\item
+Let's suppose a very common situation in a shift: 
+In the shift is running the run NNNN. The shifter wants to calculate the temperature of some particles with a (complex) process based on the shape that they create on a sensor (the basic idea is: if a particle is hotter, its speed is bigger, it can escape more easily from a magnetic trap, and the sensor can observe more particles outside the trap. At this point the software tries to fit, with an exponential function, the shape of the signal that the sensor shows as output, and through the integral of the slope of this exponential function can estimate the temperature of the particle).
+ 
+The user chooses the single analysis, insert the run NNNN, select the kind of analysis called "TemperatureMeasurement", presses start;
+The system shows to the user a textual output and some images: 
+The textual output proposes a lot of information, but in the ninety five per cent of the cases the user is interested in only three parameters, that are clearly highlighted by a special font, a color and a visible border. 
+
+The user must also check the image: there is the histogram of a signal, an a red line where the function is fitted. The user checks if the red line
+has an exponential shape (if it is a straight line the situation is too aleatory and the data are not affordable); the user also check if the fit line is too long (it must be very little to accept the results of the analysis, because of physical reasons). 
+
+
+% user wants last run ingmari version and change fit
+% user wants three groups of runs separated and with holes
+% user wants a range
+
+\end{enumerate}
 
 \section{Prototypation}
 TODO 
