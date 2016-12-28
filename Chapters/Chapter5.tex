@@ -9,7 +9,7 @@ Here will be explained the features of the final version, and how we are arrived
 \section{Functional requirements}
 
 The last version (from now "gAn Web v3") is a modified version of the intermediate version. 
-The second version's modification come from two sources: some adding requirements are proposed from the pilot users (that are also supervisors); These adding requirements proposed by the supervisors are the following:
+The second version's modification come from two sources: some adding requirements are proposed from the pilot users (that are also supervisors) and some else come from the tests made with the generic users; The first group of  adding requirements (the ones proposed by the supervisors) are the following:
 
 \begin{enumerate}
 %1 chose analysis new way
@@ -18,7 +18,7 @@ The main kinds of analysis are now more clear: they are around 15, and they are 
 
 %2 single vs multiple
 \item 
-The kind of use of this software is quite different if you decide to work with a single run or a group of runs, so is better if at the beginning the user chose directly if he wants work with a single run or more than one. 
+The kind of use of this software is quite different if you decide to work with a single run or a group of runs, so is better if at the beginning (at the application starting) the user chooses directly if he wants work with a single run or more than one. 
 
 If the user works with a single run the focus is mainly on the "exploration" of the information in the data, with the multiple runs the focus is more on the possibility to compare and see what is different.
 
@@ -30,14 +30,14 @@ There is an effort in the developing of the whole project to make it independent
 
 \end{enumerate}
  
-Furthermore, the version version with this last requirements was tested with the users: the developer studied their behavior observing them at work with the existing version, listening to their comments, and asking them opinion and information. The impact  of the debut with the users highlights some problems to be overcome, and from the analysis and the solution of these problems the requirement of the last version was defined. The problems observed (and for each the proposed solution) are the following:
+Furthermore, the version version with this last requirements was tested with the users: the developer studied their behavior observing them at work with the existing version, listening to their comments, and asking them opinion and information. The impact of the debut with the users highlights some problems to be overcome, and also provide some interesting ideas: from the analysis and the solution of these problems and from the user's proposals the requirements of the last version was defined. The problems observed (and for each the proposed solution) are the following:
 
 \begin{enumerate}
 \item 
 It is important to help the user in some way to choose the run number: the user needs a view on the logbook of the run, that is a text in which there are information about each run number divided by date.
 
 \item
-Actually nobody use the button to modify the dimension of the images: they all use the biggest version.. is better to remove (or move in a less central place) this dropdown menu. A similar reasoning can be done for the dropdown that allows the user to switch between the vertical and carousel menu (everybody use vertical, clearly at this point the carousel version isn't useful).
+Actually nobody use the button to modify the dimension of the images: they all use the biggest version.. is better to remove (or move in a less central place) this dropdown menu. A similar reasoning can be done for the dropdown that allows the user to switch between the vertical and carousel menu (everybody use vertical, clearly at this point the carousel version isn't useful). Also nobody us the run selector to choose which image see: they prefer base themselves on the image's title.. at this point a surely better solution is to create a selector with the image's titles, precisely a group of check-boxes, each with the title of an image as label, using that the user can select one or more (or all if he wants) images.  
 
 \item
 The read of the textual output takes too much time: it can be improved highlighting the most important parts (or better, the most important parts for the selected type of analysis)
@@ -67,10 +67,21 @@ The textual output proposes a lot of information, but in the ninety five per cen
 The user must also check the image: there is the histogram of a signal, an a red line where the function is fitted. The user checks if the red line
 has an exponential shape (if it is a straight line the situation is too aleatory and the data are not affordable); the user also check if the fit line is too long (it must be very little to accept the results of the analysis, because of physical reasons). 
 
+Let's suppose that the fit function is a straight line: the user can retry the same analysis with a different setting: he return to the homepage (through the button "new analysis" on the navbar), he clicks "advanced setting" to modify the configuration, he insert a new value %TODO %TODO %TODO %TODO  THROUGH A input field of through a BOOTSTRAP SLIDER %TODO %TODO %TODO %TODO 
+to have a more precise graph, in the hope to fit it better. At this point he can retry the previous algorithm (a more precise function will lead a slower computation but probably will give an affordable output)  
 
-% user wants last run ingmari version and change fit
-% user wants three groups of runs separated and with holes
-% user wants a range
+\item 
+The user is interested in a two distinguished groups of runs, from 57001 to 57005 and form 57016-57020.
+This situation is very common because most of the groups of measurements are repeated in two different slices of times (to be sure about the results).
+In this case the user, after having selected "multiple runs", can click on "insert runs by Input Area" %TODO %TODO %TODO  CAMBIA IL NOME DEL BOTTONE!   
+and an input area appears. In the area there are the value inserted the last time that the user used this function (we observe that is quite common repeat analyses with the same groups). The input is quite free: user can insert a group inserting the first and the last separated by a dash, a space, or a comma, and other group by changing the line (so each not empty line is a group). 
+The user at this point confirm the input, and return on the homepage in which he can select the analysis and run the program. 
+
+\item
+The user is interested in a range of runs, from 58001 to 58010, to perform the same analysis and check if and how some values are varying. He can select multiple runs, insert the first and the last, select the analysis (the multiple runs analysis are taken from a different set from the single runs analysis).
+
+\item
+The user insert a run, and select an analysis names PMTs. This kind of analysis take information from a group of 14 sensors and produces in output (usually) seven images. The user often is not interested in all the seven images but in one or two. At this point, using the check-boxes selector he can select/deselect images to show (by default they are all selected).  
 
 \end{enumerate}
 
