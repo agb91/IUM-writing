@@ -86,4 +86,118 @@ The user insert a run, and select an analysis names PMTs. This kind of analysis 
 \end{enumerate}
 
 \section{Prototypation}
-TODO 
+
+Here is explained with some screen-shots how the final version looks like, and how does it work.
+
+Login page:
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{LastLogin.png} 
+\caption{The Login Page of gAn Web}
+\end{figure}
+
+First of all the login page: it is very simple, only one user exists (all the people in the AEgIS experiment are equal when they use this software, and no others experiments use this application) so only the password needs to be inserted, in order to ensure that only people who work in the experiment can use the software. We can see the typical objects taken from the Bootstrap's default graphic objects.
+
+
+Home page, initial choice:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{LastInitialChoice.png} 
+\caption{The first thing that a logged user sees}
+\end{figure}
+  
+The neo-logged user can here choose if he is interested in a single run analysis of in a multiple runs one. These two situations are quite different, so the application work with them in two different ways.
+
+
+Home page, differences between single and multiple runs:
+
+Here we can see how the two modalities of work (single and multiple) appears: 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{LastSingle.png} 
+\caption{The Homepage if the user chose Single run analysis}
+\end{figure}
+
+the single one is more simple, on the left of the screen the user inserts a run number and a kind of analysis. We can see the button related to access the configurator and modify the settings. On the right part of the screen there is a view on the runlog of the experiment. The user uses the right part when he wants more information about what run use to work (actually this situation is quire seldom). In the case the user can insert a date using a datepicker, the system opens some pages related to the days around that date and in each page shows the content of the logs related to this date. The log are always divided in runs, and for each run there are some informations and comments. At the moment this functionality is a mock-up (in is the only one mock-up of this document). On the  top-left of the screen there is always a little note with some information about the status of the program: this is a little cognitive aid. On the screen there is always wrote the last known run, because in most cases the users use it or the immediately previous one. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{LastMultiple.png} 
+\caption{The Homepage if the user chose Multiple runs analysis}
+\end{figure}    
+
+The multiple runs modality is similar but more complex: in a standard situation the user inserts two runs, the first and the last. The alternative (less used) situation is the one in which the user, through the "Input Area" button insert a  list of groups of runs (this runs are written in a file, that the system is able to accept as input). This modality is sometimes useful, and can be activated with the check-box "Input from file". The activation of this modalities denies the access to the two input fields (you must only one way to insert runs..).
+Following a little example of how the user can insert data through an Input Area:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{LastMultipleRange.png} 
+\caption{The Homepage if the user chose Multiple runs analysis}
+\end{figure}   
+
+
+Output: 
+
+There are some innovation. The first one is the navbar: now the user can find here all the most important commands. Before there was more buttons, distributed in the screen, and during the tests the users had problems to found them and to understand their functionalities. Now the navbar is more clear and organized:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{LastNavbar.png} 
+\caption{The output in textual version}
+\end{figure}  
+
+
+Textual Output:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{LastMultipleRange.png} 
+\caption{The output in textual version}
+\end{figure}  
+
+Here we can see out a textual output appears: there are more information, but in the 95 per cent of cases only a few are really useful, so they are highlighted with a special font and a big border (the hope is to use perceptive suggestions to advise the user about where to find what he searches). In this example we can see also some warnings: where something works wrong (or simply not perfectly) the system informs the user about the problem, with a red color, to ensure that he sees it. 
+
+Images output:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{ImageOutput.png} 
+\caption{The output images}
+\end{figure}  
+
+Here we can see that there is no more the opportunity to select the dimension of the images (but still there is a zoom function in the image), or the layout, because none of the users never used these functionalities in the tests .. nor the possibility to choose a particular run of a group of images: this is because like discussed previous in this chapter the existing of the "kinds" of analysis makes this choice useless. Instead there is a list of check-boxes that is selected or deselected let the images appear and disappears. This feature is not important with 2 or 3 images, but sometimes the images are 7-8-9 so it is necessary.
+
+Also in this case we observed that the users in most cases search in the images (almost) always the same information, so in some images the most important data (often they are dimension of peaks or integrals of spaces, or distances between peaks, or, in the case of charts with a time on the x-axis, auto-generated timelines about asynchronous events and triggers happened etc..) are directly written on the picture, like the following example:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{LastImagenotes.png} 
+\caption{Images with infos}
+\end{figure}   
+
+Still there is the opportunity to access more information right clicking on the graph, of modifying it in various ways for example showing the graph in three dimensions: 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{LastImageOptions.png} 
+\caption{Some options}
+\end{figure}  
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{LastGraphImage2.png} 
+\caption{Other option}
+\end{figure}  
+
+Often the users in the tests had problems understanding that with a right click they could access these functionalities, so no there is a specific label on the right of the screen to inform them (this label is in fixed position, but became visible only if the user arrive with the scrollbar on the images):
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{LastImageLabel.png} 
+\caption{Label to inform the user about a feature}
+\end{figure} 
+
