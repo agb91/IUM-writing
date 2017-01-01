@@ -13,33 +13,33 @@ The intermediate version (from now "gAn Web v2") is more complex than the first 
 \begin{enumerate}
 
 % 1
-\item The user can insert multiple runs: separated by a semicolon (but in case of errors the system can automatically correct them replacing symbols like "-" or "," or "." with semicolons and giving a more robust service). These runs can be inserted by an input field of by a range select button: this button open a "modal" that allows the user to chose the first run and the last, and automatically insert the comprised runs (for example, if the user inserts 30000 and 30010 the system inserts automatically all the run numbers between 30000 and 30010). This modal has a validation system, that ensure the correctness of the inserted values. It is not perfectly clear if this solution fit the needs of the users, but the tests with the whole users group will probably solve this doubt. 
+\item The user can insert multiple runs: separated by a semicolon (but in case of errors the system can automatically correct them replacing symbols like "-" or "," or "." with semicolons and giving a more robust service). These runs can be inserted by an input field of by a range select button: this button open a "modal" that allows the user to chose the first run and the last, and automatically insert the comprised runs (for example, if the user inserts 30000 and 30010 the system inserts automatically all the run numbers between 30000 and 30010). This modal has a validation system, that ensure the correctness of the inserted values. It is not perfectly clear if this solution fits the needs of the users, but the tests with the whole users group will probably solve this doubt. 
 
 % 2
-\item The user can chose which kind of analysis execute. At this point the different analysis are related to the different branches of gAn that at this stage an heterogeneous group of programmers are developing and uploading on Gitlab. It is no clear which of these branches will be definitive and which no, lo the program must be able to use all of them. The type of the analysis depends on the version of gAn downloaded and used for the execution of the program. In gAn Web v2 five complete branches exist, but in the future they can became more. They are externally very similar, the differences are the algorithms in the program, but they give a different output (different output but in the same format: text and images). 
+\item The user can choose which kind of analysis execute. At this point the different analysis are related to the different branches of gAn that at this stage an heterogeneous group of programmers are developing and uploading on Gitlab. It is no clear which of these branches will be definitive and which no, so the program must be able to use all of them. The type of the analysis depends on the version of gAn downloaded and used for the execution of the program. In gAn Web v2 five complete branches exist, but in the future they can became more. They are externally very similar, the differences are the algorithms in the program, but they give a different output (different output but in the same format: text and images). 
 At this stage is not clear if all this different versions will be used for the final application, to clarify this point the best solution is observe directly the user's behavior. 
 
 % 3
 \item The configuration file is not only in text format, but also can be in xml format (it depends on the selected version of gAn). The xml ensures a stronger structure, and must be transparent to the user (he mustn't see differences between the configurator that works with a txt file and the one that works with xml). At this stage both text format and xml format are acceptable, to ensure the retro-compatibility of some analysis, but is possible that in further versions the xml-based design will became dominant. 
 
 %4
-\item The user can chose what version of Root he wants to use for the program. Theoretically different versions of Root are perfectly compatible, but in practice each version of gAn is designed to work with a particular version of Root and to avoid problems it seems to be a good idea to allows the user to choose freely which version of Root use among the installed versions on the server.  
+\item The user can choose what version of Root he wants to use for the program. Theoretically different versions of Root are perfectly compatible, but in practice each version of gAn is designed to work with a particular version of Root and to avoid problems it seems to be a good idea to allow the user to choose freely which version of Root use among the installed versions on the server.  
 
 %5
-\item The user can save images on his hard disk: he can chose from the shown images in the images page an image to download by clicking on a specific download button near the image. Furthermore there is another button "Download All" with whom the user can simple download all the output images.
+\item The user can save images on his hard disk: he can choose from the shown images in the images page an image to download by clicking on a specific download button near the image. Furthermore there is another button "Download All" with whom the user can simple download all the output images.
 
 %6 
-\item The user can download a reduced version of the root file with informations about the images and the results: gAn produce this kind of files as "half-processed" during the computing, and it is not a problem to save this on the hard disk of the server in a specified folder. For an expert user can be scientifically interesting have this file (this root file contain more information than the output, the most of this information is useless [it is an "half-processed" file] , but sometimes an expert user can find something interesting), so the user must have the opportunity to download this.     
+\item The user can download a reduced version of the root file with informations about the images and the results: gAn produce this kind of files as "half-processed" during the computing, and it is not a problem to save this on the hard disk of the server in a specified folder. For an expert user can be scientifically interesting to have this file (this root file contains more information than the application's output, the most of this information is useless [it is an "half-processed" file] , but sometimes an expert user can find something interesting), so the user must have the opportunity to download this.     
 
 % 7
-\item The first little group of user prefers the dropdown menu to the radio button, so all the radio buttons in the program are replaced by dropdown menus.
+\item The pilot-users prefer the dropdown menu to the radio button, so all the radio buttons in the program are replaced by dropdown menus.
 
 % 8
-\item The user has to access not only to a png image, but to a root-image. This kind of image is interactive: the user can with a left click of the mouse (a continued click, like the "dragging") select parts of the image and zoom them, and with a right click do dynamically some kind of image processing (set colors, chose  what kind of chart to show, modify the chart legend, translate in a 3D space the image etcetera). In this way each user can choose freely which information he wants see in the image (try to overseen user's needs in this part seems to be too difficult and not useful).
+\item The user has to access not only to a png image, but to a root-image. This kind of image is interactive: the user can with a left click of the mouse (a continued click, like the "dragging") select parts of the image and zoom them, and with a right click do dynamically some kind of image processing (set colors, chose  what kind of chart to show, modify the chart legend, translate in a 3D space the image etcetera). In this way each user can choose freely which information he wants see in the image (try to overseen all user's needs in this part seems to be too difficult and to overcome this limit give him the freedom of access to the image is a good idea).
 All of this must be done by the user through a browser window. This requisite seems to be quite complex, but Root provides libraries (these libraries work well but they are poorly documented) to interact with Javascript, and can in some way resolve the problem.  
 
 % 9
-\item In the homepage the user can see the run number of the last root file produced by the machine, and its creation date and time (so, he can understand what is the maximum of the range of the insertable numbers). Also, the run number is an unit of measurement of the time, so through this number the user can have information about the progress of the experiment.  
+\item In the homepage the user can see the run number of the last root file produced by the machine, and its creation date and time (so, he can understand what is the maximum of the range of the insertable numbers). Also, the run number is an unit of measurement of the time, so through this number the user can have information about the progress of the experiment. This is an important point because actually in most cases users work with the last existing run of the ones immediately before, but the way in which this application can help the user to the selection of the run need to be deeply analyzed with a confrontation with the users. 
 
 In the intermediate version there was another functional requisite: ideally the user should have been able to select a gAn version also if not installed in the server machine: in this case the system should have been capable to automatically search on the AEgIS Gitlab repository the correct version (if existing), download it, unpack it in the server, and use it to execute the program. 
 After some discussion this requirement has been cancelled, because it was considered complex, basically useless, and potentially harmful (on the branches of the repository there are untested and incomplete versions, that can create if executed wrong outputs, so wrong scientific results). At this moment installing manually the stable versions of gAn on the server seems to be a more smart way to work.
@@ -72,15 +72,13 @@ the user goes to the homepage, he is redirected to the authentication page and h
 he complete the login, in the home page there is a button name "Chose Root version", clicking on this button the user is sent to a page where, he is informed about the current version of Root, and through a dropdown menu can chose among some version of Root already installed on the server (all the acceptable Root versions are installed on the server) . If the 5.34 version is one of the installed version he can select it and confirm, the goal is achieved. If the 5.34 version is not installed, the user cannot use this version.  
 
 \item The user wants to select the "Rug-dev" branch of gAn:
-the process is very similar to the process that allows the user to chose a Root version. The user complete the login, in the home page there is a button name "Chose gAn version", clicking on this button the user is sent to a page where, he, through a dropdown menu, can chose among some branches of gAN existing on the machine. "Rug-dev" is one of these, the user can confirm and the task is completed.
+the process is very similar to the process that allows the user to chose a Root version. The user complete the login, in the home page there is a button name "Chose gAn version", clicking on this button the user is sent to a page where, he, through a dropdown menu, can chose among some branches of gAn existing on the machine. "Rug-dev" is one of these, the user can confirm and the task is completed.
 
 \item The user wants to make the computation using only the data taken from the sensor named "Mimito":
 The user, after the login, in the homepage can use the button "Edit Config" the reach a page in which, through some dropdown menus, he can change the configuration file of gAn. Each of the dropdown menus is related to a sensor (often they are 5-6, it depends on the branch), and the option of the dropdown are "yes" or "no": if "yes" is selected the sensor's data are used in the computation, if "no" they aren't. One of the dropdown menus is named "Mimito", the user select "yes" for this sensor, "no" for all the others.  
 
-\item TODO INSERT SOMETHING RELATED TO THE ROOT LIKE IMAGE %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO INSERT SOMETHING RELATED TO THE ROOT LIKE IMAGE
-
 \item The user want to download all the images related to the runs 40001 and 40002:
-He can, after the login, insert the runs in the homepage (it is possible both by input field and by range selector), run gAn, wait the end of the execution, click "Show all images", and from here click "download all images". All the images will be downloaded in png format. %TODO %TODO %TODO %TODO %TODO %TODO %TODO  CHECK IF THIS PROCESS IS EXACTLY similar to what is written
+He can, after the login, insert the runs in the homepage (it is possible both by input field and by range selector), run gAn, wait the end of the execution, click "Show all images", and from here click "download all images". All the images will be downloaded in png format.
 
 \item The user wants to download the semi-processed root file related to the runs 31111 and 31112:
 The steps are the same as the steps used to download the images, but instead of the button "Show all images", the user has to use the button "download root files".     
@@ -91,7 +89,7 @@ The steps are the same as the steps used to download the images, but instead of 
 \section{Prototypation}
 
 The late version is based on the early version, some pages (and functionalities) are added, some existing pages are improved. 
-Also in this case there aren't mock-ups, the developer chose to program directly with a common web-development process Html-javascript-php based, to optimize the time.
+Also in this case there aren't mock-ups, the developer chooses to program directly with a common web-development process Html-javascript-php based, to optimize the time.
 
 Following all modifications are explained.
 
@@ -145,7 +143,7 @@ When the user clicks start a progress bar appears. Unfortunately it is very hard
 \caption{The modal opened by clicking the button "Add runs by range"}
 \end{figure}
 
-\item There is a little message "You are using: nameOfGAnBranch" that informs the user about which is the branch of gAn used by default if he doesn't change the configuration (the default branch is the last used, because usually when a group of users starts to use a branch, it continues to use it for some days)
+\item There is a little message "You are using: nameOfGAnBranch" that informs the user about which is the branch of gAn used by default if he doesn't change the configuration (the default branch is the last used).
 
 \item There are two new buttons: "Choose Root version", "Choose gAn version". These buttons redirect the user to pages able to modify the version of Root and gAn used in the computation.
  
@@ -162,8 +160,7 @@ The page related to the modifications of the configuration file of gAn:
 \caption{The edit-configurator page of gAn Web}
 \end{figure}
 
-This page doesn't use anymore radio buttons, because some users ask the developers to use dropdown menus (for aesthetic reasons). The user can read near the button the currently selected value for each field. There aren't tool-tips able to describe the signification of each field here, because the users to which gAn Web is intended have a perfect understanding of the names and the features of each sensor (mimito, scint, farcup, etcetera are sensors).  
-
+This page doesn't use any more radio buttons, dropdown menus are preferred for aesthetic reasons. The user can read near the button the currently selected value for each field. 
 
 
 The page that shows the textual output of gAn is exposed in the following images, has some modifications:
@@ -260,7 +257,7 @@ Following the login page image:
 \caption{Simple login page}
 \end{figure}
 
-In the late version there is also the opportunity for the user to choose which branch of gAn and which version of Root Framework to use to execute the program. The pages that the user can user are quite similar, and quite simple. The user must use dropdown menus to make these choices, and there is always a default safe choice (the system remembers the last working version of Root and the last working branch of gAn), so it is impossible make errors or inconsistent choices. 
+In this version there is also the opportunity for the user to choose which branch of gAn and which version of Root Framework to use to execute the program. The pages that the user can user are quite similar, and quite simple. The user must use dropdown menus to make these choices, and there is always a default safe choice (the system remembers the last working version of Root and the last working branch of gAn), so it is impossible make errors or inconsistent choices. 
 
 Following there are some screen-shots of these pages
 

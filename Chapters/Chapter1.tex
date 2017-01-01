@@ -8,41 +8,38 @@
 
 \section{User friendly Data analysis: gAn Web}
 
-GAn is a program that aims to analyse data related to the AEgIS experiment at the CERN.
+GAn is a program that aims to analyse data related to the AEgIS experiment at the CERN, gAn Web is the web interface of gAn, and it is the main topic of this document.
  
-This program receive (continuously) in input a folder containing several terabytes of files in ".root" format, and some parameters; 
+This program receive in input (from another software system) several terabytes of files in ".root" format, and some input parameters inserted by the user; 
+It does an analysis and it gives in output some summarized scientifically interesting information, understandable by humans.   
 A file ".root" is a file produced by a variegated group of sensors in a complex machine that accelerates particles and lets them crash together. This sensors produce data continuously (8 hours per day), and a software system validates and saves these data in file with .root extension. 
 
-The parameters are:
+The input parameters are:
 \begin{enumerate}
 
 % 1
 \item "Run Number", that identifies in which part of the data the user is interested. 
-The time in this experiment is divided in "runs" (a run lasts about 140 seconds), so the user, by the run parameter can tell to gAn in which time slice he is interested. For example: run 55614 means that the user is interested in the information related to the 22th of November 2016, taken in the time slice between 15:45 and 15:47.  
+The time in this experiment is divided in "runs" (a run lasts about some hundred seconds), so the user, by the run parameter can tell to gAn in which time slice he is interested. For example: run 55614 means that the user is interested in the information related to the 22th of November 2016, taken in the time slice between 15:45 and 15:47. The enumeration of the runs is incremental: so the run 55199 identifies the time slice immediately after the time slices identified by 55198. This system to identify time slices seems to be strange at the beginning but is a standard for all the applications in the AEgIS experiment and it allows a very efficient and precise communication.
+ 
 
 % 2
 \item "Type of analysis", that identifies what the program must do with the data and what it must show as output to the user.
-A "type" is a way in which the program extracts information from the raw data. each type can extract different information using different parts of data and elaborating them in different ways. For example: a type of analysis named "Ingmari's Code" can extract information about the temperatures of some elemental particles analysing how quickly they change direction subjected to a force. 
+A "type" is a way in which the program extracts information from the raw data. each type can extract different information using different parts of data and elaborating them in different ways. For example: a type of analysis named "Tmeas" can extract information about the temperatures of some elemental particles analysing how quickly they move subjected to a force. 
 
 \end{enumerate}
 
 
 The .root files can be analysed using a framework named ROOT Framework, that consists in a lot of libraries specialized in high-energy physics analysis, and an interpreter able to understand a C++ script.
 Actually, gAn is the sum of the Root Framework plus a lot of C++ scripts.
-The goal of gAn is reduce the huge amount of raw data in input in a little amount of scientifically interesting and easily understandable data in output. To do this it has to filter data, understand which of them are scientifically interesting, chose the parts that are related to the run selected by the user (by the run parameter), elaborate and compare them, and make advanced statistical analysis on them.  
+The goal of gAn is reduce the big amount of raw data received in input in a little amount of scientifically interesting and easily understandable data in output. To do this it has to filter data, understand which of them are scientifically interesting, chose the parts that are related to the run selected by the user (by the run parameter), elaborate and compare them, and make advanced statistical analysis on them.  
 gAn can be called using a common linux terminal, using a command with parameters. 
 
 The output of gAn consists of a single text file with computed, (quite) organized data, and a folder of images in png format.
-
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO  INSERT AN IMAGE OF THE OUTPUT BEFORE ALL (TERMINAL)
-
- 
 This structure (root files in input, data analysis using Root, images, organized and selected data in output) is very common in the CERN's experiments. 
 The output of gAn is quite understandable by an experienced physicist, but it is disorganized, complex for an untrained user, and the terminal interface can be surely improved using some more user friendly technologies.
 
-
 GAn Web is a web application, that aims to create a user friendly web interface, based on the most important human-machine interaction principles, between the users and gAn.
-A web interface can improve it in two ways:
+A web interface can improve the system in two ways:
 
 \begin{enumerate}
 

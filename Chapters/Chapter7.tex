@@ -5,7 +5,7 @@
 \label{Chapter6} % For referencing the chapter elsewhere, use \ref{Chapter5} 
 
 Developing gAn Web it was decided to design together the physical parts and the conceptual part. This is the holistic approach to design. In this project the users play a special role: they are absolutely participatory, they are an important part of the developing team.
-The point is that in this project the needs of the users are very particular, and very hard to understand for a person who doesn't work in the physics world. So the users must take part in each decision and give continuously opinions and feedbacks, to arrive to a good result.
+The point is that in this project the needs of the users are very particular, and very hard to understand for a person who doesn't work in the physics world. So the users must take part in each decision and give continuously opinions and feedbacks, to avoid misunderstandings and to obtain a good result.
 
 \section{Used patterns}
 
@@ -14,46 +14,47 @@ The main source of patterns of this project is the website \url{http://designing
 
 \subsection{Clear entry point} 
 
-In each page there are only a few entry points, very visible for the user. This result is quite easy to achieve because in the application there aren't an incredible amount of pages, and in each page, according the logic, is quite easy understand where the user desires to go. In fact in each kind of task that the common user executes with gAn there is a "standard" path, and using this advantage it is possible to reduce the entry points in each page to 4-5. 
+In each page there are only one or two entry points, very visible for the user.
+The first entry point is always the arrive from the logically previous page, and the second is in case the result of a "go back" button somewhere.
+
+This result is quite easy to achieve because in the application there aren't an incredible amount of pages, and in each page, according the logic, is quite easy to understand where the user desires to go. 
+
+To enforce this result there is a block system: if the user accesses inserting directly the URL in the browser for example in the configuration page without passing through the normal path of the program the system understands that some cookies doesn't exist and re-forces automatically the URL to the first page: the Login one. These is a designer's decision according to that the limitation of the freedom of the user is acceptable to ensure to show him always consistent pages with consistent contents
+
+In conclusion in each kind of task that the common user executes with gAn there is a "standard" path, hopefully very easy to find. 
 
 \subsection{Wizard}
 The fact that each task in gAn has a "standard" path leads that each task executed with the web interface can be carried out using a wizard. The user loses some "freedom of movement" in the application, but in this way he is forced to follow the right way and can avoid easily errors or omissions.
+Is this a limitation? we must observe that if, for hypothesis an user is interested only in a textual output the program forces him to see also the image-based output, but, both output are in the same page, and the navbar allows the user to go rapidly where he wants.
 
 \subsection{Spatial memory}
-In each page the opportunities to move to another page(back to home, show images etcetera) or to execute tasks (confirm, download something, etcetera) are concentrated in the top of the screen or, if they are more then 2, in the top and in the right. They are all in fixed position, so even if the user scrolls down the page can be sure to see them in the same positions. The hope is that in this way the user can automatically associate the position of the buttons with the task that these buttons can execute.
-
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO INSERT IMAGE
+In each page the opportunities to move to another page (back to home, new analysis etc) or to execute tasks (confirm, download something, show images) are concentrated in the navbar of the screen. The hope is that in this way the user can automatically associate the position of the buttons with the task that these buttons can execute.
 
 \subsection{Grid of equals}
-
 This pattern recommends to position the elements in the screen in a way that creates a "grid". All the elements of the grids must have the same visual weight, to seem equally important to the user's eyes.
 This pattern is used in the page that allows the user to edit the configuration file of gAn, this disposition of elements is useful to give the user an ordered exposition of the editable options in the file.
 
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO INSERT IMAGE here
 
 \subsection{Responsive enabling}
-There are some buttons in the web interface that executes task which need some pre-condition. For example: to start the gAn program it is mandatory to insert one or more runs as input for the program. If this condition is not achieved the button is red and inactive, and only when the user inserts correctly the requested values it became green and clickable. A similar behaviour happens in the configurators. In this way is possible to avoid useless errors and waste of time, without create frustrating experiences for experienced users. 
+There are some buttons in the web interface that executes tasks which need some pre-condition. For example: to start the gAn program it is mandatory to insert one or more runs as input for the program. If this condition is not achieved the button is inactive, and only when the user inserts correctly the requested values it became clickable. A similar behaviour happens in the configuration page. In this way is possible to avoid useless errors and wastes of time, without create frustrating experiences for experienced users. In the intermediate version to say to the user if the button is clickable or not we used the colors red-green, but in the final version the user of the standard Bootstrap's graphic that for this point prefers to use the variation of opacity, seems to be a better idea.   
 
 \subsection{Progress indicator}
-The starting of gAn is a complex task that take some seconds. This waiting can be disturbing for the user, who can think that the program is crashed. Another problem is that is quite difficult at this moment estimate the waiting time with precision. A solution can be create an infinite progress bar, that cannot show to the user exactly how much time he must still wait, but can inform him that the system is effectively working and has receipt his request. 
+The starting of gAn is a complex task that takes some seconds. This waiting can be disturbing for the user, who can think that the program is crashed. Another problem is that is quite difficult at this moment estimate the waiting time with precision. A solution can be create an infinite progress bar, that cannot show to the user exactly how much time he must still wait, but can inform him that the system is effectively working and has receipt his request. In the finished product, with a completely working server, we expect that the waiting time is something around 2 seconds, no more. 
 
 \subsection{Go Back to a Safe Place}
-In each screen the user can easily return to the homepage, that is the common start point of all the possible tasks. In the page related to the analysis of the images the user can also return to the page where all the images are shown, because this page is a good point to start the image analysis.
+In each screen the user can easily return to the homepage , that is the common start point of all the possible tasks. When the user returns at this situation the program re-starts asking him if he prefers a multi-runs analysis or a single-run one, so the program is ready to start a new task. 
 
 \subsection{Modal panel}
-This pattern is quite useful in some situation, because it forces the user to do some stuffs before he can return to the normal execution of the program. This pattern is used in the homepage where the user can choose if he prefers insert some runs by selecting the first and the last of a list. In this situation a modal is opened and he inserts the requested values (that must be valid). The user can exit from the modal only by canceling the operation (through the "X" button) of by inserting valid values. Also this solution helps to avoid useless errors. 
+This pattern is quite useful in some situation, because it forces the user to do some stuffs before he can return to the normal execution of the program. This pattern is used in the homepage where the user can choose if he prefers to insert different groups of runs using a "text area" input. In this situation a modal is opened and he inserts the requested values (that must be valid). The user can exit from the modal only by deleting the operation (through the "X" button) of by inserting valid values. Also this solution helps to avoid useless errors. 
 
 \subsection{Liquid layout}
 
-This useful pattern recommends to create a dynamic structure able to adapt itself automatically to the screen's dimensions. The concept of "adapt itself" doesn't include only the ability to modify the dimensions of each object, but also to modify the layout of the screen. This pattern is very useful in applications that must work both on laptops and on mobile devices. In the particular case of gAn Web the users never use mobile devices, so the application has to adapt itself only to screens with a dimension of minimum 13-14 inches. For this reason the automatics system of object-dimensioning provided by Bootstrap (based on the partitioning of the screen in columns and sub-columns) is sufficient to ensure that all the system is usable by all the "target" screens. In fact all the objects that compose the system's graphic can adapt themselves easily to all the expected screen dimensions. 
+This useful pattern recommends to create a dynamic structure able to adapt itself automatically to the screen's dimensions. The concept of "adapt itself" doesn't include only the ability to modify the dimensions of each object, but also to modify the layout of the screen. This pattern is very useful in applications that must work both on laptops and on mobile devices. In the particular case of gAn Web the users never use mobile devices (a correct analysis request a big screen), so the application has to adapt itself only to screens with a dimension of minimum around 10 inches. For this reason the automatics system of object-dimensioning provided by Bootstrap (based on the partitioning of the screen in columns and sub-columns) is sufficient to ensure that all the system is usable by all the "target" screens. In fact all the objects that compose the system's graphic can adapt themselves easily to all the expected screen dimensions. 
 
 
 \subsection{Hover tools}
 
 This kind of helper allows the user to get information about the tasks that each object can carry on just moving the mouse over it. 
-
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO METTI IMMAGINE DI HOVER
-
 The interface of gAn Web is quite simple, but for a new user is useful to have a some tips about the components potentialities. Bootstrap provides some easy commands to create the tooltips accessible by a "on hover" event, giving to the developer a fast way to implement this pattern.
 
 \subsection{Harmless default}
@@ -61,26 +62,21 @@ The interface of gAn Web is quite simple, but for a new user is useful to have a
 This pattern is used in 2 ways:
 \begin{enumerate}
 
-\item In the homepage, where the user has to insert the run numbers (before he can press the start button) some place-holders are visible (as is shown in the figure %TODO %TODO %TODO %TODO %TODO INSERTI NUMBER OF THE FIGURE)
+\item In the homepage, where the user has to insert the run numbers (before he can press the start button) some place-holders are visible. 
+These place-holders aim to teach the user how to insert correctly the numbers.
 
-%TODO %TODO %TODO %TODO %TODO %TODO %TODO  INSERT THE FIGURE OF THE PLACEHOLDER
+\item Another use of this pattern is related to the page that aims to modify the configuration file of gAn: here the user can see as default the last known working values, avoiding to re-insert values that he doesn't want to change. He also can, through the related  button, re-set all the configurations to default values.
 
-These place-holders aim to teach the user to insert correctly the numbers: separating them with a semicolon (if the user uses a dot, a slash, or a dash, the application can repair the error and run correctly the same). 
-
-\item Another use of this pattern is related to the page that aims to modify the configuration file of gAn: here the user can see as default the last known working values, avoiding to re-insert values that he doesn't want to change.
-
-%TODO %TODO %TODO %TODO  image here 
 \end{enumerate}
 
 \subsection{Same-page error messages}
 
 This pattern allows the user to understand immediately if and where there is an error in the inserted values, showing him a visible message in the page able to explain him how to correct the error. In most cases in gAn Web the values are inserted using dropdown menus, so it is impossible make errors, but in each part where there is a "free" input field this pattern is used: if the inserted value doesn't meet the requirements of a validator a message appears on the screen explaining to the user what to do to solve the problem.
 
-%TODO %TODO %TODO %TODO  IMAGE HERE
-
 \subsection{Alternative views}
+This is an example of pattern that we tried to use, mainly in the intermediate version, but at the end we decided to leave. 
 This pattern proposes to let the user choose among alternative views that are substantially different from the default view. 
-GAn Web applies this pattern where shows images to the user: he can show if he prefers to see an static image in png format, that is simple and contains all and only the needed information (or better, the information that the designer thought the user needs), or a dynamic, modifiable and navigable image in Root format, in which the user can decide exactly what to see.
+GAn Web tried to apply this pattern in the intermediate version where the system showed images to the user: the user was enabled to choose if see a static image in png format, that is simple and contains all and only the needed information (or better, the information that the designer thought the user needs), or a dynamic, modifiable and navigable image in Root format, in which the user can decide exactly what to see. Also the user was able to choose the dimension of the image (little, medium, big). But to the test with users we found that actually almost nobody used this opportunity: the users always chose big images, root like version. So this choice opportunity was removed
 
 
  

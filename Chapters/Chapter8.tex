@@ -1,8 +1,8 @@
-% Chapter 9
+% Chapter 8
 
 \chapter{Users and Tests with them} % Main chapter title
 
-\label{Chapter9} % For referencing the chapter elsewhere, use \ref{Chapter9} 
+\label{Chapter8} % For referencing the chapter elsewhere, use \ref{Chapter8} 
 
 In this chapter first of all is exposed how the users are defined and what are their characteristics. Also, here are described the test conducted with them and in which ways they are useful to improve the gAn Web's features.   
 
@@ -25,7 +25,7 @@ A considerable amount of the users use eyeglasses, and probably some of them pas
 \subsection{Education Background}
 The cultural and educational level of the user is very high: almost all of them have a Phd, and they do a complex scientific job. They often have in mind a really structural model of the processes that goes on in all the AEgIS experiment applications (as explained in the related paragraph). 
 
-All of them have an extraordinary deep understanding of the particles physics: in particular they understand the technical terminology, the jargon in which the logbooks are written (because all the personnel, in shifts, writes the logbooks) and the names of the sensors (this is quite important, each sensor has a proper name, they are very numerous, and the fact that the users can identify them easily is a big ad advantage). 
+All of them have an extraordinary deep understanding of the particles physics: in particular they understand the technical terminology, the jargon in which the logbooks are written (because all the personnel, in shifts, writes the logbooks) and the names of the sensors (this is quite important, each sensor has a proper name, they are very numerous, and the fact that the users can identify them easily is a big advantage). 
 
 Other important information: almost every time a user use gAn he is quite sure about what he is looking for. Situation in which the user searches a run number and reads generically the output of an analysis (or thinks about which is the correct analysis to use) is not common: in the most of the use cases the user is pretty sure about what is the information to search and what is the correct analysis. 
 
@@ -38,7 +38,7 @@ A different approach exists for the run number, in this case we must identify tw
 
 \end{enumerate}
 
-Most of the users are used to use the Linux's terminal, so they are used to quite complex but efficient interaction. A good advantage is that the users are very used to approach new applications, even complex ones, and they learn very rapidly: the advantage is that they are used to give developers hints about what they expect from an new application, because they do it quite often. Actually, the users, in particular the pilot users, are almost co-developers. GAn Web offers them a way to interact efficient like the terminal but easier (hopefully). They also are used to have a feedback for every action they do (using the Linux's terminal you can always know if the program is running, if it is crashed, and what are its outputs).
+Most of the users are used to use the Linux's terminal, so they are used to quite complex but efficient interaction. A good advantage is that the users are very used to approach new applications, even complex ones, and they learn very rapidly: the advantage is that they are used to give developers hints about what they expect from a new application, because they do it quite often. Actually, the users, in particular the pilot users, are almost co-developers. GAn Web offers them a way to interact efficient like the terminal but easier (hopefully). They also are used to have a feedback for every action they do (using the Linux's terminal you can always know if the program is running, if it is crashed, and what are its outputs).
 
 One of the tested users is a web developer, so his hints are particularly interesting because is quite expert in the creation of interfaces.
  
@@ -80,12 +80,13 @@ The developer of the application is a student in Software Engineering, and his d
 This test is divided in three parts: 
 \begin{enumerate}
 \item
-The first is an observation of the behavior of the user with the application: the developer tells to the user only a few information: the fact that this application can transform a run number and a kind of analysis. 
-The first idea was follow a pattern in which the developer asks to the user to use this application during the shift, in the situation that he considers it useful: in this situation the user talks about what he is doing, and makes comments, and the developer observe and take notes about what happens (and this pattern was effectively applied with 1/3 of the users), but to test the biggest possible numbers of users and recover more information, in 2/3 of the cases the developer ask to the user to try to use the application in a test situation (not a really work situation) and to reason about what he is doing.
+The first part is a direct observation of the user when he uses the application. It take place during the shifts: both the users and the designer partecipated in this task divided in groups of 3-4-5 peaople, so this is a perfect opportunity, also because actually it is not a simulated test, is a real test on the field in a real work simulation. This test is an observation of the behavior of the user with the application: the developer tells to the user only a few information: the fact that this application can transform a run number and a kind of analysis in an output. 
+The first idea was follow a pattern in which the developer asks to the user to use this application during the shift, in the situation that he considers it useful: in this situation the user talks about what he is doing, and makes comments, and the developer observe and take notes about what happens (and this pattern was effectively applied with a quite big group of users), but to test the biggest possible numbers of users and recover more information, in other cases the developer ask to the user to try to use the application in a test situation (not a really work situation) and to reason about what he is doing. The reason of this choice is that wait the moment in which the application can be used during the shifts to test isn't efficient (but still is a good resource) and "create" artificially the situation is a good idea.
+
 \item
 The second consists in the proposition of a standard survey about the application to the user, to be compiled. This survey is the standard SUS survey. This choice is related to the fact that using a standard survey we can have an high quality already testes survey with precise and organized closed questions, able to give us an idea about the overall result of the interface. 
 \item 
-The third part consists in a brief discussion with the user: the designer asks him in which way this application can be more useful and if there are in his opinion some good ideas to implement able to improve the helpfulness of the application.
+The third part consists in a brief discussion with the user (some chosen users, selected by their willingness to dedicate a moment to discuss about the application): the designer asks him in which way this application can be more useful and if there are in his opinion some good ideas to implement able to improve the helpfulness of the application.
 
 \end{enumerate} 
 
@@ -95,7 +96,7 @@ There is an advantage: one of the users is a web developer, so he is very expert
 
 \subsection{Execution and Results}
 The first part of the test, the one related to the observation of the users working with the application and talking about what they do, gived a big amount of useful information and let the developer observe a good amount of problems and errors. 
-The biggest part of the problem is founded by observing the behaviors of the user and asking directly to him if there is a problem: for example, if the user search for a while how he can enable a sensor and has some difficult to understand how to do it, the developer can listen his comments, understanding his reasons about where he thinks this option can be, shows him where actually the sensor is, and understand that probably the location of the sensor option is not clear. 
+The biggest part of the problems are founded by observing the behaviors of the user and asking directly to him if there is a problem: for example, if the user search for a while how he can enable a sensor and has some difficult to understand how to do it, the developer can listen his comments, understanding his reasons about where he thinks this option can be, shows him where actually the sensor is, and understand that probably the location of the sensor option is not clear. 
 Here is a list of problems found in this phase:
 
 \begin{enumerate}
@@ -110,19 +111,19 @@ The main options in the configuration page are related to the activation or de-a
 In the page that shows the images the user can by a selector choose if he wants want to see the images in a big, a middle, or a little format. During the test no one used this opportunity, and when the developer asked to the users if this control can be useful they simply say that the correct dimension of the image the "big" solution, with the image that cover (almost) all the screen in width. In this case the user can easily read all the information in the image. At this point is possible to observe that the "image dimension control" is useless, and it is a good idea remove it (or at least move it in another part of the screen)   
 
 \item
-The interaction of the users with the personal output is particular: during the test the users read it rapidly, but actually they take from there only few information contained in 2-3 rows. Actually in each type of analysis in the eighty percent of the situation there are a few important information, and only in the other cases the user must read all the rest of the output (but in probably 20 percent of the cases he must). So a good idea is to highlight the more important parts (that varies based on the type of the analysis), to organize in groups the "sometimes important" parts, and to hide all the others (there are some rows that are actually important only in the debug phase, that the user never does.. so we can improve the clearness hiding them).
+The interaction of the users with the personal output is particular: during the test the users read it rapidly, but actually they take from there only few information contained in 2-3 rows. Actually in each type of analysis in the eighty percent of the situation there are a few important information, and only in the other cases the user must read all the rest of the output (but in probably 20 percent of the cases he must). So a good idea is to highlight the more important parts (that varies based on the type of the analysis), to organize in groups the "sometimes important" parts, and to hide all the others (there are some rows that are reasonably important only in the debug phase, that the user never does.. so we can improve the clearness hiding them).
 
 \item 
-One of the worst problems is the maybe half of the users don't understand that if they click on the image they can access a lot of information such as other representation, drawing options, opportunity to zoom in or out, labels. In that cases almost all the users asked directly to the developer how to act this commands, because they are absolutely necessary to the correct use of the application. This control is probably the biggest improvement between gAn and gAn Web, because give to the users new opportunity of understanding what is happening in the experiment through information related to the images (the previous version, before gAn, had only png-format images, without this controls), so the fact that the users often don't find it is a big deal. A solution can be create a label-advice to give the user a clearer vision.
+One of the worst problems is the maybe half of the users don't understand that if they right-click on the image they can access a lot of information such as other representation, drawing options, opportunity to zoom in or out, labels. In that cases almost all the users asked directly to the developer how to act this commands, because they are absolutely necessary to the correct use of the application. This control is probably the biggest improvement between gAn and gAn Web, because give to the users new opportunity of understanding what is happening in the experiment through information related to the images (the previous version, before gAn, had only png-format images, without this controls), so the fact that the users often don't find it is a big deal. A solution can be create a label-advice to give the user a clearer vision.
 
 \item
 Some users, when is in the textual-output page, have some difficulties in finding the command to move to the images pages: probably the button is not sufficiently evident in the screen. This problem can be an impediment with new users so the best idea is solve it, re-thinking the distribution of the buttons in this page, that are actually not very clear. 
 
 \end{enumerate}
 
-The second part, the one related with the surveys, was actually a bit less useful, because the results seemed to be too high if compared with the amount of problems founded in the first test (probably the users simply tried to be gentle with the developer).
+The second part, the one related with the surveys, has as goal to give an overall idea about the utility of gAn Web. This part of the test was unfortunately a bit less useful, because the results seemed to be too high if compared with the amount of problems founded in the first test (probably the users simply tried to be gentle with the developer). Generically the strategy based on the survey was used no more after this attempts (the direct tests with the users seems to be more promising).
 
-The third part, the one that consists in the discussion with the user, was very helpful: almost all the user proposed new ideas (all of them are useful, the most of them are effectively implementable), and new functionalities. Some of the functionalities was asked by almost all the users, so they probably are absolutely important to improve the interaction quality. 
+The third part, the one that consists in the discussion with the user, was very helpful: almost all the selected users proposed new ideas (all of them are useful, the most of them are effectively implementable), and new functionalities. Some of the functionalities was asked by almost all the users, so they probably are absolutely important to improve the interaction quality. 
 
 Here is a list of observations obtained in the third phase, through discussions with the users:
 
