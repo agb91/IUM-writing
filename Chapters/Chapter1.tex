@@ -19,7 +19,12 @@ The input parameters are:
 
 % 1
 \item "Run Number", that identifies in which part of the data the user is interested. 
-The time in this experiment is divided in "runs" (a run lasts about some hundred seconds), so the user, by the run parameter can tell to gAn in which time slice he is interested. For example: run 55614 means that the user is interested in the information related to the 22th of November 2016, taken in the time slice between 15:45 and 15:47. The enumeration of the runs is incremental: so the run 55199 identifies the time slice immediately after the time slices identified by 55198. This system to identify time slices seems to be strange at the beginning but is a standard for all the applications in the AEgIS experiment and it allows a very efficient and precise communication.
+The time in this experiment is divided in "runs" (a run lasts about some hundred seconds), so the user, by the run parameter can tell to gAn in which time slice he is interested. For example: run 55614 means that the user is interested in the information related to the 22th of November 2016, taken in the time slice between 15:45 and 15:47. 
+The enumeration of the runs is incremental: so the run 55199 identifies the time slice immediately after the time slices identified by 55198. The progress of the run numbers is always going on, so new run numbers are continuously added. 
+In this document every time we say "last run number" we don't mean the absolute last run numbers, but the run number that is going on right in this moment. This concept is important because usually in most cases the users use gAn Web on the last existing run number (so on the run number that is going on right at that moment) or the immediately previous run number.  
+This system to identify time slices seems to be strange at the beginning but is a standard for all the applications in the AEgIS experiment and it allows a very efficient and precise communication.
+
+On another server exists a RunLog. The RunLog is a document on which at each run  a group of person write the run number, some informations (about settings), some observation (at maximum 2 rows, usually one.. so very brief observations). This document is not very useful if the user works with gAn Web using the most recent run number (because he can remember information about the last run..) but it is important when it works with old run numbers (the memory of the user is obviously limited). 
  
 
 % 2

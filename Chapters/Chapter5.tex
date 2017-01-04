@@ -1,15 +1,15 @@
-% Chapter 1
+% Chapter 5
 
 \chapter{Final version} % Main chapter title
 
-\label{Chapter5} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+\label{Chapter5} % For referencing the chapter elsewhere, use \ref{Chapter5} 
 
 Here will be explained the features of the final version, and how we are arrived at it.
 
 \section{Functional requirements}
 
 The last version (from now "gAn Web v3") is a modified version of the intermediate version. 
-The second version's modification come from two sources: some adding requirements and modifications are proposed from the pilot users (that are also supervisors) and some else come from the tests made with the generic users; The first group of adding requirements (the ones proposed by the supervisors) are the following:
+The second version's modification come from two sources: some adding requirements and modifications are proposed from the super users and some else come from the tests made with the generic users; The first group of adding requirements (the ones proposed by the supervisors) are the following:
 
 \begin{enumerate}
 %1 chose analysis new way
@@ -34,9 +34,9 @@ There is an effort in the developing of the whole project to make it independent
  
 Furthermore, the version with this last requirements was tested with the users: the developer studied their behavior observing them at work with the existing version, listening to their comments, and asking them opinion and information. The impact of the debut with the users highlights some problems to be overcome, and also provide some interesting ideas: from the analysis and the solution of these problems and from the user's proposals the requirements of the last version was defined. 
 
-In this document there is a chapter (chapter \ref{Chapter8} ) aimed to explain how the tests with the users took place and what are the results.
+In this document there is a chapter (chapter \ref{Chapter6} ) aimed to explain how the tests with the users took place and what are the results, to know more about the argument.
 
-The problems observed (and for each the proposed solution) are the following:
+The main problems observed (and for each the proposed solution) are the following:
 
 \begin{enumerate}
 \item 
@@ -88,7 +88,7 @@ The user insert a run, and select an analysis names PMTs. This kind of analysis 
 
 \end{enumerate}
 
-\section{Prototypation}
+\section{Prototyping - Implementation}
 
 Here is explained with some screen-shots how the final version looks like, and how does it work.
 
@@ -124,7 +124,7 @@ Here we can see how the two modalities of work (single and multiple) appears:
 \caption{The Homepage if the user chose Single run analysis}
 \end{figure}
 
-the single one is more simple, on the left of the screen the user inserts a run number and a kind of analysis. We can see the button related to access the configurator and modify the settings (Advanced Settings). On the right part of the screen there is a view on the runlog of the experiment. The user uses the right part when he wants more information about what run use to work (actually this situation is quite seldom). In the case the user can insert a date using a datepicker, the system opens some pages related to the days around that date and in each page shows the content of the logs related to this date. The log are always divided in runs, and for each run there are some informations and comments. At the moment this functionality is a mock-up (in is the only one mock-up of this document). On the top-left of the screen there is always a little note with some information about the status of the program: this is a little cognitive aid. On the screen there is always wrote the last known run, because in most cases the users use it or the immediately previous one. 
+the single one is more simple, on the left of the screen the user inserts a run number and a kind of analysis. We can see the button related to access the configuration page and modify the settings (Advanced Settings). On the right part of the screen there is a view on the RunLog of the experiment. The user uses the right part when he wants more information about what run use to work (actually this situation is quite seldom). In the case the user can insert a date using a datepicker, the system opens some pages related to the days around that date and in each page shows the content of the logs related to this date. The goal of the datepicker, provided by Bootstrap, is to reduce the charge on the memory of the users (it shows as default the current date, and shows as result the pages of the RunLog related not only to the selected date but also to the days before and after, to give the user some references and allow him to make errors of 2-3 days) and to allow him to insert the date in a correct format. The log are always divided in runs, and for each run there are some informations and comments. At the moment this functionality is a mock-up (it is one of the few  mock-ups exposed in this document). On the top-left of the screen there is always a little note with some information about the status of the program: this is a little cognitive aid. On the screen there is always wrote the last known run, because in most cases the users use it or the immediately previous one. 
 
 
 \begin{figure}[H]
@@ -139,8 +139,18 @@ Following a little example of how the user can insert data through an Input Area
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{LastMultipleRange.png} 
-\caption{The Homepage if the user chose Multiple runs analysis}
+\caption{Modal using which the users insert different ranges of runs }
 \end{figure}   
+
+Advanced Settings page:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{LastEditConfig.png} 
+\caption{The page related to edit configurations}
+\end{figure}   
+
+This page aims to allow the user to modify some groups of settings. The general rule is to use dropdown menus if the choice is true/false or Yes/No (	quite common) or between a reduced number of textual options, an to use instead  seekbars (an input bar moving which the user can insert a bigger or smaller numerical value) when the user must set a numerical value that goes from a minimum to a maximum value. On the top of the screen the user chooses to save the current setting, to return to the default setting, to back home (without saving).    
 
 
 Output: 
@@ -150,7 +160,7 @@ There are some innovation. The first one is the navbar: now the user can find he
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{LastNavbar.png} 
-\caption{The output in textual version}
+\caption{The Navbar}
 \end{figure}  
 
 
@@ -158,11 +168,20 @@ Textual Output:
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.25]{LastMultipleRange.png} 
+\includegraphics[scale=0.25]{LastTextualOutputHighLight.png} 
 \caption{The output in textual version}
 \end{figure}  
 
 Here we can see out a textual output appears: there are more information, but in the 95 per cent of cases only a few are really useful, so they are highlighted with a special font and a big border (the hope is to use perceptive suggestions to advise the user about where to find what he searches). In this example we can see also some warnings: where something works wrong (or simply not perfectly) the system informs the user about the problem, with a red color, to ensure that he sees it. 
+
+Let's make a confrontation between the same textual output before and after being formatted:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{TextConfrontation.png} 
+\caption{Formatted vs unformatted output}
+\end{figure}  
+
 
 Images output:
 
@@ -172,7 +191,8 @@ Images output:
 \caption{The output images}
 \end{figure}  
 
-Here we can see that there is no more the opportunity to select the dimension of the images (but still there is a zoom function in the image), or the layout, because none of the users never used these functionalities in the tests .. nor the possibility to choose a particular run of a group of images: this is because like discussed previous in this chapter the existing of the "kinds" of analysis makes this choice useless. Instead there is a list of check-boxes that is selected or deselected let the images appear and disappears. This feature is not important with 2 or 3 images, but sometimes the images are 7-8-9 so it is necessary.
+Here we can see that there is no more the opportunity to select the dimension of the images (but still there is a zoom function in the image), or the layout, because none of the users never used these functionalities in the tests .. nor the possibility to choose a particular run of a group of images: this is because like discussed previous in this chapter the existing of the "kinds" of analysis makes this choice useless. Actually the navbar with these options is completely removed: the goal of this choice is to avoid the "information overload", so not to give the users too many commands and options, even more if these options are considered quite useless by the users.
+Instead there is a list of check-boxes that is selected or deselected let the images appear and disappears. This feature is not important with 2 or 3 images, but sometimes the images are 7-8-9 so it is necessary.
 
 Also in this case we observed that the users in most cases search in the images (almost) always the same information, so in some images the most important data (often they are dimension of peaks or integrals of spaces, or distances between peaks, or, in the case of charts with a time on the x-axis, auto-generated timelines about asynchronous events and triggers happened etc..) are directly written on the picture, like the following example:
 
