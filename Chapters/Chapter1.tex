@@ -24,8 +24,11 @@ The enumeration of the runs is incremental: so the run 55199 identifies the time
 In this document every time we say "last run number" we don't mean the absolute last run numbers, but the run number that is going on right in this moment. This concept is important because usually in most cases the users use gAn Web on the last existing run number (so on the run number that is going on right at that moment) or the immediately previous run number.  
 This system to identify time slices seems to be strange at the beginning but is a standard for all the applications in the AEgIS experiment and it allows a very efficient and precise communication.
 
-On another server exists a RunLog. The RunLog is a document on which at each run  a group of person write the run number, some informations (about settings), some observation (at maximum 2 rows, usually one.. so very brief observations). This document is not very useful if the user works with gAn Web using the most recent run number (because he can remember information about the last run..) but it is important when it works with old run numbers (the memory of the user is obviously limited). 
- 
+How can the user have more information about the runs? 
+On another server exists a RunLog (sometimes also called LogBook). The RunLog is a document organized by date on which at each run a group of person write the run number, some informations (about settings), some observation (at maximum 2 rows, usually one.. so usually brief observations [but if in the run something particular happens, in that rare case the observations can become very long] ). 
+Is this document an input or an output for gAn Web? it depends:
+If the user uses gAn Web on the last existing run (or the run immediately before) probably the output of gAn Web is one of the (many) input of the RunLog.  
+If the user is interested in a phenomenon happened some days ago, probably he searches on the RunLog at the page related the date of the phenomenon, he choose one or more runs related to this phenomenon (he recognize them by the observations), he works with gAn using these runs, and probably he notes parts of the output of gAn Web as observations on the RunLog, that in this situation is both input and output. Some runs are absolutely not related with gAn Web, so in some cases the RunLog is neither an input nor an output.  
 
 % 2
 \item "Type of analysis", that identifies what the program must do with the data and what it must show as output to the user.
