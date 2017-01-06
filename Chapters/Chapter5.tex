@@ -88,6 +88,7 @@ The user insert a run, and select an analysis names PMTs. This kind of analysis 
 
 \end{enumerate}
 
+\newpage
 \section{Prototyping - Implementation}
 
 Here is explained with some screen-shots how the final version looks like, and how does it work.
@@ -103,6 +104,7 @@ Login page:
 
 First of all the login page: it is very simple, only one user exists (all the people in the AEgIS experiment are equal when they use this software, and no others experiments use this application) so only the password needs to be inserted, in order to ensure that only people who work in the experiment can use the software. We can see the typical objects taken from the Bootstrap's default graphic objects.
 
+\newpage
 
 Home page, initial choice:
 
@@ -114,18 +116,61 @@ Home page, initial choice:
   
 The neo-logged user can here choose if he is interested in a single run analysis of in a multiple runs one. These two situations are quite different, so the application work with them in two different ways.
 
+After the choice, the user can always change idea, by the appropriate button:
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{ParticularExitStrategy.png} 
+\caption{How the user can change his choice}
+\end{figure}
+
+\newpage
 Home page, differences between single and multiple runs:
 
-Here we can see how the two modalities of work (single and multiple) appears: 
+Here we can see how the two modalities of work (single and multiple) appear.
+
+Single run: 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{LastSingle.png} 
 \caption{The Homepage if the user chose Single run analysis}
 \end{figure}
 
-the single one is more simple, on the left of the screen the user inserts a run number and a kind of analysis. We can see the button related to access the configuration page and modify the settings (Advanced Settings). On the right part of the screen there is a view on the RunLog of the experiment. The user uses the right part when he wants more information about what run use to work (actually this situation is quite seldom). In the case the user can insert a date using a datepicker, the system opens some pages related to the days around that date and in each page shows the content of the logs related to this date. The goal of the datepicker, provided by Bootstrap, is to reduce the charge on the memory of the users (it shows as default the current date, and shows as result the pages of the RunLog related not only to the selected date but also to the days before and after, to give the user some references and allow him to make errors of 2-3 days) and to allow him to insert the date in a correct format. The log are always divided in runs, and for each run there are some informations and comments. At the moment this functionality is a mock-up (it is one of the few  mock-ups exposed in this document). On the top-left of the screen there is always a little note with some information about the status of the program: this is a little cognitive aid. On the screen there is always wrote the last known run, because in most cases the users use it or the immediately previous one. 
+the single one is more simple, on the left of the screen the user inserts a run number and a kind of analysis. We can see the button related to access the configuration page and modify the settings (Advanced Settings). On the right part of the screen there is a view on the RunLog of the experiment. The user uses the right part when he wants more information about what run use to work (actually this situation is quite seldom). In the case the user can insert a date using a datepicker, the system opens some pages related to the days around that date and in each page shows the content of the logs related to this date. The goal of the datepicker, provided by Bootstrap, is to reduce the charge on the memory of the users (it shows as default the current date, and shows as result the pages of the RunLog related not only to the selected date but also to the days before and after, to give the user some references and allow him to make errors of 2-3 days still finding the result) and to allow him to insert the date in a correct format. The log are always divided in runs, and for each run there are some informations and comments. At the moment this functionality is a mock-up (it is one of the few  mock-ups exposed in this document). 
 
+On the top-left of the screen there is always a little note with some information about the status of the program: this is a little cognitive aid:
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{ParticularStatusHP.png} 
+\caption{A label with some information about the current status is always visible in the homepage}
+\end{figure}    
+ 
+
+
+On the screen there is always wrote the last known run, because in most cases the users use it or the immediately previous one. 
+
+The interface informs the user if he makes some errors inserting the input. On the first implementation the error messages was programmed to became visible every time the inserted value was incorrect, so also at the moment the user was entering in the page and still hasn't inserted the values. This behavior is quite aggressive and unkind to the user.. it is surely not our intention so is a better solution if the error messages appear only when the user try to click send without having inserted correct values. The messages are hopefully aimed to explain the user how to solve the problem:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{ParticularHowErrorsWork.png} 
+\caption{How error messages work}
+\end{figure}    
+
+
+\newpage
+The dropdown menu usable to choose the kind of analysis is quite long (up to 10 options). A good idea is to order it and organize it in homogeneous groups:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{ParticularDropDownSpecial.png} 
+\caption{Grouped dropdown menu}
+\end{figure}    
+
+  
+Multiple runs:  
 
 \begin{figure}[H]
 \centering
@@ -152,6 +197,24 @@ Advanced Settings page:
 
 This page aims to allow the user to modify some groups of settings. The general rule is to use dropdown menus if the choice is true/false or Yes/No (	quite common) or between a reduced number of textual options, an to use instead  seekbars (an input bar moving which the user can insert a bigger or smaller numerical value) when the user must set a numerical value that goes from a minimum to a maximum value. On the top of the screen the user chooses to save the current setting, to return to the default setting, to back home (without saving).    
 
+In some cases the values to insert by the seekbars are in a very big range and is not easy to the user to have a too long seekbar. A good solution is to choose an exponential values seekbar: so the user choose the exponentiation, not the number. This choice is quite reckless for normal users.. but for physicists the understanding of how an exponential value works is not a problem:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{ParticularScalesExpo.png} 
+\caption{ An example of exponential scale (the first) followed by a non-exponential scale (the second) }
+\end{figure}  
+
+Other setting are more easily accessibly but some yes/no dropdown menus:
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{ParticularYesNoConfig.png} 
+\caption{ A group of dropdown menus }
+\end{figure}  
+
+\newpage
 
 Output: 
 
@@ -159,7 +222,7 @@ There are some innovation. The first one is the navbar: now the user can find he
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.25]{LastNavbar.png} 
+\includegraphics[scale=0.35]{LastNavbar.png} 
 \caption{The Navbar}
 \end{figure}  
 
@@ -194,13 +257,41 @@ Images output:
 Here we can see that there is no more the opportunity to select the dimension of the images (but still there is a zoom function in the image), or the layout, because none of the users never used these functionalities in the tests .. nor the possibility to choose a particular run of a group of images: this is because like discussed previous in this chapter the existing of the "kinds" of analysis makes this choice useless. Actually the navbar with these options is completely removed: the goal of this choice is to avoid the "information overload", so not to give the users too many commands and options, even more if these options are considered quite useless by the users.
 Instead there is a list of check-boxes that is selected or deselected let the images appear and disappears. This feature is not important with 2 or 3 images, but sometimes the images are 7-8-9 so it is necessary.
 
-Also in this case we observed that the users in most cases search in the images (almost) always the same information, so in some images the most important data (often they are dimension of peaks or integrals of spaces, or distances between peaks, or, in the case of charts with a time on the x-axis, auto-generated timelines about asynchronous events and triggers happened etc..) are directly written on the picture, like the following example:
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{ParticularHowToSelectImages.png} 
+\caption{How the user can choose which images to show}
+\end{figure}
+
+
+An observation: sometimes the output is a list of images, vertically organized in a framework, some other times is a single image with more graph on a single sheets (a graph for each run inserted by the user as input, now all with the same color, in the next version each run with a personal color); why?
+The output is a single images on a single sheets when the goal is to compare different chart to see what is different, the output is an array of separate images when the goal is more related to the exploration, when the different images don't contain the same type of information. Sometimes is interesting make a confrontation between two images: in that case they are usually positioned horizontally. Who can decide what is the goal in each case? The solution in simple: who create the analysis, so the back-end of this system codified directly in the program how to show the charts in a sheet. This is because nobody better than who creates a particular analysis can understand what are the goals of this analysis.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.35]{ParticularConfrontationImages.png} 
+\caption{Images that are meant to be compared}
+\end{figure}   
+
+
+Also in the "output image" case we observed that the users in most cases search in the images (almost) always the same information, so in some images the most important data (often they are dimension of peaks or integrals of spaces, or distances between peaks, or, in the case of charts with a time on the x-axis, auto-generated timelines about asynchronous events and triggers happened etc..) are directly written on the picture, like the following examples:
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{LastImagenotes.png} 
-\caption{Images with infos}
+\caption{Images with info}
 \end{figure}   
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{ParticularFastReadInfos.png} 
+\caption{Other image with special info in a clear position }
+\end{figure}   
+
+There we can observe that the important information can be shown directly on the plot of the image (if they are graphical information, for example peaks, position of triggers etc) or in a special square on the top-right of the image (if they are not directly related to the image, but come form calculation or machine's settings).
+
+\newpage
 
 Still there is the opportunity to access more information right clicking on the graph, of modifying it in various ways for example showing the graph in three dimensions: 
 
@@ -220,7 +311,15 @@ Often the users in the tests had problems understanding that with a right click 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.25]{LastImageLabel.png} 
+\includegraphics[scale=0.45]{LastImageLabel.png} 
 \caption{Label to inform the user about a feature}
 \end{figure} 
 
+There are some additional commands, that actually nobody used in the tests. Having on the screen commands the nobody uses is a potential source of confusion, but the developer is not absolutely sure about the idea of delete them. A good solution is to have them in the bottom of the frame of the image, not very highlighted, because they are not very important. Probably in a future confrontation with the super-users (is important to remember that this stage is never finished and always open to modification) these commands will be deleted.
+They are in the following image:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{ParticularUnusedControls.png} 
+\caption{Not frequently used controls}
+\end{figure}  
