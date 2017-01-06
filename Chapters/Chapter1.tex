@@ -6,15 +6,19 @@
 
 %----------------------------------------------------------------------------------------
 
+The goal of this chapter is give some general information about what the application does and how does the AEgIS experiment works (for that is related to this application).
+
 \section{User friendly Data analysis: gAn Web}
 
 GAn is a program that aims to analyse data related to the AEgIS experiment at the CERN, gAn Web is the web interface of gAn, and it is the main topic of this document.
  
-This program receive in input (from another software system) several terabytes of files in ".root" format, and some input parameters inserted by the user; 
+This program receives in input (from another software system) several terabytes of files in ".root" format, and some input parameters inserted by the user;
 It does an analysis and it gives in output some summarized scientifically interesting information, understandable by humans.   
+
+For that regards the file in ".root" format:
 A file ".root" is a file produced by a variegated group of sensors in a complex machine that accelerates particles and lets them crash together. This sensors produce data continuously (8 hours per day), and a software system validates and saves these data in file with .root extension. 
 
-The input parameters are:
+The input parameters inserted by the users are:
 \begin{enumerate}
 
 % 1
@@ -25,22 +29,22 @@ In this document every time we say "last run number" we don't mean the absolute 
 This system to identify time slices seems to be strange at the beginning but is a standard for all the applications in the AEgIS experiment and it allows a very efficient and precise communication.
 
 How can the user have more information about the runs? 
-On another server exists a RunLog (sometimes also called LogBook). The RunLog is a document organized by date on which at each run a group of person write the run number, some informations (about settings), some observation (at maximum 2 rows, usually one.. so usually brief observations [but if in the run something particular happens, in that rare case the observations can become very long] ). 
+On another server exists a RunLog (sometimes also called LogBook). The RunLog is a document organized by date on which at each run a group of people write the run number, some informations (about settings), some observation (at maximum 2 rows, usually one.. so usually brief observations [but if in the run something particular happens, in that rare case the observations can become very long] ). 
 Is this document an input or an output for gAn Web? it depends:
-If the user uses gAn Web on the last existing run (or the run immediately before) probably the output of gAn Web is one of the (many) input of the RunLog.  
-If the user is interested in a phenomenon happened some days ago, probably he searches on the RunLog at the page related the date of the phenomenon, he choose one or more runs related to this phenomenon (he recognize them by the observations), he works with gAn using these runs, and probably he notes parts of the output of gAn Web as observations on the RunLog, that in this situation is both input and output. Some runs are absolutely not related with gAn Web, so in some cases the RunLog is neither an input nor an output.  
+If the user uses gAn Web on the last existing run (or the run immediately before) probably the output of gAn Web is one of the (many) inputs of the RunLog.  
+If the user is interested in a phenomenon happened some days ago, probably he searches on the RunLog at the page related the date of the phenomenon, he chooses one or more runs related to this phenomenon (he recognize them by the observations), he works with gAn using these runs, and probably he notes parts of the output of gAn Web as observations on the RunLog, that in this situation is both input and output. Some runs are absolutely not related with gAn Web, so in some cases the RunLog is neither an input nor an output.  
 
 % 2
 \item "Type of analysis", that identifies what the program must do with the data and what it must show as output to the user.
-A "type" is a way in which the program extracts information from the raw data. each type can extract different information using different parts of data and elaborating them in different ways. For example: a type of analysis named "Tmeas" can extract information about the temperatures of some elemental particles analysing how quickly they move subjected to a force. 
+A "type" is a way in which the program extracts information from the raw data. Each type can extract different information using different parts of data and elaborating them in different ways. For example: a type of analysis named "Tmeas" can extract information about the temperatures of some elemental particles analysing how quickly they move subjected to a force. 
 
 \end{enumerate}
 
 
 The .root files can be analysed using a framework named ROOT Framework, that consists in a lot of libraries specialized in high-energy physics analysis, and an interpreter able to understand a C++ script.
 Actually, gAn is the sum of the Root Framework plus a lot of C++ scripts.
-The goal of gAn is reduce the big amount of raw data received in input in a little amount of scientifically interesting and easily understandable data in output. To do this it has to filter data, understand which of them are scientifically interesting, chose the parts that are related to the run selected by the user (by the run parameter), elaborate and compare them, and make advanced statistical analysis on them.  
-gAn can be called using a common linux terminal, using a command with parameters. 
+The goal of gAn is reduce the big amount of raw data received in input in a little amount of scientifically interesting and easily understandable data in output. To do this it has to filter data, understand which of them are scientifically interesting, choose the parts that are related to the run selected by the user (by the run parameter), elaborate and compare them, and make advanced statistical analysis on them.  
+GAn can be called using a common linux terminal, using a command with parameters. 
 
 The output of gAn consists of a single text file with computed, (quite) organized data, and a folder of images in png format.
 This structure (root files in input, data analysis using Root, images, organized and selected data in output) is very common in the CERN's experiments. 
@@ -56,7 +60,7 @@ A web interface can improve the system in two ways:
  
 
 % 2
-\item a Linux terminal interface is practical for expert users, but a web based interface can be more attractive for new users, and, if well done, can be easier to use. It is important to notice that the users are physicists, not necessarily specialized in computer science, so, create a friendly and easily learnable interface can avoid them problems and time wasting.   
+\item a Linux terminal interface is practical for expert users, but a web based interface can be more attractive for new users, and, if well done, can be easier to use. It is important to notice that the users need to hardly exploit their memory to use correctly a terminal application, an we want try to make their work easier.
 
 
 \end{enumerate}
