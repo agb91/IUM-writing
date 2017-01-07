@@ -9,13 +9,13 @@ Here will be explained the features of the final version, and how we are arrived
 \section{Functional requirements}
 
 The last version (from now "gAn Web v3") is a modified version of the intermediate version. 
-The second version's modification come from two sources: some adding requirements and modifications are proposed from the super users and some else come from the tests made with the generic users; 
+The second version's modifications come from two sources: some adding requirements and modifications are proposed from the super users and some else come from the tests made with the generic users; 
 The first group of adding requirements (the ones proposed by the supervisors) are the following:
 
 \begin{enumerate}
 %1 chose analysis new way
 \item 
-The main kinds of analysis are now more clear: they are around 10, and they are     quite stable (their goals, so their input and expected output are quite stable, but still we'll probably modify the algorithmic ways in which these goals are achieved; from the point of view of the web interface the situation us quite stable). Their roles and when they are useful is now steadily fixed (more precisely: we are pretty sure about the role of the existing analysis, but in the future we can add more analysis..). Each user, according on his task, knows (should know) in every moment which analysis fits better the situation, so, the best solution is to allow the user to choose the type of the analysis through a dropdown menu directly in the main page (exactly like he chooses the run number). To make the user's life easier use a tooltip for each analysis, to remember him in which situation it is useful, seems to be appropriate. At this point the possibility of choose the gAn version is useless, because the definitive version of gAn include all the existing types of analysis. 
+The main kinds of analysis are now more clear: they are around 10, and they are     quite stable (their goals, so their input and expected output are quite stable, but still we'll probably modify the algorithmic ways in which these goals are achieved; from the point of view of the web interface the situation is quite stable). Their roles and when they are useful is now steadily fixed (more precisely: we are pretty sure about the role of the existing analysis, but in the future we can add more analysis..). Each user, according on his task, knows (should know) in every moment which analysis fits better the situation, so, the best solution is to allow the user to choose the type of the analysis through a dropdown menu directly in the main page (exactly like he chooses the run number). To make the user's life easier the application can use a tooltip for each analysis, to remember him in which situation it is useful, seems to be appropriate. At this point the possibility of choose the gAn version is useless, because the definitive version of gAn include all the existing types of analysis. 
 
 %2 single vs multiple
 \item 
@@ -39,7 +39,7 @@ The aesthetic part in this application was neglected in the first and intermedia
  
 Furthermore, the version with this last requirements was tested with the users: the developer studied their behavior observing them at work with the existing version, listening to their comments, and asking them opinion and information. The impact of the debut with the users highlights some problems to be overcome, and also provide some interesting ideas: from the analysis and the solution of these problems and from the user's proposals the requirements of the last version was defined. 
 
-In this document there is a chapter (chapter \ref{Chapter6} ) aimed to explain how the tests with the users took place and what are the results, to know more about the argument.
+In this document there is a chapter (\ref{Chapter6} ) aimed to explain how the tests with the users took place and what are the results, to know more about the argument.
 
 The main problems observed (and for each the proposed solution) are the following:
 
@@ -75,9 +75,9 @@ The system shows to the user a textual output and some images:
 The textual output proposes a lot of information, but in the ninety five per cent of the cases the user is interested in only three parameters, that are clearly highlighted by a special font, a color and a visible border. 
 
 The user must also check the image: there is the histogram of a signal, an a red line where the function is fitted. The user checks if the red line
-has an exponential shape (if it is a straight line the situation is too aleatory and the data are not affordable); the user also check if the fit line is too long (it must be very little to accept the results of the analysis, because of physical reasons). 
+has an exponential shape (if it is a straight line the situation is too aleatory and the data are not affordable); the user also checks if the fit line is too long (it must be very little to accept the results of the analysis, because of physical reasons). 
 
-Let's suppose that the fit function is a straight line: the user can retry the same analysis with a different setting: he return to the homepage (through the button "new analysis" on the navbar), he clicks "advanced setting" to modify the configuration, he insert a new value through a slider, to have a more precise graph, in the hope to fit it better. At this point he can retry the previous algorithm (a more precise function will lead a slower computation but probably will give an affordable output)  
+Let's suppose that the fit function is a straight line: the user can retry the same analysis with a different setting: he returns to the homepage (through the button "New Analysis" on the Navbar), he clicks "Advanced Setting" to modify the configuration, he inserts a new value through a slider, to have a more precise graph, in the hope to fit it better. At this point he can retry the previous algorithm (a more precise function will lead a slower computation but probably will give an affordable output)  
 
 \item 
 The user is interested in a two distinguished groups of runs, from 57001 to 57005 and form 57016-57020.
@@ -210,7 +210,7 @@ In some cases the values to insert by the seekbars are in a very big range and i
 \caption{ An example of exponential scale (the first) followed by a non-exponential scale (the second) }
 \end{figure}  
 
-Other setting are more easily accessibly but some yes/no dropdown menus:
+Other setting are more easily accessible by some yes/no dropdown menus:
 
 
 \begin{figure}[H]
@@ -223,7 +223,7 @@ Other setting are more easily accessibly but some yes/no dropdown menus:
 
 Output: 
 
-There are some innovation. The first one is the navbar: now the user can find here all the most important commands. Before there was more buttons, distributed in the screen, and during the tests the users had problems to found them and to understand their functionalities. Now the navbar is more clear and organized:
+There are some innovations. The first one is the navbar: now the user can find here all the most important commands. Before there was more buttons, distributed in the screen, and during the tests the users had problems to found them and to understand their functionalities. Now the navbar is more clear and organized:
 
 \begin{figure}[H]
 \centering
@@ -260,7 +260,7 @@ Images output:
 \end{figure}  
 
 Here we can see that there is no more the opportunity to select the dimension of the images (but still there is a zoom function in the image), or the layout, because none of the users never used these functionalities in the tests .. nor the possibility to choose a particular run of a group of images: this is because like discussed previous in this chapter the existing of the "kinds" of analysis makes this choice useless. Actually the navbar with these options is completely removed: the goal of this choice is to avoid the "information overload", so not to give the users too many commands and options, even more if these options are considered quite useless by the users.
-Instead there is a list of check-boxes that is selected or deselected let the images appear and disappears. This feature is not important with 2 or 3 images, but sometimes the images are 7-8-9 so it is necessary.
+Instead there is a list of check-boxes that if selected or deselected let the images appear and disappears. This feature is not determinant with 2 or 3 images, but sometimes the images are 7-8-9 so it is necessary.
 
 \begin{figure}[H]
 \centering
@@ -269,8 +269,8 @@ Instead there is a list of check-boxes that is selected or deselected let the im
 \end{figure}
 
 
-An observation: sometimes the output is a list of images, vertically organized in a framework, some other times is a single image with more graph on a single sheets (a graph for each run inserted by the user as input, now all with the same color, in the next version each run with a personal color); why?
-The output is a single images on a single sheets when the goal is to compare different chart to see what is different, the output is an array of separate images when the goal is more related to the exploration, when the different images don't contain the same type of information. Sometimes is interesting make a confrontation between two images: in that case they are usually positioned horizontally. Who can decide what is the goal in each case? The solution in simple: who create the analysis, so the back-end of this system codified directly in the program how to show the charts in a sheet. This is because nobody better than who creates a particular analysis can understand what are the goals of this analysis.
+An observation: sometimes the output is a list of images, vertically organized in a framework, some other times is a single image with more graph on a single sheets (a graph for each run inserted by the user as input, now all with the same color, but soon each run with a personal color); why?
+The output is a single image on a single sheet when the goal is to compare different charts to see what is different, the output is an array of separate images when the goal is more related to the exploration, when the different images don't contain the same type of information. Sometimes is interesting make a confrontation between two images: in that case they are usually positioned horizontally. Who can decide what is the goal in each case? The solution is simple: who creates the analysis, so the back-end of this system codifies directly in the program how to show the charts in one or more sheets. This is because nobody better than who creates a particular analysis can understand what are the goals of this analysis.
 
 
 \begin{figure}[H]
@@ -312,7 +312,7 @@ Still there is the opportunity to access more information right clicking on the 
 \caption{Other option}
 \end{figure}  
 
-Often the users in the tests had problems understanding that with a right click they could access these functionalities, so no there is a specific label on the right of the screen to inform them (this label is in fixed position, but became visible only if the user arrive with the scrollbar on the images):
+Often the users in the tests had problems understanding that with a right click they could access these functionalities, so now there is a specific label on the right of the screen to inform them (this label is in fixed position, but became visible only if the user arrive with the scrollbar on the images):
 
 \begin{figure}[H]
 \centering
