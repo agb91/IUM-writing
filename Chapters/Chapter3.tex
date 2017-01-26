@@ -14,7 +14,7 @@ The requirements of this version are the following:
 \begin{enumerate}
 
 % 1
-\item The user, in the homepage, can choose the run (only one run, for the moment) in which he is interested, using an input field. This field has a validator, able to understand if the run number is inserted, if it is effectively a number, and if it is in an acceptable range. The user receives an explaining and precise error message directly on the homepage if the input field is empty or if the inserted value is not acceptable. It is always possible validate the inserted run and ensure that the related Root file exists? No, because in some moments some sensors don't work properly and it is inevitable that some root files related to some runs are incomplete, or even in-existent. This problem will be solved in the next versions.
+\item The user, in the homepage, can choose the run (only one run, for the moment) in which he is interested, using an input field. This field has a validator, able to understand if the run number is inserted, if it is effectively a number, and if it is in an acceptable range. The user receives an explaining and precise error message directly on the homepage if the input field is empty or if the inserted value is not acceptable. Is it always possible validate the inserted run and ensure that the related Root file exists? No, because in some moments some sensors don't work properly and it is inevitable that some root files related to some runs are incomplete, or even in-existent. This problem will be solved in the next versions.
 
 % 2
 \item At this moment there is only a generic idea about what kind of analysis can be useful for the user, so in this version there will be only a generic analysis, able to dump in text all the possible information, and a group of example images (this is useless for the goal of the scientific research, but very useful to improve the understanding of the needed features of the web interface).
@@ -37,7 +37,7 @@ At this stage is not clear if the type of analysis will be chosen by the user of
  
 \section{Non-functional requirements}
 
-This version (and actually also all the next versions) hse some non-functional requisites:
+This version (and actually also all the next versions) has some non-functional requisites:
 
 \begin{enumerate}
 
@@ -84,7 +84,7 @@ Following are visible some part of the first prototype, with very simple feature
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{HomePageOLD.png} 
-\caption{The early homepage of gAn Web}
+\caption{First version: the first homepage of gAn Web}
 \end{figure}
 
 It is quite clear: There is the AEgIS Logo, an input field where the user can insert a run number (only one in this version) and a "Send" button to start the analysis (using gAn). A button "Edit Configuration File" allows the user to  enter in the page dedicated to the configuration of the program.
@@ -94,7 +94,7 @@ It is quite clear: There is the AEgIS Logo, an input field where the user can in
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{TextOutputOLD.png} 
-\caption{The early page related to the textual output of gAn Web}
+\caption{First version: the page related to the textual output of gAn Web}
 \end{figure}
   
 The textual result of the computation is visible: it seems to be too long and incomprehensible, but for physicists it is quite clear; to understand what is the best way to format this output a further confrontation with the users is needed. The graphics is very minimalist, there is only one button: "Look at the images", that sends the user to the page related to the images. 
@@ -106,7 +106,7 @@ The textual result of the computation is visible: it seems to be too long and in
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{AllImagesPageOLD.png}
-\caption{The page able to show the output images in the early prototype}
+\caption{First version: the page able to show the output images in the early prototype}
 \end{figure}   
 
 This page shows the images in a dynamic framework, that the user can edit.
@@ -118,7 +118,7 @@ The user can choose by dropdown menus the dimension, the layout ("vertical", if 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{EditConfigOLD.png}  
-\caption{The configuration page}
+\caption{First version: the configuration page}
 \end{figure}   
 
 This page allows the user to choose by radio buttons (modified using Bootstrap graphic) the value to insert in the configuration file of gAn. Radio buttons force users to insert correct values.    

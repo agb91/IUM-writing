@@ -1,68 +1,67 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
 \select@language {english}
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.2}
-\contentsline {section}{\numberline {1.1}User friendly Data analysis: gAn Web}{1}{section.3}
-\contentsline {chapter}{\numberline {2}General organization of the project}{5}{chapter.9}
-\contentsline {section}{\numberline {2.1}The role of the designer and the users}{5}{section.10}
-\contentsline {section}{\numberline {2.2}General organization of the design process }{6}{section.14}
-\contentsline {section}{\numberline {2.3}The stages of the design project}{7}{section.15}
-\contentsline {section}{\numberline {2.4}The role of aesthetics}{8}{section.20}
-\contentsline {section}{\numberline {2.5}Analysis with inspection methods and Tests with users}{8}{section.21}
-\contentsline {section}{\numberline {2.6}Prototyping and mock-up}{9}{section.24}
-\contentsline {section}{\numberline {2.7}Ambiguities and doubts}{10}{section.25}
-\contentsline {section}{\numberline {2.8}How the various stages are presented}{10}{section.26}
-\contentsline {chapter}{\numberline {3}First version}{11}{chapter.30}
-\contentsline {section}{\numberline {3.1}Functional requirements}{11}{section.31}
-\contentsline {section}{\numberline {3.2}Non-functional requirements}{13}{section.38}
-\contentsline {section}{\numberline {3.3}Scenario based functional analysis}{14}{section.43}
-\contentsline {section}{\numberline {3.4}Prototyping}{14}{section.46}
-\contentsline {section}{\numberline {3.5}How the early version can be improved}{17}{section.55}
-\contentsline {chapter}{\numberline {4}Intermediate version}{19}{chapter.56}
-\contentsline {section}{\numberline {4.1}Functional requirements}{19}{section.57}
-\contentsline {subsection}{\numberline {4.1.1}Ambiguities (and related solutions)}{22}{subsection.68}
-\contentsline {section}{\numberline {4.2}Scenario based functional analysis}{22}{section.69}
-\contentsline {section}{\numberline {4.3}Prototyping}{24}{section.76}
-\contentsline {subsection}{\numberline {4.3.1}Modified pages}{25}{subsection.77}
-\contentsline {subsection}{\numberline {4.3.2}Added pages}{33}{subsection.106}
-\contentsline {chapter}{\numberline {5}Final version}{35}{chapter.110}
-\contentsline {section}{\numberline {5.1}Functional requirements}{35}{section.111}
-\contentsline {section}{\numberline {5.2}Non-functional requirements}{38}{section.121}
-\contentsline {section}{\numberline {5.3}Scenario based functional analysis}{38}{section.122}
-\contentsline {section}{\numberline {5.4}Prototyping - Implementation}{40}{section.127}
-\contentsline {chapter}{\numberline {6}Users and Tests with them}{55}{chapter.152}
-\contentsline {section}{\numberline {6.1}User's Profile: why?}{55}{section.153}
-\contentsline {section}{\numberline {6.2}User's Profile: classification}{55}{section.154}
-\contentsline {subsection}{\numberline {6.2.1}Generic Characteristics}{55}{subsection.155}
-\contentsline {subsection}{\numberline {6.2.2}Education Background}{56}{subsection.156}
-\contentsline {subsection}{\numberline {6.2.3}Models in the user's mind}{57}{subsection.159}
-\contentsline {subsection}{\numberline {6.2.4}User's psychological characteristics }{58}{subsection.160}
-\contentsline {subsection}{\numberline {6.2.5}User's level of expertise }{58}{subsection.161}
-\contentsline {subsection}{\numberline {6.2.6}Environment}{59}{subsection.162}
-\contentsline {section}{\numberline {6.3}Relation developer-user and progressive sematization}{59}{section.163}
-\contentsline {section}{\numberline {6.4}How the tests take place}{59}{section.164}
-\contentsline {subsection}{\numberline {6.4.1}Preliminary observations}{61}{subsection.168}
-\contentsline {subsection}{\numberline {6.4.2}What the test is evaluating?}{61}{subsection.169}
-\contentsline {subsection}{\numberline {6.4.3}Execution and Results}{62}{subsection.170}
-\contentsline {subsection}{\numberline {6.4.4}Is the testing finished here?}{65}{subsection.182}
-\contentsline {chapter}{\numberline {7}Design}{67}{chapter.183}
-\contentsline {section}{\numberline {7.1}Used patterns}{67}{section.184}
-\contentsline {subsection}{\numberline {7.1.1}Clear entry point}{67}{subsection.185}
-\contentsline {subsection}{\numberline {7.1.2}Wizard}{68}{subsection.186}
-\contentsline {subsection}{\numberline {7.1.3}Spatial memory}{68}{subsection.187}
-\contentsline {subsection}{\numberline {7.1.4}Grid of equals}{69}{subsection.188}
-\contentsline {subsection}{\numberline {7.1.5}Responsive enabling}{69}{subsection.189}
-\contentsline {subsection}{\numberline {7.1.6}Progress indicator}{70}{subsection.190}
-\contentsline {subsection}{\numberline {7.1.7}Go Back to a Safe Place}{70}{subsection.191}
-\contentsline {subsection}{\numberline {7.1.8}Modal panel}{70}{subsection.192}
-\contentsline {subsection}{\numberline {7.1.9}Liquid layout}{71}{subsection.193}
-\contentsline {subsection}{\numberline {7.1.10}Hover tools}{71}{subsection.194}
-\contentsline {subsection}{\numberline {7.1.11}Harmless default}{71}{subsection.195}
-\contentsline {subsection}{\numberline {7.1.12}Same-page error messages}{72}{subsection.198}
-\contentsline {subsection}{\numberline {7.1.13}Alternative views}{72}{subsection.199}
-\contentsline {chapter}{\numberline {8}Implementation}{75}{chapter.200}
-\contentsline {section}{\numberline {8.1}Introduction}{75}{section.201}
-\contentsline {section}{\numberline {8.2}The use of Bootstrap}{75}{section.202}
-\contentsline {section}{\numberline {8.3}The use of non-Bootstrap components}{79}{section.221}
-\contentsline {chapter}{\numberline {9}Conclusions}{81}{chapter.223}
-\contentsline {section}{\numberline {9.1}Conclusions}{81}{section.224}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.3}
+\contentsline {section}{\numberline {1.1}User friendly Data analysis: gAn Web}{1}{section.4}
+\contentsline {chapter}{\numberline {2}General organization of the project}{5}{chapter.10}
+\contentsline {section}{\numberline {2.1}The roles of the designer and of the users}{5}{section.11}
+\contentsline {section}{\numberline {2.2}General organization of the design process }{6}{section.15}
+\contentsline {section}{\numberline {2.3}The stages of the design project}{7}{section.16}
+\contentsline {section}{\numberline {2.4}The role of aesthetics}{8}{section.21}
+\contentsline {section}{\numberline {2.5}Analysis with inspection methods and Tests with users}{8}{section.22}
+\contentsline {section}{\numberline {2.6}Prototyping and mock-up}{9}{section.25}
+\contentsline {section}{\numberline {2.7}Ambiguities and doubts}{10}{section.26}
+\contentsline {section}{\numberline {2.8}How the various stages are presented}{10}{section.27}
+\contentsline {chapter}{\numberline {3}First version}{11}{chapter.31}
+\contentsline {section}{\numberline {3.1}Functional requirements}{11}{section.32}
+\contentsline {section}{\numberline {3.2}Non-functional requirements}{13}{section.39}
+\contentsline {section}{\numberline {3.3}Scenario based functional analysis}{14}{section.44}
+\contentsline {section}{\numberline {3.4}Prototyping}{14}{section.47}
+\contentsline {section}{\numberline {3.5}How the early version can be improved}{17}{section.56}
+\contentsline {chapter}{\numberline {4}Intermediate version}{19}{chapter.57}
+\contentsline {section}{\numberline {4.1}Functional requirements}{19}{section.58}
+\contentsline {subsection}{\numberline {4.1.1}Ambiguities (and related solutions)}{22}{subsection.69}
+\contentsline {section}{\numberline {4.2}Scenario based functional analysis}{22}{section.70}
+\contentsline {section}{\numberline {4.3}Prototyping}{24}{section.77}
+\contentsline {subsection}{\numberline {4.3.1}Modified pages}{25}{subsection.78}
+\contentsline {subsection}{\numberline {4.3.2}Added pages}{33}{subsection.107}
+\contentsline {chapter}{\numberline {5}Final version}{35}{chapter.111}
+\contentsline {section}{\numberline {5.1}Functional requirements}{35}{section.112}
+\contentsline {section}{\numberline {5.2}Non-functional requirements}{37}{section.122}
+\contentsline {section}{\numberline {5.3}Scenario based functional analysis}{38}{section.123}
+\contentsline {section}{\numberline {5.4}Prototyping - Implementation}{40}{section.128}
+\contentsline {chapter}{\numberline {6}Users and Tests with them}{57}{chapter.156}
+\contentsline {section}{\numberline {6.1}User's Profile: why?}{57}{section.157}
+\contentsline {section}{\numberline {6.2}User's Profile: classification}{57}{section.158}
+\contentsline {subsection}{\numberline {6.2.1}Generic Characteristics}{57}{subsection.159}
+\contentsline {subsection}{\numberline {6.2.2}Education Background}{58}{subsection.160}
+\contentsline {subsection}{\numberline {6.2.3}Models in the user's mind}{59}{subsection.163}
+\contentsline {subsection}{\numberline {6.2.4}User's psychological characteristics }{60}{subsection.164}
+\contentsline {subsection}{\numberline {6.2.5}User's level of expertise }{60}{subsection.165}
+\contentsline {subsection}{\numberline {6.2.6}Environment}{61}{subsection.166}
+\contentsline {section}{\numberline {6.3}Relation developer-user and progressive sematization}{61}{section.167}
+\contentsline {section}{\numberline {6.4}How the tests take place}{61}{section.168}
+\contentsline {subsection}{\numberline {6.4.1}Preliminary observations}{63}{subsection.172}
+\contentsline {subsection}{\numberline {6.4.2}What the test is evaluating?}{63}{subsection.173}
+\contentsline {subsection}{\numberline {6.4.3}Execution and Results}{64}{subsection.174}
+\contentsline {subsection}{\numberline {6.4.4}Is the testing finished here?}{67}{subsection.186}
+\contentsline {chapter}{\numberline {7}Design and Patterns}{69}{chapter.187}
+\contentsline {section}{\numberline {7.1}Used patterns}{69}{section.188}
+\contentsline {subsection}{\numberline {7.1.1}Clear entry point}{69}{subsection.189}
+\contentsline {subsection}{\numberline {7.1.2}Wizard}{70}{subsection.190}
+\contentsline {subsection}{\numberline {7.1.3}Spatial memory}{70}{subsection.191}
+\contentsline {subsection}{\numberline {7.1.4}Grid of equals}{71}{subsection.192}
+\contentsline {subsection}{\numberline {7.1.5}Responsive enabling}{71}{subsection.193}
+\contentsline {subsection}{\numberline {7.1.6}Progress indicator}{72}{subsection.194}
+\contentsline {subsection}{\numberline {7.1.7}Go Back to a Safe Place}{72}{subsection.195}
+\contentsline {subsection}{\numberline {7.1.8}Liquid layout}{72}{subsection.196}
+\contentsline {subsection}{\numberline {7.1.9}Hover tools}{73}{subsection.197}
+\contentsline {subsection}{\numberline {7.1.10}Harmless default}{73}{subsection.198}
+\contentsline {subsection}{\numberline {7.1.11}Same-page error messages}{74}{subsection.201}
+\contentsline {subsection}{\numberline {7.1.12}Alternative views}{74}{subsection.202}
+\contentsline {chapter}{\numberline {8}Implementation}{75}{chapter.203}
+\contentsline {section}{\numberline {8.1}Introduction}{75}{section.204}
+\contentsline {section}{\numberline {8.2}The use of Bootstrap}{75}{section.205}
+\contentsline {section}{\numberline {8.3}The use of non-Bootstrap components}{80}{section.225}
+\contentsline {chapter}{\numberline {9}Conclusions}{83}{chapter.227}
+\contentsline {section}{\numberline {9.1}Conclusions}{83}{section.228}

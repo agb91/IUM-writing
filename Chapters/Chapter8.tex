@@ -13,11 +13,11 @@ Some non-functional requirements, such as the goal to create a solution easily c
 
 \section{The use of Bootstrap}
 
-The only framework used in the interface (Root Framework is used in the back-end) is Bootstrap. Bootstrap is quite useful in the production of the front-end because allows the programmer to manage the dimension of each object on the screen in a smart way and to automatically adapt this dimension to the varying dimension of the screen. It was evaluated the possibility to use a framework for the part related to PHP, but it was preferred not to do so. The point is that the PHP part of the program is quite little and quite atypical: in fact the main task of the PHP part is to talk with the C++ scripts of Root, and for this kind of atypical situation the use of a framework can lead more problems that advantages.  
+The only framework used in the interface is Bootstrap (Root Framework is used in the back-end). Bootstrap is quite useful in the production of the front-end because allows the programmer to manage the dimension of each object on the screen in a smart way and to automatically adapt this dimension to the varying dimension of the screen. It was evaluated the possibility to use a framework for the part related to PHP, but it was preferred not to do so. The point is that the PHP part of the program is quite little and quite atypical: in fact the main task of the PHP part is to talk with the C++ scripts of Root, and for this kind of atypical situation the use of a framework can lead more problems that advantages.  
 
-Everywhere in the program is easily visible the sign of Bootstrap, in particular all the graphical parts are taken from Bootstrap's components (all visible and freely accessible here \url{http://getbootstrap.com/components/}). The goal of this choice is to exploit the wide diffusion of Bootstrap's graphics on the internet: a common user used to navigate on the net surely is used to see the graphical object of Bootstrap, and is unconsciously used to associate these symbols to their signification. So the using on the Bootstrap's graphics can improve the affordance of the interface. 
+Everywhere in the program is easily visible the sign of Bootstrap, in particular almost all the graphical parts are taken from Bootstrap's components (all visible and freely accessible here \url{http://getbootstrap.com/components/}). The goal of this choice is to exploit the wide diffusion of Bootstrap's graphics on the internet: a common user used to navigate on the net surely is used to see the graphical object of Bootstrap, and is unconsciously used to associate these symbols to their signification. So the using on the Bootstrap's graphics can improve the affordance of the interface. 
 
-So all the graphical objects in the application are taken from standard Bootstrap's graphics? No: in fact we checked during the development all the options case per case. Definitely we can observe that in the final tests with users graphic objects taken from Bootstrap are often preferred to the alternatives.. so they are used in most cases, but their adoption is not automatic.  
+So all the graphical objects in the application are taken from standard Bootstrap's graphics? No: in fact we checked during the development all the options case per case. Definitely we can observe that for practical and aesthetic reasons graphic objects taken from Bootstrap are often preferred to the alternatives.. so they are used in most cases, but their adoption is not automatic.  
 
 Bootstrap graphics is an enormous database of object, for this project only a few are used, in particular:
 
@@ -43,7 +43,7 @@ Bootstrap graphics is an enormous database of object, for this project only a fe
 \caption{A "disabled" button created with Bootstrap's graphics}
 \end{figure}
 
-The main used button is the "primary", but for some secondary function is also used the "secondary". Bootstrap allow also to use the "disabled" version, useful to let the user understand if a command is unacceptable. In the intermediate version there was some coloured buttons (green and red) to communicate the concept of enabled/disabled, but in the final version we preferred to use the default Bootstrap's behavior to enable/disable each button. 
+The main used button is the "primary", but for some secondary function is also used the "secondary". Bootstrap allows also to use the "disabled" version, useful to let the user understand if a command is unacceptable. In the intermediate version there was some coloured buttons (green and red) to communicate the concept of enabled/disabled, but in the final version we preferred to use the default Bootstrap's behavior to enable/disable each button. 
  
 
 \item The navbar:
@@ -68,6 +68,8 @@ Putting some object together in a common structure clearly separated from the re
 
 This solution makes the waiting time less frustrating for the user. The bar is infinite (without a percentage, it go on like an endless screw until the program is ready to show the results), because it is impossible to estimate precisely the amount of time that the user must wait (if the server works properly we talk about around 2 seconds.. no more).
 
+\newpage
+
 \item The input fields
 
 \begin{figure}[H]
@@ -87,6 +89,13 @@ with different colors if the input is acceptable or not. Also there are error me
 \caption{A dropdown menu created with Bootstrap's graphics}
 \end{figure}
 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{ParticularDropDownSpecial.png} 
+\caption{A grouped dropdown menu created with Bootstrap's graphics: it needs more space, but it is more clear}
+\end{figure}
+
 It is the common solution to force the users to choice a value among some options. According to the super users it is aesthetically better than the radio buttons.
 
 \item The tooltips
@@ -94,17 +103,17 @@ It is the common solution to force the users to choice a value among some option
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{BootstrapTooltip.png} 
-\caption{An explaining tooltip obtained form Bootstrap's graphics}
+\caption{An explaining tooltip obtained from Bootstrap's graphics}
 \end{figure}
 
-The user can see this kind of tip just moving the mouse over the interested object. The tip explains briefly what the object can do.
+The user can see this kind of tip just moving the mouse over the interested object. The tip explains briefly what the object can do. A tooltip on the name of the analysis and on the name of the sensors is very useful, but it needs to be written with the help of domain experts (at this stage some of the tooltips are mock-ups, so the written information is realistic but still not checked by domain experts). 
 
 \item The modal form
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{BootstrapModal.png} 
-\caption{A modal form obtained form Bootstrap's graphics}
+\caption{A modal form obtained from Bootstrap's graphics}
 \end{figure}
 
 This structure, named "modal form", is a window that appears on the screen as response to some event, takes the focus, and allows the user to execute some activities. 
